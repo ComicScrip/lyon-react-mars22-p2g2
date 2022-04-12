@@ -1,0 +1,50 @@
+.mainContainer {
+  padding-top: 50px;
+}
+
+.mainTitle {
+  display: flex;
+  justify-content: center;
+  border: solid;
+  border-radius: 10px;
+  margin: 30px;
+}
+.mainPara {
+  display: flex;
+  justify-content: center;
+  padding: 0px 50px 0px 50px;
+  text-align: center;
+}
+.quizzYes {
+  display: flex;
+  justify-content: center;
+  padding: 0px 20px 0px 20px;
+  line-height: 1px;
+  border: solid;
+  margin: 15px;
+  border-radius: 10px;
+}
+.quizzNo {
+  display: flex;
+  justify-content: center;
+  padding: 0px 50px 0px 50px;
+  line-height: 1px;
+}
+.movieMonth {
+  display: flex;
+  justify-content: center;
+  border: solid;
+  border-radius: 10px;
+  margin: 50px;
+}
+
+.pictureOfMonth {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 220px;
+}
+.pictureOfMonth img {
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
