@@ -1,28 +1,36 @@
+@import url('https: //fonts.google.com/share?selection.family=Abhaya%20Libre');
+body {
+  font-family: 'Abhaya Libre', serif;
+}
 .mainContainer {
   padding-top: 50px;
+  background-image: url('../img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 }
 
 .mainTitle {
   display: flex;
   justify-content: center;
   border: solid;
+  border-color: #c4c4c4;
   border-radius: 10px;
   margin: 30px;
+  color: #c4c4c4;
 }
 .mainPara {
   display: flex;
   justify-content: center;
   padding: 0px 50px 0px 50px;
   text-align: center;
+  color: #c4c4c4;
 }
 .quizzYes {
   display: flex;
   justify-content: center;
   padding: 0px 20px 0px 20px;
-  line-height: 1px;
-  border: solid;
   margin: 15px;
-  border-radius: 10px;
 }
 .quizzNo {
   display: flex;
@@ -30,21 +38,68 @@
   padding: 0px 50px 0px 50px;
   line-height: 1px;
 }
-.movieMonth {
-  display: flex;
-  justify-content: center;
-  border: solid;
-  border-radius: 10px;
-  margin: 50px;
+.linkStyle {
+  text-decoration: none;
+  font-style: italic;
+  font-size: 9pt;
+  color: #938181;
 }
 
+.movieMonth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  color: #c4c4c4;
+  margin-top: 30px;
+}
+.borderMovie {
+  border: solid;
+  border-radius: 10px;
+  border-color: #c4c4c4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #c4c4c4;
+}
 .pictureOfMonth {
   display: flex;
   justify-content: center;
   text-align: center;
-  height: 220px;
-}
-.pictureOfMonth img {
+  height: 250px;
   border-radius: 10px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 760px) {
+  .mainContainer {
+    display: flex;
+    align-items: center;
+  }
+  .containerMediaQ {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .movieMonth {
+    position: relative;
+  }
+  .mainContainerMediaQ {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  .borderMovie {
+    position: absolute;
+    top: 250px;
+    z-index: 1;
+    width: 80%;
+  }
+  .pictureOfMonth {
+    min-height: 50vh;
+    opacity: 70%;
+  }
 }
