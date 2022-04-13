@@ -1,6 +1,7 @@
 .nav {
-  height: 5vh;
+  height: 6vh;
   background: linear-gradient(45deg, rgb(16, 14, 156), #3f92a8);
+  display: flex;
 }
 
 .liste {
@@ -10,16 +11,30 @@
   background: linear-gradient(45deg, rgb(16, 14, 156), #3f92a8);
   height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   position: relative;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 56px;
 }
 
 .items {
   margin-right: 10px;
   color: #f1f1f1;
   cursor: pointer;
-  width: 100%;
+  width: 70px;
+  height: 30px;
+  background: rgba(196, 196, 196, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn {
@@ -30,6 +45,17 @@
   .liste {
     flex-direction: column;
     height: 200px;
+    width: 50%;
+
+    top: 6vh;
+    left: 15vh;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 50px;
   }
   .items :nth-child(1) {
     border-top: 1px solid #f1f1f1;
@@ -44,9 +70,11 @@
   .btn {
     display: block;
     position: absolute;
-    right: 10px;
-    top: 10px;
-    color: #333;
+    right: 15px;
+    top: 5px;
+    height: 4vh;
+    width: 50px;
+
     cursor: pointer;
   }
 }

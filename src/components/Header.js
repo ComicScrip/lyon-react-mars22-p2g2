@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './header.css';
+import burgerIcon from '../image/menu.png';
+import logo from '../image/logo.png';
 
 export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -26,38 +28,47 @@ export default function Header() {
 
   return (
     <nav className="nav">
+      <div>
+        <img src={logo} alt="logo" className={'item'} />
+      </div>
       {(toggleMenu || largeur > 500) && (
         <div className="liste">
           <NavLink
-            className={'item'}
+            className={'items'}
             to="../routes/Home"
             style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
           >
             Home
           </NavLink>
           <NavLink
+            className={'items'}
             to="../routes/Quizz"
             style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
           >
             Quizz
           </NavLink>
           <NavLink
+            className={'items'}
             to="../routes/Profil"
             style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
           >
             Profil
           </NavLink>
           <NavLink
-            to="../routes/Home"
+            className={'items'}
+            to="../routes/Contact"
             style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
           >
             Contact
           </NavLink>
         </div>
       )}
-      <button onClick={toggleNavSmallScreen} type="button" className="btn">
-        Btn
-      </button>
+      <img
+        src={burgerIcon}
+        alt="Burger icon"
+        onClick={toggleNavSmallScreen}
+        className="btn"
+      />
     </nav>
   );
 }

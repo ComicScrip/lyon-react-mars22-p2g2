@@ -1,0 +1,32 @@
+.main-footer {
+  height: 6vh;
+  display: flex;
+
+  background: linear-gradient(45deg, rgb(16, 14, 156), #3f92a8);
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.content {
+  color: #fff;
+  font-size: 10px;
+}
+
+.logo-content {
+  display: flex;
+  align-items: flex-end;
+}
+
+.logo {
+  height: 30px;
+  width: 20;
+}
+
+h3 {
+  font-size: 10px;
+}
