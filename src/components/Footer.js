@@ -1,3 +1,3 @@
 export default function Footer() {
-  console.log('Footer.js');
+  return <div>footer</div>;
 }
