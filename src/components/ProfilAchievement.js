@@ -1,15 +1,17 @@
-import { LinearProgress } from '@mui/material';
 import React from 'react';
 import styles from './Profil.module.css';
+import ProfilAchievementList from './ProfilAchievementList';
 
 function ProfilAchievement() {
   return (
     <>
       <section className={styles.achievement}>
         <h2>Achievements</h2>
-        <div className={styles.achievementListContainer}>
-          <LinearProgress variant="determinate" value={50} />;
-        </div>
+        <ProfilAchievementList value={50} />
+        <ProfilAchievementList value={20} />
+        <ProfilAchievementList value={40} />
+        <ProfilAchievementList value={20} />
+        <ProfilAchievementList value={80} />
       </section>
 
       <hr />
