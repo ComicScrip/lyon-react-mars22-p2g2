@@ -18,18 +18,10 @@
   padding: 5%;
 }
 
-/*.ligne {
-    height: 5px;
-    background-color: black;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-}*/
-
 .question {
   min-width: 50px;
   border: solid;
-  border-color: brown;
+  border-color: white;
   text-align: center;
   margin: 0 auto;
   padding: 2% 9%;
@@ -47,36 +39,21 @@
 }
 
 .myButtons {
-  /*max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
-    padding-left: 50%;
-    padding-right: 50%;*/
-  margin: 0 30%;
-  padding: 0 auto;
-  border: solid;
-  border-color: chocolate;
+  border: none;
+  display: flex;
+  justify-content: space-around;
 }
 
 h2 {
-  /* width: 25%;
-       width: auto;
-    min-width: 50px;
-    margin-left: 0 auto;*/
+  min-width: 100px;
+  padding: 5%;
+  margin: 1%;
   border: solid;
-  /*display: inline-block; : pour les destock */
+  border-radius: 15px;
   text-align: center;
-  border-color: indianred;
+  border-color: white;
 }
 
 .ligne2 {
   margin: 0 5%;
 }
-
-/*style={{
-          color: '#000000',
-          backgroundColor: '#000000',
-          height: 0.5,
-          borderColor: '##444444',
-        }}*/
