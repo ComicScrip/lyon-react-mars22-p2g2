@@ -105,4 +105,13 @@ h2 {
     display: flex;
     flex-direction: row;
   }
+
+  .profilSecondContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  hr {
+    display: none;
+  }
 }
