@@ -8,6 +8,7 @@ export default function Header() {
         <Link to="/contact">Contact</Link>
         <Link to="/profil">Profil</Link>
         <Link to="/quizz">Quizz</Link>
+        <Link to="/results">Résultats</Link>
       </nav>
     </header>
   );

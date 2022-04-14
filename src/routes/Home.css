@@ -2,14 +2,27 @@
 body {
   font-family: 'Abhaya Libre', serif;
 }
-.mainContainer {
+/*.mainContainer {
   padding-top: 50px;
   background-image: url('../img/background.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-}
+}*/
 
+.linkStyle {
+  text-decoration: none;
+  color: #938181;
+}
+.movieMonth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.borderMovie {
+  color: #c4c4c4;
+}
 .mainTitle {
   display: flex;
   justify-content: center;
@@ -33,34 +46,11 @@ body {
   margin: 15px;
 }
 .quizzNo {
-  display: flex;
-  justify-content: center;
-  padding: 0px 50px 0px 50px;
-  line-height: 1px;
-}
-.linkStyle {
-  text-decoration: none;
-  font-style: italic;
-  font-size: 9pt;
-  color: #938181;
-}
-
-.movieMonth {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 30px;
-  color: #c4c4c4;
-  margin-top: 30px;
-}
-.borderMovie {
-  border: solid;
-  border-radius: 10px;
-  border-color: #c4c4c4;
   width: 100%;
   display: flex;
   justify-content: center;
   color: #c4c4c4;
+  font-size: 9pt;
 }
 .pictureOfMonth {
   display: flex;
@@ -72,10 +62,6 @@ body {
 }
 
 @media screen and (min-width: 760px) {
-  .mainContainer {
-    display: flex;
-    align-items: center;
-  }
   .containerMediaQ {
     width: 50%;
     display: flex;
@@ -94,12 +80,18 @@ body {
   }
   .borderMovie {
     position: absolute;
+    border: solid;
+    border-color: #c4c4c4;
+    border-radius: 10px;
     top: 250px;
     z-index: 1;
-    width: 80%;
+    width: 74%;
   }
   .pictureOfMonth {
     min-height: 50vh;
     opacity: 70%;
+  }
+  .mainContainer {
+    margin-top: 200px;
   }
 }

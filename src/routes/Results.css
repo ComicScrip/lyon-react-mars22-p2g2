@@ -1,0 +1,52 @@
+.firstContainer {
+  color: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  border: solid;
+  border-radius: 10px;
+  margin: 30px 50px;
+  padding: 5px 0px;
+}
+.secondContainerContent {
+  color: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-radius: 10px;
+  margin: 0px 15px 0px 15px;
+  padding: 5px 10px;
+}
+.secondContainerContents {
+  color: #c4c4c4;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  border: solid;
+  border-radius: 10px;
+  margin: 20px 15px 0px 15px;
+  padding: 5px 10px;
+}
+.textContainer {
+  text-align: center;
+  font-size: 8pt;
+  line-height: 20px;
+  padding: 10px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.middleContainer {
+  margin: 40px 15px;
+}
+.pictureOfMonthR {
+  height: 250px;
+  border-radius: 10px;
+}
+hr {
+  margin: 0px 15px;
+  color: #c4c4c4;
+}
