@@ -3,12 +3,12 @@ import React from 'react';
 
 export default function Quizz() {
   return (
-    <div>
+    <div className="bg-sky-900">
       <div>
-        <h1 className="quizz">Quizz</h1>
+        <h1 className="quizz font-family: Abhaya">Quizz</h1>
       </div>
       <div className="bloc">
-        <div className="question">
+        <div className="question bg-sky-900">
           <p>Question :</p>
           <p>
             HTML-ipsum est un générateur de faux texte (Lorem Ipsum) destiné à
