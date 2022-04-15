@@ -1,0 +1,122 @@
+.lettre {
+  height: auto;
+  margin-left: 250px;
+  /*display: flex;
+    justify-content: center;*/
+}
+
+.recG,
+.recM,
+.recD {
+  animation-name: trio;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 15%;
+  height: 75px;
+  width: 300px;
+  display: inline-block;
+  animation-duration: 3s;
+  animation-iteration-count: 2;
+  transition: all 1s ease-in-out;
+  /*border: solid;*/
+}
+
+.recG {
+  animation-name: rotationG;
+}
+.recM {
+  animation-name: rotationM;
+  background-color: rgba(54, 7, 7);
+}
+.recD {
+  animation-name: rotationD;
+}
+
+@keyframes trio {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(0px, 100%) rotate(180deg) scale(0.5);
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+  }
+}
+
+@keyframes rotationG {
+  from {
+    transform: 0;
+  }
+  33% {
+    transform: rotate(90deg) translateY(-171px);
+    animation-delay: 2s;
+  }
+  75% {
+    transform: rotate(180deg) scale(50%);
+  }
+  100% {
+    transform: rotate(360deg) scale(0) translate(-171px);
+  }
+}
+
+@keyframes rotationM {
+  from {
+    transform: 0;
+  }
+  33% {
+    transform: rotate(45deg) skew(30deg);
+    animation-delay: 2s;
+  }
+  75% {
+    transform: rotate(180deg) scale(50%);
+  }
+  100% {
+    transform: rotate(360deg) scale(0) translate(15);
+  }
+}
+
+@keyframes rotationD {
+  from {
+    transform: 0;
+  }
+  33% {
+    transform: rotate(90deg) translateY(189px);
+    animation-delay: 2s;
+  }
+  75% {
+    transform: rotate(180deg) scale(50%);
+  }
+  100% {
+    transform: rotate(360deg) scale(0) translate(180);
+  }
+}
+
+/**/
+
+/*  from {
+    transform: translate(0px, 0px);
+  to {
+    transform: rotate(360deg) scale(0);
+  }
+}
+0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(200px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    
+    }
+    to {
+        transform: rotate(90deg);
+    }
+  }
+*/
+/*bg-stone-800*/

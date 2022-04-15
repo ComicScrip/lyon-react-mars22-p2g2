@@ -1,9 +1,11 @@
 import './Quizz.css';
+import Logo from '../components/Logo';
 import React from 'react';
 
 export default function Quizz() {
   return (
     <div>
+      <Logo />
       <div>
         <h1 className="quizz">Quizz</h1>
       </div>
