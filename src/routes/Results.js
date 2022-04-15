@@ -1,6 +1,25 @@
 import './Results.css';
+import ResultApiContainer from './ResultApiContainer';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function Results() {
+  const [resultApi, setResultApi] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        'https://imdb-api.com/API/AdvancedSearch/k_9vhe3kdy?user_rating=1.0,3.0&genres=action,adventure&colors=color'
+      )
+      .then((res) => res.data)
+      .then((data) => {
+        setResultApi(data.results[10]);
+      })
+      .catch((err) => {
+        console.error(err.response.data);
+      });
+  }, []);
+
   return (
     <div>
       <div className="firstContainer">
@@ -8,42 +27,10 @@ export default function Results() {
       </div>
       <div className="middleContainer">
         <div className="secondContainerContent">
-          <img
-            className="pictureOfMonthR"
-            src="https://imdb-api.com/images/original/MV5BYTUyNjZkMjEtYmQ5OS00NzljLThiMmQtNWIwNTM1YjUyOWNjXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_Ratio0.6837_AL_.jpg"
-            alt="filmofthemonth"
-          />
-          <div className="textContainer">
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <div className="button">
-              <button type="submit">Like</button>
-              <button type="submit">Unlike</button>
-            </div>
-          </div>
+          <ResultApiContainer resultApi={resultApi} />
         </div>
         <div className="secondContainerContents">
-          <img
-            className="pictureOfMonthR"
-            src="https://imdb-api.com/images/original/MV5BYTUyNjZkMjEtYmQ5OS00NzljLThiMmQtNWIwNTM1YjUyOWNjXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_Ratio0.6837_AL_.jpg"
-            alt="filmofthemonth"
-          />
-          <div className="textContainer">
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <div className="button">
-              <button type="submit">Like</button>
-              <button type="submit">Unlike</button>
-            </div>
-          </div>
+          <ResultApiContainer resultApi={resultApi} />
         </div>
       </div>
       <hr />

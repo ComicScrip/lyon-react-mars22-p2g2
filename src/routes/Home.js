@@ -7,7 +7,7 @@ export default function Home() {
       <div className="mainContainerMediaQ">
         <div className="containerMediaQ">
           <div className="mainTitle">
-            <h2>FilmsClaqués.com</h2>
+            <h2>FILMSClaqués.com</h2>
           </div>
           <div className="mainPara">
             <p>
@@ -49,11 +49,13 @@ export default function Home() {
           <div className="borderMovie">
             <h2>Movie of the month</h2>
           </div>
-          <img
-            className="pictureOfMonth"
-            src="https://imdb-api.com/images/original/MV5BYTUyNjZkMjEtYmQ5OS00NzljLThiMmQtNWIwNTM1YjUyOWNjXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_Ratio0.6837_AL_.jpg"
-            alt="filmofthemonth"
-          />
+          <a href="/">
+            <img
+              className="pictureOfMonth"
+              src="https://imdb-api.com/images/original/MV5BYTUyNjZkMjEtYmQ5OS00NzljLThiMmQtNWIwNTM1YjUyOWNjXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_Ratio0.6837_AL_.jpg"
+              alt="filmofthemonth"
+            />
+          </a>
         </div>
       </div>
     </div>

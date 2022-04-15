@@ -5,6 +5,7 @@ body {
 .linkStyle {
   text-decoration: none;
   color: #938181;
+  font-style: italic;
 }
 .movieMonth {
   display: flex;
@@ -51,6 +52,7 @@ body {
   height: 250px;
   border-radius: 10px;
   margin-top: 30px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 760px) {
