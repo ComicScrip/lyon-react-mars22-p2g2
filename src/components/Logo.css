@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .lettre {
   height: auto;
   margin-left: 250px;
@@ -9,7 +13,7 @@
 .recM,
 .recD {
   animation-name: trio;
-  background-color: rgba(0, 0, 0, 0.8);
+  /*background-color: rgba(0, 0, 0, 0.8)*/
   margin-top: 15%;
   height: 75px;
   width: 300px;
