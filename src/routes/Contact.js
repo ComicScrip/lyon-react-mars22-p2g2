@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import styles from './ContactPage.module.css';
 
 export default function ContactPage() {
+  const [nom, setNom] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
@@ -15,7 +16,7 @@ export default function ContactPage() {
       type: 'success',
       position: 'bottom-center',
     });
-
+    setNom('');
     setEmail('');
     setMessage('');
   };
@@ -26,7 +27,19 @@ export default function ContactPage() {
 
       <form className={styles.form} onSubmit={handleSubmit}>
         <label htmlFor="email">
-          Email
+          Nom:
+          <input
+            type="nom"
+            id="nom"
+            className={styles.field}
+            required
+            value={nom}
+            onChange={(e) => setNom(e.target.value)}
+          />
+        </label>
+
+        <label htmlFor="email">
+          Email:
           <input
             type="email"
             id="email"
@@ -38,7 +51,7 @@ export default function ContactPage() {
         </label>
 
         <label htmlFor="message">
-          Message
+          Message:
           <textarea
             id="message"
             className={styles.field}
