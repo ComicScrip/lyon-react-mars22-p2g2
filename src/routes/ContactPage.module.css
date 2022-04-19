@@ -1,3 +1,10 @@
+body {
+  background-image: url('./img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
 .container form {
   width: 60%;
   text-align: center;
@@ -7,32 +14,32 @@
   margin-top: 1%;
   margin-left: auto;
   margin-right: auto;
+  color: #c4c4c4;
 }
 
 .form {
   position: absolute;
   border: 1px solid #ddd4d4;
   border-radius: 10%;
-  background-color: rgba(0, 0, 0, 0.678);
-  position: absolute;
-  width: 300px;
-  height: 400px;
-  left: 45px;
+  height: 350px;
+  left: 40px;
   top: 246.44px;
   border: 2px solid #ddd4d4;
 }
 h1 {
   position: absolute;
+  height: 50px;
+  width: 60%;
   display: flex;
-  justify-content: center;
-  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   border: 1px solid grey;
-  border-radius: 5%;
-  margin: 1px 0px;
-  left: 30px;
-  top: 20px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.267))
-    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.103));
+  margin: 130px 50px;
+  font-size: 20px;
+  filter: drop-shadow(0px 4px 4px #ddd4d4(0, 0, 0, 0.267))
+    drop-shadow(0px 4px 4px #ddd4d4(0, 0, 0, 0.103));
+  color: #ddd4d4;
+  left: 60px;
 }
 
 .field {
@@ -67,14 +74,17 @@ label {
   background-color: #ddd4d4;
 }
 
-/* MEDIA QUERIES */
+hr {
+  position: absolute;
+  width: 310px;
+  height: 0px;
+  left: 35px;
+  top: 700px;
+}
 
-@media screen and (min-width: 768px) {
-  .Container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 95vh;
+/* MEDIA QUERIES */
+@media screen and (min-width: 700px) {
+  .desktop h1 {
+    display: none;
   }
 }

@@ -60,12 +60,14 @@ export default function ContactPage() {
             onChange={(e) => setMessage(e.target.value)}
           />
         </label>
-
         <button type="submit" className={styles.submitBtn}>
           Envoyer
         </button>
       </form>
+
       <ToastContainer />
+
+      <hr className="ligne" />
     </div>
   );
 }
