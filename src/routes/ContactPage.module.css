@@ -6,15 +6,16 @@ body {
 }
 
 .container form {
+  position: absolute;
   width: 60%;
   text-align: center;
   padding: 10%;
   border: solid;
-  border-radius: 10px;
-  margin-top: 1%;
+  border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
   color: #c4c4c4;
+  top: 220px;
 }
 
 .form {
@@ -25,21 +26,25 @@ body {
   left: 40px;
   top: 246.44px;
   border: 2px solid #ddd4d4;
+  background: rgba(196, 196, 196, 0.22);
 }
 h1 {
   position: absolute;
-  height: 50px;
-  width: 60%;
+  width: 280px;
+  height: 40px;
+  left: 60px;
+  top: 130px;
+  font-family: 'Abhaya Libre';
+  font-size: 22px;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  border: 1px solid grey;
-  margin: 130px 50px;
-  font-size: 20px;
+  text-align: center;
+  /* Font police */
+  color: #ddd4d4;
+  border: 2px solid grey;
   filter: drop-shadow(0px 4px 4px #ddd4d4(0, 0, 0, 0.267))
     drop-shadow(0px 4px 4px #ddd4d4(0, 0, 0, 0.103));
   color: #ddd4d4;
-  left: 60px;
 }
 
 .field {
@@ -76,15 +81,14 @@ label {
 
 hr {
   position: absolute;
-  width: 310px;
+  width: 314px;
   height: 0px;
-  left: 35px;
+  left: 23px;
   top: 700px;
+  border: 1px solid #ddd4d4;
+  padding-left: 6%;
 }
 
 /* MEDIA QUERIES */
-@media screen and (min-width: 700px) {
-  .desktop h1 {
-    display: none;
-  }
+@media h screen and (min-width: 600px) {
 }
