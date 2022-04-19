@@ -5,6 +5,7 @@
   padding: 0px;
   font-family: 'Abhaya Libre', serif;
   font-size: 10pt;
+  color: #ddd4d4;
 }
 
 .profilPageContainer {
@@ -66,10 +67,11 @@ h2 {
 }
 
 .achievement {
-  border: 1px solid grey;
+  border: 1px solid #c4c4c4;
   border-radius: 5%;
   margin: 0px 20px;
   height: 20vh;
+  background: rgba(196, 196, 196, 0.22);
 }
 
 .achievementTitle {
@@ -168,16 +170,9 @@ h2 {
     display: initial;
     margin-top: 20px;
     width: 300px;
-    height: 100px;
     border: 1px solid grey;
-    overflow: hidden;
-  }
-
-  .profilBioScrollContainer {
-    overflow: auto;
-    width: 310px;
-    height: 90px;
-    margin: 5px;
+    background: rgba(196, 196, 196, 0.22);
+    border-radius: 10px;
   }
 
   .profilBio p {

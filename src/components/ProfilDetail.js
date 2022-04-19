@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Profil.module.css';
-import profilPicture from '../pictures/profil.jpeg';
+import profilPicture from '../img/profil.jpeg';
 
 function ProfilDetail() {
   return (
@@ -14,20 +14,24 @@ function ProfilDetail() {
             <h1>Jeanne Profil</h1>
           </div>
           <div className={styles.profilDescription}>
-            <li>Prénom: Jeanne</li>
-            <li>Age: 32 ans</li>
-            <li>Catégories préférées : Action, aventure, thriller</li>
+            <li>
+              <b>Prénom</b> : Jeanne
+            </li>
+            <li>
+              <b>Age</b> : 32 ans
+            </li>
+            <li>
+              <b>Catégories préférées</b> : Action, aventure, thriller
+            </li>
           </div>
           <div className={styles.profilBio}>
-            <div className={styles.profilBioScrollContainer}>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                blandit leo ac nulla finibus laoreet. Vestibulum molestie
-                iaculis dapibus. Curabitur non nunc ex. Integer magna enim,
-                elementum id sollicitudin vitae, tempus sit amet nibh. Sed
-                tristique nisi leo, at blandit metus scelerisque viverra.
-              </p>
-            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              blandit leo ac nulla finibus laoreet. Vestibulum molestie iaculis
+              dapibus. Curabitur non nunc ex. Integer magna enim, elementum id
+              sollicitudin vitae, tempus sit amet nibh. Sed tristique nisi leo,
+              at blandit metus scelerisque viverra.
+            </p>
           </div>
         </section>
       </div>
