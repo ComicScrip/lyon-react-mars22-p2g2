@@ -14,6 +14,7 @@ function ResultApiContainer({ resultApi }) {
         <p className="plot">{resultApi.plot}</p>
         <br />
         <p className="runtime">{resultApi.runtimeStr}</p>
+        <p className="knowMore">En savoir +</p>
         <div className="button">
           <button type="submit">
             <FcLike size={30} />

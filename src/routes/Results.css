@@ -17,6 +17,7 @@
   border-radius: 10px;
   margin: 0px 15px 0px 15px;
   padding: 5px 10px;
+  background: rgba(196, 196, 196, 0.3);
 }
 .secondContainerContents {
   color: #ddd4d4;
@@ -27,6 +28,7 @@
   border-radius: 10px;
   margin: 20px 15px 0px 15px;
   padding: 5px 10px;
+  background: rgba(196, 196, 196, 0.3);
 }
 .textContainer {
   text-align: center;
@@ -57,6 +59,10 @@ hr {
 }
 .plot {
   font-size: 10pt;
+}
+.knowMore {
+  margin-top: 20px;
+  color: #c4c4c4;
 }
 
 @media screen and (min-width: 1160px) {
