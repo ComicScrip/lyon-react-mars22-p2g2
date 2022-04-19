@@ -1,6 +1,6 @@
 .nav {
   height: 6vh;
-  background: linear-gradient(45deg, rgb(16, 14, 156), #3f92a8);
+  background: #3f92a8;
   display: flex;
 }
 
@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  background: linear-gradient(45deg, rgb(16, 14, 156), #3f92a8);
+  background: #3f92a8;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   width: 90px;
-  height: 56px;
+  height: 60px;
 }
 
 .items {
