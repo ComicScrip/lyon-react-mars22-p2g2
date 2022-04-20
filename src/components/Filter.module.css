@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+
+body {
+  font-family: 'Abhaya Libre', serif;
+  color: #c4c4c4;
+}
+
+.title {
+  padding: 10px 0px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* FILTRES */
+
+.filterGridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  margin: auto;
+  background: rgba(196, 196, 196, 0.22);
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+}
+
+.filterContainer {
+  margin: 10px;
+}
+
+.filterContainer > h2 {
+  font-size: 9pt;
+  text-align: center;
+}
+
+.filterFond {
+  background-color: #c4c4c4;
+  height: 70px;
+  margin-top: 5px;
+}
+
+.filterContainerReinitialiser {
+  margin: auto;
+  font-size: 10pt;
+  text-align: center;
+}
+
+.filmContainer {
+  display: grid;
+}
