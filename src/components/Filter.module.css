@@ -25,7 +25,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 90%;
-  margin: auto;
+  margin: auto auto 10px auto;
   background: rgba(196, 196, 196, 0.22);
   border: 1px solid #c4c4c4;
   border-radius: 10px;
@@ -44,6 +44,12 @@ body {
   background-color: #c4c4c4;
   height: 70px;
   margin-top: 5px;
+  color: black;
+  font-size: 9pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3px;
 }
 
 .filterContainerReinitialiser {
@@ -52,6 +58,89 @@ body {
   text-align: center;
 }
 
-.filmContainer {
+/* FILMS */
+
+.filmGridContainer {
   display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.filmContainer {
+  display: flex;
+  width: 90%;
+  height: 27vh;
+  margin: 10px auto;
+}
+
+.filmAfficheContainer {
+  width: 40%;
+}
+
+.filmAffiche {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+
+.filmDetails {
+  width: 60%;
+  height: 100%;
+  font-size: 10pt;
+}
+
+.filmPlot {
+  height: 60%;
+  width: 80%;
+  overflow: hidden;
+  text-align: center;
+  margin: 5px auto 0px auto;
+}
+
+.filmPlotOverflow {
+  overflow: auto;
+  height: 100%;
+}
+
+.filmButtons {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+  /* LAYOUT */
+
+  .title {
+    width: 30%;
+    margin: 30px auto 30px auto;
+  }
+
+  .firstContainer {
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+  }
+
+  /* FILTRE */
+  .filterGridContainer {
+    grid-template-columns: repeat(1, 1fr);
+    width: 20%;
+  }
+
+  /* FILM */
+  .filmGridContainer {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    margin-left: 20px;
+    height: 80vh;
+    overflow: auto;
+  }
+
+  .filmPlotOverflow {
+    width: 111%;
+  }
 }
