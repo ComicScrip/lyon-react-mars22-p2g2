@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './Filter.module.css';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { RiCloseFill } from 'react-icons/ri';
 
 function FilmContainer() {
   return (
@@ -13,18 +15,22 @@ function FilmContainer() {
       </section>
       <section className={styles.filmDetails}>
         <div className={styles.filmPlot}>
-          <div className={styles.filmPlotOverflow}>
-            <p>
-              Sangoku, un jeune lycéen doit répondre à la dernière volonté de
-              son grand-père : rechercher maître Roshi, un expert en arts
-              martiaux. Ce dernier lui donne la mission de retrouver les sept
-              boules de cristal, les Dragon Balls, avant qu'un puissant démon,
-              Lord Piccolo, ne parvienne à les réunir pour dominer le monde en
-              utilisant leurs pouvoirs.
-            </p>
+          <p>
+            Sangoku, un jeune lycéen doit répondre à la dernière volonté de son
+            grand-père : rechercher maître Roshi, un expert en arts martiaux. Ce
+            dernier lui donne la mission de retrouver les sept boules de
+            cristal, les Dragon Balls, avant qu'un puissant démon, Lord Piccolo,
+            ne parvienne à les réunir pour dominer le monde en utilisant leurs
+            pouvoirs.
+          </p>
+        </div>
+        <div className={styles.filmDetailPlus}>
+          En savoir +
+          <div className={styles.filmButtons}>
+            <AiOutlineHeart className={styles.buttons} />
+            <RiCloseFill className={styles.buttons} />
           </div>
         </div>
-        <div className={styles.filmButtons}>En savoir +</div>
       </section>
     </div>
   );

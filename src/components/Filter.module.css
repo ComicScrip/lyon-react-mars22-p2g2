@@ -89,24 +89,38 @@ body {
 }
 
 .filmPlot {
-  height: 60%;
+  height: 55%;
   width: 80%;
-  overflow: hidden;
+  overflow: auto;
   text-align: center;
   margin: 5px auto 0px auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.filmPlotOverflow {
-  overflow: auto;
-  height: 100%;
+.filmPlot::-webkit-scrollbar {
+  display: none;
 }
 
-.filmButtons {
+.filmDetailPlus {
   height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.filmButtons {
+  display: flex;
+  margin-top: 10px;
+}
+
+.buttons {
+  border: 1px solid #c4c4c4;
+  border-radius: 50%;
+  padding: 8px;
+  background: rgba(196, 196, 196, 0.22);
+  margin-right: 5px;
 }
 
 /* MEDIA QUERIES */
@@ -131,6 +145,10 @@ body {
     width: 20%;
   }
 
+  .filterContainerReinitialiser {
+    padding-bottom: 10px;
+  }
+
   /* FILM */
   .filmGridContainer {
     grid-template-columns: repeat(2, 1fr);
@@ -138,6 +156,12 @@ body {
     margin-left: 20px;
     height: 80vh;
     overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .filmGridContainer::-webkit-scrollbar {
+    display: none;
   }
 
   .filmPlotOverflow {
