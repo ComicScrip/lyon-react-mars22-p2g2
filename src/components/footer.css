@@ -1,5 +1,5 @@
 .main-footer {
-  height: 6vh;
+  height: 7vh;
   display: flex;
 
   background: #3f92a8;
@@ -15,6 +15,7 @@
 .content {
   color: #fff;
   font-size: 15px;
+  margin-left: 5px;
 }
 
 .logo-content {
