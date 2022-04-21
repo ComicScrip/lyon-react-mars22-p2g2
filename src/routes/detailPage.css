@@ -4,25 +4,21 @@ body {
 .mainContainerProfilPage {
   display: flex;
   justify-content: center;
-  margin: 40px 30px;
+  margin: 40px 30px 0px 30px;
 }
 .secondContainerProfilPage {
   font-size: 9pt;
 }
 .synopsisContainer {
-  font-size: 8pt;
+  font-size: 9pt;
   text-align: center;
-  margin: 0px 0px 30px 0;
+  margin: 10px 0px 20px 0;
+  line-height: 30px;
 }
 .filmContainer {
   line-height: 30px;
 }
-.realContainer {
-  margin-top: 30px;
-}
-.rateContainer {
-  margin-top: 30px;
-}
+
 .distributionTitle {
   display: flex;
   justify-content: center;
@@ -35,6 +31,7 @@ body {
 }
 .filmDetailPicture {
   height: 30vh;
+  margin-right: 10px;
 }
 .firstPicture {
   height: 200px;
@@ -53,17 +50,23 @@ body {
 }
 @media screen and (min-width: 768px) {
   .filmDetailPicture {
-    height: 500px;
+    height: 700px;
+    margin-right: 15px;
+  }
+  .secondContainerProfilPage {
+    margin-right: 500px;
+    line-height: 220px;
+  }
+  .synopsisContainer {
+    font-size: 12pt;
   }
   .mainContainerProfilPage {
     display: flex;
-    justify-content: flex-start;
-    margin-left: 60px;
+    justify-content: center;
   }
   .synopsisContainer {
-    width: 18%;
-    margin-left: 60px;
     text-align: inherit;
+    margin: 20px 300px;
   }
   .trailer {
     display: flex;
@@ -72,6 +75,11 @@ body {
   .firstPicture {
     height: 400px;
     width: 300px;
+  }
+  .containerActorsPicturesOne {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 

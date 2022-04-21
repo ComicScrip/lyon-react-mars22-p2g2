@@ -1,41 +1,63 @@
 import './detailPage.css';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import Rating from '@mui/material/Rating';
 
 export default function DetailPage() {
+  const [arrayApi, setArrayApi] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        'https://imdb-api.com/en/API/SearchMovie/k_9vhe3kdy/inception%202010'
+      )
+      .then((res) => res.data)
+      .then((data) => {
+        setArrayApi(data.results);
+      })
+      .catch((err) => {
+        console.error(err.response.data);
+      });
+  }, []);
+
   return (
     <div>
       <div className="mainContainerProfilPage">
-        <img
-          className="filmDetailPicture"
-          src="https://m.media-amazon.com/images/M/MV5BYTUyNjZkMjEtYmQ5OS00NzljLThiMmQtNWIwNTM1YjUyOWNjXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_Ratio0.6837_AL_.jpg"
-          alt=""
-        />
+        <img src={arrayApi.image} alt="" />
         <div className="secondContainerProfilPage">
           <div className="filmContainer">
-            <h2>TITRE FILM</h2>
-            <h2>DATE DE SORTIE</h2>
-            <h2>RUNTIME</h2>
+            <h2>{arrayApi.title}</h2>
+            <h2>{arrayApi.description}</h2>
+            <h2>{arrayApi.runtimeStr}</h2>
           </div>
           <div className="realContainer">
             <h2>REALISATEUR</h2>
           </div>
-          <h1 className="rateContainer">RATE</h1>
+          <h1 className="rateContainer">
+            <Rating
+              name="half-rating-read"
+              value={arrayApi.imDbRating}
+              precision={0.5}
+              readOnly
+            />
+          </h1>
         </div>
         <div className="trailerMediaQ">
           <iframe
             title="Trailer"
             src="https://www.imdb.com/video/vi2959588889"
+            width="1000"
+            height="700"
+            allowFullScreen="true"
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true"
+            frameBorder="no"
+            scrolling="no"
           />
         </div>
       </div>
       <div className="synopsisContainer">
-        <h3>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-        </h3>
+        <h3>{arrayApi.plot}</h3>
       </div>
       <hr />
       <div className="distributionTitle">
@@ -58,7 +80,7 @@ export default function DetailPage() {
             alt=""
           />
         </div>
-        <div className=" ">
+        <div className="actorContainer">
           <h4>ACTOR</h4>
           <img
             className="firstPicture"
@@ -94,7 +116,17 @@ export default function DetailPage() {
         </div>
       </div>
       <div className="trailer">
-        <iframe title="Trailer" src="https://www.imdb.com/video/vi2959588889" />
+        <iframe
+          title="Trailer"
+          src="https://www.imdb.com/video/vi2959588889"
+          width="480"
+          height="270"
+          allowFullScreen="true"
+          mozallowfullscreen="true"
+          webkitallowfullscreen="true"
+          frameBorder="no"
+          scrolling="no"
+        />
       </div>
     </div>
   );
