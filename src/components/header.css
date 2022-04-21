@@ -21,20 +21,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
 }
 
 .items {
   margin-right: 10px;
   color: #f1f1f1;
   cursor: pointer;
-  width: 70px;
-  height: 30px;
-  background: rgba(196, 196, 196, 0.3);
+  width: 90px;
+  height: 40px;
+  background: #26798b;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .btn {
@@ -46,16 +49,16 @@
     flex-direction: column;
     height: 200px;
     width: 50%;
-
     top: 6vh;
-    left: 15vh;
+    left: 18vh;
   }
   .item {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70px;
+    width: 50px;
     height: 50px;
+    margin-top: 0px;
   }
   .items :nth-child(1) {
     border-top: 1px solid #f1f1f1;
@@ -64,17 +67,28 @@
   .items {
     height: 50px;
     width: 100%;
-    border-bottom: 1px solid #fff;
     line-height: 50px;
+    margin-right: 0px;
   }
   .btn {
     display: block;
     position: absolute;
-    right: 15px;
-    top: 5px;
+    right: 10px;
+    top: 10px;
     height: 4vh;
     width: 50px;
-
     cursor: pointer;
+    color: #f1f1f1;
+  }
+
+  .btn2 {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 4vh;
+    width: 50px;
+    cursor: pointer;
+    color: #f1f1f1;
   }
 }

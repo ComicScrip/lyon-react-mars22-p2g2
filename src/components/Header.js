@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './header.css';
-import burgerIcon from '../image/menu.png';
+import { AiOutlineClose } from 'react-icons/ai';
 import logo from '../image/logo.png';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -55,6 +56,7 @@ export default function Header() {
             Profil
           </NavLink>
           <NavLink
+            GrClose
             className={'items'}
             to="../routes/Contact"
             style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
@@ -63,12 +65,11 @@ export default function Header() {
           </NavLink>
         </div>
       )}
-      <img
-        src={burgerIcon}
-        alt="Burger icon"
-        onClick={toggleNavSmallScreen}
-        className="btn"
-      />
+      {toggleMenu ? (
+        <AiOutlineClose className="btn2" onClick={toggleNavSmallScreen} />
+      ) : (
+        <GiHamburgerMenu className="btn" onClick={toggleNavSmallScreen} />
+      )}
     </nav>
   );
 }
