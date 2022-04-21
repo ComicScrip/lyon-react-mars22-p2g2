@@ -5,57 +5,49 @@ body {
   min-height: 100vh;
 }
 
-.container form {
-  position: absolute;
-  width: 60%;
-  text-align: center;
-  padding: 10%;
-  border: solid;
-  border-radius: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #c4c4c4;
-  top: 220px;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 15%;
+  padding: 10px;
+  border: groove 1px #ddd4d4;
+  font-size: 18px;
+  border-radius: 5px;
+  font-family: Abhaya Libre;
+  color: #ddd4d4;
+}
+.container {
+  background: rgba(196, 196, 196, 0.22);
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 0% 9%;
 }
 
 .form {
-  position: absolute;
-  border: 1px solid #ddd4d4;
-  border-radius: 10%;
-  height: 350px;
-  left: 40px;
-  top: 246.44px;
-  border: 2px solid #ddd4d4;
-  background: rgba(196, 196, 196, 0.22);
-}
-h1 {
-  position: absolute;
-  width: 280px;
-  height: 40px;
-  left: 60px;
-  top: 130px;
-  font-family: 'Abhaya Libre';
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  margin: 0% 10%;
+  height: 357px;
   /* Font police */
-  color: #ddd4d4;
-  border: 2px solid grey;
-  filter: drop-shadow(0px 4px 4px #ddd4d4(0, 0, 0, 0.267))
-    drop-shadow(0px 4px 4px #ddd4d4(0, 0, 0, 0.103));
-  color: #ddd4d4;
+  text-align: center;
+
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 15px;
 }
 
 .field {
   border: 1px solid #ddd4d4;
-  border-radius: 20px;
+  border-radius: 15px;
   display: block;
   width: 100%;
-  padding: 8px;
+  padding: 5px;
+  font-size: 2vh;
   box-sizing: border-box;
   margin-bottom: 20px;
-  margin-top: 15px;
+  margin-top: 20px;
   background-color: #ddd4d4;
 }
 
@@ -80,15 +72,33 @@ label {
 }
 
 hr {
+  margin: 10%;
+  color: #ddd4d4;
+}
+
+/*hr {
+  width: 70%;
+
   position: absolute;
-  width: 314px;
-  height: 0px;
-  left: 23px;
-  top: 700px;
+  left: 90px;
+  top: 630px;
   border: 1px solid #ddd4d4;
-  padding-left: 6%;
+  padding-left: 10%;
 }
 
 /* MEDIA QUERIES */
-@media h screen and (min-width: 600px) {
+@media screen and (min-width: 688px) {
+  .desktop {
+    display: none;
+  }
+  .container {
+    display: flex;
+    margin: 5%;
+    justify-content: center;
+    padding-top: 25px;
+  }
+
+  .hr {
+    top: 1000px;
+  }
 }

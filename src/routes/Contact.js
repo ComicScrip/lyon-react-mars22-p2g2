@@ -22,50 +22,51 @@ export default function ContactPage() {
   };
 
   return (
-    <div className={styles.container}>
+    <div>
       <h1>Formulaire de contact</h1>
+      <div className={styles.container}>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <label htmlFor="email">
+            Nom:
+            <input
+              type="nom"
+              id="nom"
+              className={styles.field}
+              required
+              value={nom}
+              onChange={(e) => setNom(e.target.value)}
+            />
+          </label>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <label htmlFor="email">
-          Nom:
-          <input
-            type="nom"
-            id="nom"
-            className={styles.field}
-            required
-            value={nom}
-            onChange={(e) => setNom(e.target.value)}
-          />
-        </label>
+          <label htmlFor="email">
+            Email:
+            <input
+              type="email"
+              id="email"
+              className={styles.field}
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </label>
 
-        <label htmlFor="email">
-          Email:
-          <input
-            type="email"
-            id="email"
-            className={styles.field}
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
+          <label htmlFor="message">
+            Message:
+            <textarea
+              id="message"
+              className={styles.field}
+              required
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+          </label>
+          <button type="submit" className={styles.submitBtn}>
+            Envoyer
+          </button>
+        </form>
 
-        <label htmlFor="message">
-          Message:
-          <textarea
-            id="message"
-            className={styles.field}
-            required
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-        </label>
-        <button type="submit" className={styles.submitBtn}>
-          Envoyer
-        </button>
-      </form>
-
-      <ToastContainer />
+        <ToastContainer />
+      </div>
 
       <hr className="ligne" />
     </div>
