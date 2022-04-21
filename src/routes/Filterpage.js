@@ -1,7 +1,24 @@
 import FilmContainer from '../components/FilmContainer';
 import styles from '../components/Filter.module.css';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 export default function Filterpage() {
+  const [arrayApi, setArrayApi] = useState([]);
+  useEffect(() => {
+    axios
+      .get(
+        'https://imdb-api.com/API/AdvancedSearch/k_8kbcras1?user_rating=1.0,3.0&genres=action,adventure'
+      )
+      .then((res) => res.data)
+      .then((data) => {
+        setArrayApi(data.results);
+      })
+      .catch((err) => {
+        console.error(err.response.data);
+      });
+  }, []);
+
   return (
     <div>
       <div className={styles.title}>
@@ -59,12 +76,9 @@ export default function Filterpage() {
           </div>
         </section>
         <section className={styles.filmGridContainer}>
-          <FilmContainer />
-          <FilmContainer />
-          <FilmContainer />
-          <FilmContainer />
-          <FilmContainer />
-          <FilmContainer />
+          {arrayApi.map((resultApi) => (
+            <FilmContainer resultApi={resultApi} key={resultApi.id} />
+          ))}
         </section>
       </div>
     </div>
