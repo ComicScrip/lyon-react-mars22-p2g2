@@ -1,5 +1,5 @@
 .nav {
-  height: 7vh;
+  height: 6vh;
   background: #3f92a8;
   display: flex;
 }
@@ -49,8 +49,8 @@
     flex-direction: column;
     height: 200px;
     width: 50%;
-    top: 7vh;
-    left: 19vh;
+    top: 6vh;
+    left: 18vh;
   }
   .item {
     display: flex;
