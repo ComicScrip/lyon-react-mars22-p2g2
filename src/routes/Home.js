@@ -19,7 +19,7 @@ export default function Home() {
         </div>
         <div className="quizzYes">
           <Button
-            href="/"
+            href="/quizz &&éé"
             variant="outlined"
             sx={{
               borderColor: '#C4C4C4',
@@ -39,7 +39,7 @@ export default function Home() {
           </Button>
         </div>
         <div className="quizzNo">
-          <a className="linkStyle" href="/">
+          <a className="linkStyle" href="/filterpage">
             Non, je veux choisir mes films
           </a>
         </div>

@@ -29,6 +29,8 @@
   padding: 5px 10px;
 }
 .textContainer {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 10px;
 }
@@ -36,6 +38,14 @@
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+}
+.buttons {
+  border: 1px solid #c4c4c4;
+  border-radius: 50%;
+  padding: 8px;
+  background: rgba(196, 196, 196, 0.22);
+  margin-right: 5px;
+  cursor: pointer;
 }
 button {
   cursor: pointer;
@@ -47,6 +57,16 @@ button {
   height: 250px;
   border-radius: 10px;
   cursor: pointer;
+}
+.knowMoreMovie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.knowPara {
+  margin-top: 50px;
+  text-decoration: none;
+  color: #c4c4c4;
 }
 hr {
   margin: 0px 15px;
@@ -80,17 +100,20 @@ hr {
   .textContainer {
     font-size: 20pt;
   }
-
+  .knowPara {
+    margin-bottom: 50px;
+  }
   hr {
     margin: 0px 100px;
   }
   .runtime {
     font-size: 10pt;
+    margin-top: 40px;
   }
   .plot {
     font-size: 15pt;
   }
   .containerResolv {
-    margin-bottom: 120px;
+    margin-bottom: 60px;
   }
 }
