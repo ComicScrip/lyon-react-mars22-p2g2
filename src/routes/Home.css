@@ -57,6 +57,9 @@ body {
   margin-top: 30px;
   cursor: pointer;
 }
+.quizzYes {
+  display: none;
+}
 
 @media screen and (min-width: 760px) {
   .containerMediaQ {
@@ -69,12 +72,18 @@ body {
   .movieMonth {
     position: relative;
   }
+  .mainPara {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    line-height: 25pt;
+  }
   .mainContainerMediaQ {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 86vh;
-    width: 100%;
+    width: 87%;
   }
   .borderMovie {
     position: absolute;
@@ -91,5 +100,9 @@ body {
   .pictureOfMonth {
     min-height: 50vh;
     opacity: 70%;
+    margin: 0;
+  }
+  .mainTitle {
+    padding: 10px;
   }
 }
