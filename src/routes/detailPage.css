@@ -1,0 +1,112 @@
+body {
+  color: white;
+}
+.mainContainerProfilPage {
+  display: flex;
+  justify-content: center;
+  margin: 40px 30px 0px 30px;
+}
+.secondContainerProfilPage {
+  font-size: 9pt;
+}
+.spaceBtwTitle {
+  margin: 10px 0px 10px 0px;
+}
+.synopsisContainer {
+  font-size: 9pt;
+  text-align: center;
+  margin: 10px 0px 20px 0;
+  line-height: 30px;
+}
+.filmContainer {
+  line-height: 30px;
+  font-size: 8pt;
+}
+.distributionTitle {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 30px 0;
+}
+.containerActorsPicturesOne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.filmDetailPicture {
+  height: 30vh;
+  margin-right: 10px;
+}
+.firstPicture {
+  height: 200px;
+  width: 160px;
+  margin: 10px 0px 30px 0px;
+}
+.actorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.trailer {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.moviePicture {
+  height: 35vh;
+}
+.rateContainer {
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .filmDetailPicture {
+    height: 700px;
+    margin-right: 15px;
+  }
+  .moviePicture {
+    height: 45vh;
+  }
+  .secondContainerProfilPage {
+    line-height: 220px;
+    padding-right: 30px;
+  }
+  .fontSyno {
+    font-size: 12pt;
+  }
+  .synopsisContainer {
+    text-align: inherit;
+    margin: 20px 300px;
+  }
+  .trailer {
+    display: flex;
+    justify-content: center;
+  }
+  .firstPicture {
+    height: 400px;
+    width: 300px;
+  }
+  .containerActorsPicturesOne {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .filmContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 180px;
+    padding-left: 15px;
+  }
+  .rateContainer {
+    padding-left: 15px;
+    margin-top: 0px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .trailerMediaQ {
+    display: none;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .trailer {
+    display: none;
+  }
+}
