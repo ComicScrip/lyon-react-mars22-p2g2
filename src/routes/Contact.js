@@ -67,8 +67,21 @@ export default function ContactPage() {
 
         <ToastContainer />
       </div>
-
-      <hr className="ligne" />
+      <div className={styles.ligne}>
+        <hr className="ligne" />
+      </div>
+      <div className={styles.apropos}>
+        <p>A propos de Nanar production </p>
+      </div>
+      <div className={styles.detail}>
+        <h2>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+          at ultrices turpis, non hendrerit leo. Vivamus auctor tempus nulla,
+          nec elementum augue tincidunt vel. Nam et pellentesque lectus, vel
+          fermentum augue. Maecenas pretium aliquet ipsum, ac fermentum nibh
+          sagittis nec. Donec euismod dictum turpis sed accumsan.
+        </h2>
+      </div>
     </div>
   );
 }
