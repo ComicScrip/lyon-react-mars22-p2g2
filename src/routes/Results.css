@@ -17,6 +17,7 @@
   border-radius: 10px;
   margin: 0px 15px 0px 15px;
   padding: 5px 10px;
+  background: rgba(196, 196, 196, 0.22);
 }
 .secondContainerContents {
   color: #ddd4d4;
@@ -27,6 +28,7 @@
   border-radius: 10px;
   margin: 20px 15px 0px 15px;
   padding: 5px 10px;
+  background: rgba(196, 196, 196, 0.22);
 }
 .textContainer {
   display: flex;
@@ -35,7 +37,7 @@
   padding: 10px;
 }
 .button {
-  display: flex;
+  display: none;
   justify-content: space-around;
   margin-top: 20px;
 }
