@@ -121,6 +121,7 @@ body {
   padding: 8px;
   background: rgba(196, 196, 196, 0.22);
   margin-right: 5px;
+  cursor: pointer;
 }
 
 /* MEDIA QUERIES */

@@ -4,11 +4,16 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export default function Filterpage() {
+  const [checked, setChecked] = useState(false);
+  const handleChangeCheck = () => {
+    setChecked(!checked);
+  };
+
   const [arrayApi, setArrayApi] = useState([]);
   useEffect(() => {
     axios
       .get(
-        'https://imdb-api.com/API/AdvancedSearch/k_8kbcras1?user_rating=1.0,3.0&genres=action,adventure'
+        'https://imdb-api.com/API/AdvancedSearch/k_8kbcras1?user_rating=1.0,3.0&genres=comedy'
       )
       .then((res) => res.data)
       .then((data) => {
@@ -33,28 +38,16 @@ export default function Filterpage() {
           <div className={styles.filterContainer}>
             <h2>Catégorie</h2>
             <div className={styles.filterFond}>
-              <div>
+              <div onChange={handleChangeCheck}>
                 <label htmlFor="action">
-                  <input type="checkbox" id="action" name="action" />
+                  <input
+                    type="radio"
+                    value="action"
+                    name="categorie"
+                    id="action"
+                    checked={checked}
+                  />
                   Action
-                </label>
-              </div>
-              <div>
-                <label htmlFor="comédie">
-                  <input type="checkbox" id="comédie" name="comédie" />
-                  Comédie
-                </label>
-              </div>
-              <div>
-                <label htmlFor="famille">
-                  <input type="checkbox" id="famille" name="famille" />
-                  Famille
-                </label>
-              </div>
-              <div>
-                <label htmlFor="fantastique">
-                  <input type="checkbox" id="fantastique" name="fantastique" />
-                  Fantastique
                 </label>
               </div>
             </div>
