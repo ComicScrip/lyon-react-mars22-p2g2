@@ -47,7 +47,7 @@ export default function Filterpage() {
                     id="action"
                     checked={checked}
                   />
-                  Action
+                  <span style={{ color: 'black' }}>Action</span>
                 </label>
               </div>
             </div>

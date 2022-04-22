@@ -1,10 +1,9 @@
 body {
-  background-image: url('./img/unnamedmod.jpg');
+  background-image: url('./image/unnamedmod.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
 }
-
 * {
   margin: 0;
   padding: 0;
