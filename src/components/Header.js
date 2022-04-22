@@ -36,21 +36,21 @@ export default function Header() {
         <div className="liste">
           <NavLink
             className={'items'}
-            to="../routes/Home"
+            to="/"
             style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
           >
             Home
           </NavLink>
           <NavLink
             className={'items'}
-            to="../routes/Quizz"
+            to="/Quizz"
             style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
           >
             Quizz
           </NavLink>
           <NavLink
             className={'items'}
-            to="../routes/Profil"
+            to="/Profil"
             style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
           >
             Profil
@@ -58,7 +58,7 @@ export default function Header() {
           <NavLink
             GrClose
             className={'items'}
-            to="../routes/Contact"
+            to="/Contact"
             style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
           >
             Contact
