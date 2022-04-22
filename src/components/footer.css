@@ -1,0 +1,33 @@
+.main-footer {
+  height: 7vh;
+  display: flex;
+
+  background: #3f92a8;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.content {
+  color: #fff;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.logo-content {
+  display: flex;
+  align-items: flex-end;
+}
+
+.logo {
+  height: 30px;
+  width: 20;
+}
+
+h3 {
+  font-size: 12px;
+}
