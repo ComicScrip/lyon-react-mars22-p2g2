@@ -2,6 +2,9 @@
 body {
   font-family: 'Abhaya Libre', serif;
 }
+.mainContainerMediaQ {
+  height: 87vh;
+}
 .linkStyle {
   text-decoration: none;
   color: #938181;
@@ -69,7 +72,8 @@ body {
   .mainContainerMediaQ {
     display: flex;
     justify-content: center;
-    height: 100%;
+    align-items: center;
+    height: 86vh;
     width: 100%;
   }
   .borderMovie {
@@ -77,15 +81,15 @@ body {
     border: solid;
     border-color: #c4c4c4;
     border-radius: 10px;
-    top: 250px;
+    top: 240px;
     z-index: 1;
     width: 74%;
+    display: flex;
+    justify-content: center;
+    font-size: 10pt;
   }
   .pictureOfMonth {
     min-height: 50vh;
     opacity: 70%;
-  }
-  .mainContainer {
-    margin-top: 200px;
   }
 }

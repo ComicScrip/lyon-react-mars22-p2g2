@@ -59,11 +59,10 @@ hr {
   font-size: 10pt;
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1050px) {
   .middleContainer {
     display: flex;
     justify-content: center;
-    margin: 200px;
   }
   .secondContainerContents {
     margin: 0px 15px 0px 15px;
@@ -72,7 +71,7 @@ hr {
   }
   .firstContainer {
     width: 20%;
-    margin: 100px auto;
+    margin: 50px auto;
   }
   .pictureOfMonthR {
     height: 500px;
@@ -90,5 +89,8 @@ hr {
   }
   .plot {
     font-size: 15pt;
+  }
+  .containerResolv {
+    margin-bottom: 120px;
   }
 }

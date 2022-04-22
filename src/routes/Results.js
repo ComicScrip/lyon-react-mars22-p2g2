@@ -22,18 +22,20 @@ export default function Results() {
 
   return (
     <div>
-      <div className="firstContainer">
-        <h2>Choose one</h2>
-      </div>
-      <div className="middleContainer">
-        <div className="secondContainerContent">
-          <ResultApiContainer resultApi={resultApi} />
+      <div className="containerResolv">
+        <div className="firstContainer">
+          <h2>Choose one</h2>
         </div>
-        <div className="secondContainerContents">
-          <ResultApiContainer resultApi={resultApi} />
+        <div className="middleContainer">
+          <div className="secondContainerContent">
+            <ResultApiContainer resultApi={resultApi} />
+          </div>
+          <div className="secondContainerContents">
+            <ResultApiContainer resultApi={resultApi} />
+          </div>
         </div>
+        <hr />
       </div>
-      <hr />
     </div>
   );
 }
