@@ -50,12 +50,21 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 3px;
+  overflow: auto;
 }
 
 .filterContainerReinitialiser {
   margin: auto;
   font-size: 10pt;
   text-align: center;
+}
+
+.filterContainerReinitialiser > p {
+  cursor: pointer;
+}
+
+.filterContainerReinitialiser > p:hover {
+  color: orange;
 }
 
 /* FILMS */
@@ -111,7 +120,7 @@ body {
 }
 
 .filmButtons {
-  display: flex;
+  display: none;
   margin-top: 10px;
 }
 
@@ -124,6 +133,10 @@ body {
   cursor: pointer;
 }
 
+.filmDetailPlus > a {
+  cursor: pointer;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 768px) {
@@ -131,13 +144,13 @@ body {
 
   .title {
     width: 30%;
-    margin: 30px auto 30px auto;
+    margin: 60px auto 30px auto;
   }
 
   .firstContainer {
     flex-direction: row;
     width: 80%;
-    margin: 20px auto;
+    margin: 50px auto;
   }
 
   /* FILTRE */
@@ -147,7 +160,7 @@ body {
   }
 
   .filterContainerReinitialiser {
-    padding-bottom: 10px;
+    padding: 10px 10px 20px 10px;
   }
 
   /* FILM */
@@ -155,7 +168,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     width: 80%;
     margin-left: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
     height: 80vh;
     overflow: auto;
     -ms-overflow-style: none;

@@ -1,19 +1,29 @@
+/* eslint-disable operator-linebreak */
 import FilmContainer from '../components/FilmContainer';
 import styles from '../components/Filter.module.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useSearchParams } from 'react-router-dom';
+
+require('dotenv').config();
 
 export default function Filterpage() {
   const [checked, setChecked] = useState(false);
-  const handleChangeCheck = () => {
-    setChecked(!checked);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [arrayApi, setArrayApi] = useState([]);
+
+  const handleChangeCheck = (event) => {
+    setChecked(event.target.value);
+  };
+  const handleChangeReset = () => {
+    setChecked('');
+    setSearchParams('');
   };
 
-  const [arrayApi, setArrayApi] = useState([]);
   useEffect(() => {
     axios
       .get(
-        'https://imdb-api.com/API/AdvancedSearch/k_8kbcras1?user_rating=1.0,3.0&genres=comedy'
+        `https://imdb-api.com/API/AdvancedSearch/${process.env.FILTER_API_KEY}?user_rating=,3.0&${searchParams}`
       )
       .then((res) => res.data)
       .then((data) => {
@@ -22,7 +32,7 @@ export default function Filterpage() {
       .catch((err) => {
         console.error(err.response.data);
       });
-  }, []);
+  }, [searchParams]);
 
   return (
     <div>
@@ -38,17 +48,38 @@ export default function Filterpage() {
           <div className={styles.filterContainer}>
             <h2>Catégorie</h2>
             <div className={styles.filterFond}>
-              <div onChange={handleChangeCheck}>
-                <label htmlFor="action">
-                  <input
-                    type="radio"
-                    value="action"
-                    name="categorie"
-                    id="action"
-                    checked={checked}
-                  />
-                  <span style={{ color: 'black' }}>Action</span>
-                </label>
+              <div
+                value={searchParams.get('genres') || ''}
+                onChange={(e) => setSearchParams({ genres: e.target.value })}
+              >
+                {[
+                  'action',
+                  'comedy',
+                  'drama',
+                  'fantasy',
+                  'horror',
+                  'romance',
+                  'sci-fi',
+                  'thriller',
+                  'western',
+                ].map((genres) => (
+                  <div key={genres}>
+                    <label htmlFor={genres}>
+                      <input
+                        type="radio"
+                        value={genres}
+                        name="genres"
+                        id={genres}
+                        checked={
+                          checked === genres ||
+                          searchParams.get('genres') === genres
+                        }
+                        onChange={handleChangeCheck}
+                      />
+                      <span style={{ color: 'black' }}>{genres}</span>
+                    </label>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -65,7 +96,7 @@ export default function Filterpage() {
             <div className={styles.filterFond}>...</div>
           </div>
           <div className={styles.filterContainerReinitialiser}>
-            Réinitialiser les filtres
+            <p onClick={handleChangeReset}>Réinitialiser les filtres</p>
           </div>
         </section>
         <section className={styles.filmGridContainer}>

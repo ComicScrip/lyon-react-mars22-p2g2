@@ -18,7 +18,7 @@ function FilmContainer({ resultApi }) {
           <p>{resultApi.plot}</p>
         </div>
         <div className={styles.filmDetailPlus}>
-          En savoir +
+          <a href="/detailPage">En savoir +</a>
           <div className={styles.filmButtons}>
             <AiOutlineHeart className={styles.buttons} />
             <RiCloseFill className={styles.buttons} />
