@@ -56,7 +56,6 @@ export default function Header() {
             Profil
           </NavLink>
           <NavLink
-            GrClose
             className={'items'}
             to="../routes/Contact"
             style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}

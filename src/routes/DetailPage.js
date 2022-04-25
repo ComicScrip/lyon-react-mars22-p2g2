@@ -13,6 +13,18 @@ export default function DetailPage() {
       imDbRating: '2.1',
       plot: "Chewbacca and Han Solo try to get to the Wookiee homeworld of Kashyyyk to celebrate Life Day, but are impeded by an Imperial blockade. Chewie's family passes the time with various forms of entertainment.",
       description: '(1978 TV Movie)',
+      link: 'https://www.imdb.com/video/vi684114201',
+    },
+  ];
+  const actorList = [
+    {
+      id: 'nm0000434',
+      imageMh:
+        'https://imdb-api.com/images/original/MV5BOGY2MjI5MDQtOThmMC00ZGIwLWFmYjgtYWU4MzcxOGEwMGVkXkEyXkFqcGdeQXVyMzM4MjM0Nzg@._V1_Ratio1.7727_AL_.jpg',
+      nameMh: 'Mark Hamill',
+      imageHf:
+        'https://imdb-api.com/images/original/MV5BMTY4Mjg0NjIxOV5BMl5BanBnXkFtZTcwMTM2NTI3MQ@@._V1_Ratio0.7273_AL_.jpg',
+      nameHf: 'Harrison Ford',
     },
   ];
 
@@ -39,7 +51,7 @@ export default function DetailPage() {
         <div className="trailerMediaQ">
           <iframe
             title="Trailer"
-            src="https://www.imdb.com/video/vi2959588889"
+            src={movieList[0].link}
             width="600"
             height="450"
             allowFullScreen="true"
@@ -59,60 +71,18 @@ export default function DetailPage() {
       </div>
       <div className="containerActorsPicturesOne">
         <div className="actorContainer">
-          <h4>ACTOR</h4>
-          <img
-            className="firstPicture"
-            src="https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_Ratio0.7273_AL_.jpg"
-            alt=""
-          />
+          <h4>{actorList[0].nameMh}</h4>
+          <img className="firstPicture" src={actorList[0].imageMh} alt="" />
         </div>
         <div className="actorContainer">
-          <h4>ACTOR</h4>
-          <img
-            className="firstPicture"
-            src="https://m.media-amazon.com/images/M/MV5BMTY3NTk0NDI3Ml5BMl5BanBnXkFtZTgwNDA3NjY0MjE@._V1_Ratio0.7273_AL_.jpg"
-            alt=""
-          />
-        </div>
-        <div className="actorContainer">
-          <h4>ACTOR</h4>
-          <img
-            className="firstPicture"
-            src="https://m.media-amazon.com/images/M/MV5BYWY0NzFmYjAtYzMwNC00ODc3LWI2ZWEtOTU3YTM0Y2ZiNTM5XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_Ratio0.7273_AL_.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div className="containerActorsPicturesOne">
-        <div className="actorContainer">
-          <h4>ACTOR</h4>
-          <img
-            className="firstPicture"
-            src="https://m.media-amazon.com/images/M/MV5BMTQ3ODEyNjA4Nl5BMl5BanBnXkFtZTgwMTE4ODMyMjE@._V1_Ratio0.7273_AL_.jpg"
-            alt=""
-          />
-        </div>
-        <div className="actorContainer">
-          <h4>ACTOR</h4>
-          <img
-            className="firstPicture"
-            src="https://m.media-amazon.com/images/M/MV5BMTQzMTUzNjc4Nl5BMl5BanBnXkFtZTcwMTUyODU2Mw@@._V1_Ratio0.7273_AL_.jpg"
-            alt=""
-          />
-        </div>
-        <div className="actorContainer">
-          <h4>ACTOR</h4>
-          <img
-            className="firstPicture"
-            src="https://m.media-amazon.com/images/M/MV5BMTI5Nzc2NTc2MF5BMl5BanBnXkFtZTcwMDM2MTc1Mg@@._V1_Ratio1.5000_AL_.jpg"
-            alt="https://m.media-amazon.com/images/M/MV5BMTI5Nzc2NTc2MF5BMl5BanBnXkFtZTcwMDM2MTc1Mg@@._V1_Ratio1.5000_AL_.jpg"
-          />
+          <h4>{actorList[0].nameHf}</h4>
+          <img className="firstPicture" src={actorList[0].imageHf} alt="" />
         </div>
       </div>
       <div className="trailer">
         <iframe
           title="Trailer"
-          src="https://www.imdb.com/video/vi2959588889"
+          src={movieList[0].link}
           width="480"
           height="270"
           allowFullScreen="true"
