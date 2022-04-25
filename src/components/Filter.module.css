@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+
+body {
+  font-family: 'Abhaya Libre', serif;
+  color: #c4c4c4;
+}
+
+.title {
+  padding: 10px 0px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* FILTRES */
+
+.filterGridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  margin: auto auto 10px auto;
+  background: rgba(196, 196, 196, 0.22);
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+}
+
+.filterContainer {
+  margin: 10px;
+}
+
+.filterContainer > h2 {
+  font-size: 9pt;
+  text-align: center;
+}
+
+.filterFond {
+  background-color: #c4c4c4;
+  height: 70px;
+  margin-top: 5px;
+  color: black;
+  font-size: 13pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3px;
+  overflow: auto;
+}
+
+.filterContainerReinitialiser {
+  margin: auto;
+  font-size: 10pt;
+  text-align: center;
+}
+
+.filterContainerReinitialiser > p {
+  cursor: pointer;
+}
+
+.filterContainerReinitialiser > p:hover {
+  color: orange;
+}
+
+/* FILMS */
+
+.filmGridContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.filmContainer {
+  display: flex;
+  width: 90%;
+  height: 27vh;
+  margin: 10px auto;
+}
+
+.filmAfficheContainer {
+  width: 40%;
+}
+
+.filmAffiche {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+
+.filmDetails {
+  width: 60%;
+  height: 100%;
+  font-size: 10pt;
+}
+
+.filmPlot {
+  height: 55%;
+  width: 80%;
+  overflow: auto;
+  text-align: center;
+  margin: 5px auto 0px auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.filmPlot::-webkit-scrollbar {
+  display: none;
+}
+
+.filmDetailPlus {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.filmButtons {
+  display: none;
+  margin-top: 10px;
+}
+
+.buttons {
+  border: 1px solid #c4c4c4;
+  border-radius: 50%;
+  padding: 8px;
+  background: rgba(196, 196, 196, 0.22);
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.filmDetailPlus > a {
+  cursor: pointer;
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 900px) {
+  /* LAYOUT */
+
+  .title {
+    width: 30%;
+    margin: 60px auto 30px auto;
+  }
+
+  .firstContainer {
+    flex-direction: row;
+    width: 80%;
+    margin: 50px auto;
+  }
+
+  /* FILTRE */
+  .filterGridContainer {
+    grid-template-columns: repeat(1, 1fr);
+    width: 20%;
+  }
+
+  .filterContainerReinitialiser {
+    padding: 10px 10px 20px 10px;
+  }
+
+  /* FILM */
+  .filmGridContainer {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    margin-left: 20px;
+    margin-top: 50px;
+    height: 80vh;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .filmGridContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filmPlotOverflow {
+    width: 111%;
+  }
+}
