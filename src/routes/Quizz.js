@@ -25,7 +25,7 @@ export default function Quizz() {
           </div>
           <div className="myButtons">
             <button className="button1 h-24 w-/12" type="submit">
-              <h2 className=" over:scale-75 p-5">YES</h2>
+              <h2 className="hover:scale-75 p-5">YES</h2>
             </button>
             <button className="button2" type="submit">
               <h2 className="hover:scale-75 p-5">NO</h2>
