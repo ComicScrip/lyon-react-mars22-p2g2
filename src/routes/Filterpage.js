@@ -6,8 +6,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useSearchParams } from 'react-router-dom';
 
-require('dotenv').config();
-
 function toObject(searchParams) {
   const res = {};
   searchParams.forEach((value, key) => {
@@ -19,7 +17,7 @@ function toObject(searchParams) {
 export default function Filterpage() {
   const [checked, setChecked] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
-  const [arrayApi, setArrayApi] = useState([]);
+  const [results, setResults] = useState([]);
 
   const handleChangeCheck = (event) => {
     setChecked(event.target.value);
@@ -32,11 +30,11 @@ export default function Filterpage() {
   useEffect(() => {
     axios
       .get(
-        `https://imdb-api.com/API/AdvancedSearch/${process.env.FILTER_API_KEY}?user_rating=,3.0&${searchParams}`
+        `https://imdb-api.com/API/AdvancedSearch/k_8kbcras1?user_rating=,3.0&${searchParams}`
       )
       .then((res) => res.data)
       .then((data) => {
-        setArrayApi(data.results);
+        setResults(data.results);
       })
       .catch((err) => {
         console.error(err.response.data);
@@ -106,7 +104,7 @@ export default function Filterpage() {
                 onChange={(e) =>
                   setSearchParams({
                     ...toObject(searchParams),
-                    genres: e.target.value,
+                    certificates: e.target.value,
                   })
                 }
               >
@@ -116,7 +114,7 @@ export default function Filterpage() {
                       <input
                         type="radio"
                         value={`us:${certificates}`}
-                        name="genres"
+                        name="certificates"
                         id={certificates}
                         checked={
                           checked === `us:${certificates}` ||
@@ -145,7 +143,7 @@ export default function Filterpage() {
           </div>
         </section>
         <section className={styles.filmGridContainer}>
-          {arrayApi.map((resultApi) => (
+          {results.map((resultApi) => (
             <FilmContainer resultApi={resultApi} key={resultApi.id} />
           ))}
         </section>
