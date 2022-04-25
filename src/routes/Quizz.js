@@ -24,14 +24,11 @@ export default function Quizz() {
             <p>Réponse :</p>
           </div>
           <div className="myButtons">
-            <button
-              className="button1 hover:scale-75 h-24 w-/12 p-5"
-              type="submit"
-            >
-              <h2 className=" hover:scale-75 p-5">YES</h2>
+            <button className="button1 h-24 w-/12" type="submit">
+              <h2 className=" over:scale-75 p-5">YES</h2>
             </button>
             <button className="button2" type="submit">
-              <h2 className=" hover:scale-75 p-5">NO</h2>
+              <h2 className="hover:scale-75 p-5">NO</h2>
             </button>
           </div>
         </div>
