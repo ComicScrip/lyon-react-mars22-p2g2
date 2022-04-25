@@ -97,7 +97,9 @@ export default function Filterpage() {
                         }
                         onChange={handleChangeCheck}
                       />
-                      <span style={{ color: 'black' }}>{genres}</span>
+                      <span style={{ color: 'black', padding: '5px' }}>
+                        {genres}
+                      </span>
                     </label>
                   </div>
                 ))}
@@ -132,7 +134,9 @@ export default function Filterpage() {
                         }
                         onChange={handleChangeCheck}
                       />
-                      <span style={{ color: 'black' }}>{certificates}</span>
+                      <span style={{ color: 'black', padding: '5px' }}>
+                        {certificates}
+                      </span>
                     </label>
                   </div>
                 ))}

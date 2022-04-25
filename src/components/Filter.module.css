@@ -45,7 +45,7 @@ body {
   height: 70px;
   margin-top: 5px;
   color: black;
-  font-size: 9pt;
+  font-size: 13pt;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -135,6 +135,7 @@ body {
 
 .filmDetailPlus > a {
   cursor: pointer;
+  display: none;
 }
 
 /* MEDIA QUERIES */
