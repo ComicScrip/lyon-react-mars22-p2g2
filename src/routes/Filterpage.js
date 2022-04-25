@@ -28,9 +28,14 @@ export default function Filterpage() {
   };
 
   useEffect(() => {
+    const source = axios.CancelToken.source();
+
     axios
       .get(
-        `https://imdb-api.com/API/AdvancedSearch/k_8kbcras1?user_rating=,3.0&${searchParams}`
+        `https://imdb-api.com/API/AdvancedSearch/k_8kbcras1?user_rating=,3.0&${searchParams}`,
+        {
+          cancelToken: source.token,
+        }
       )
       .then((res) => res.data)
       .then((data) => {
@@ -39,6 +44,10 @@ export default function Filterpage() {
       .catch((err) => {
         console.error(err.response.data);
       });
+
+    return () => {
+      source.cancel('Component got unmounted');
+    };
   }, [searchParams]);
 
   return (

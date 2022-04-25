@@ -9,7 +9,7 @@ function FilmContainer({ resultApi }) {
       <section className={styles.filmAfficheContainer}>
         <img
           src={resultApi.image}
-          alt="film favoris 1"
+          alt={`${resultApi.title} poster`}
           className={styles.filmAffiche}
         />
       </section>
