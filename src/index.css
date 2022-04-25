@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-image: url('./image/unnamedmod.jpg');
+  background-image: url('./img/background.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;

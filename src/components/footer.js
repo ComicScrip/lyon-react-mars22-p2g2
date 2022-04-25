@@ -6,13 +6,13 @@ export default function Footer() {
   return (
     <div className="main-footer">
       <div className="container">
-        <NavLink className={'content'} to="../routes/Contact">
+        <NavLink className={'content'} to="/Contact">
           Contact
         </NavLink>
-        <NavLink className={'content'} to="../routes/Contact">
+        <NavLink className={'content'} to="/Contact">
           Recrutement
         </NavLink>
-        <NavLink className={'content'} to="../routes/Profil">
+        <NavLink className={'content'} to="/Profil">
           Profil
         </NavLink>
       </div>
