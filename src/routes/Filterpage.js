@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable operator-linebreak */
 import FilmContainer from '../components/FilmContainer';
 import styles from '../components/Filter.module.css';
@@ -7,8 +8,16 @@ import { useSearchParams } from 'react-router-dom';
 
 require('dotenv').config();
 
+function toObject(searchParams) {
+  const res = {};
+  searchParams.forEach((value, key) => {
+    res[key] = value;
+  });
+  return res;
+}
+
 export default function Filterpage() {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
   const [arrayApi, setArrayApi] = useState([]);
 
@@ -50,7 +59,12 @@ export default function Filterpage() {
             <div className={styles.filterFond}>
               <div
                 value={searchParams.get('genres') || ''}
-                onChange={(e) => setSearchParams({ genres: e.target.value })}
+                onChange={(e) =>
+                  setSearchParams({
+                    ...toObject(searchParams),
+                    genres: e.target.value,
+                  })
+                }
               >
                 {[
                   'action',
@@ -85,7 +99,38 @@ export default function Filterpage() {
           </div>
           <div className={styles.filterContainer}>
             <h2>Restriction d'âge</h2>
-            <div className={styles.filterFond}>...</div>
+            <div className={styles.filterFond}>
+              {' '}
+              <div
+                value={searchParams.get('certificates') || ''}
+                onChange={(e) =>
+                  setSearchParams({
+                    ...toObject(searchParams),
+                    genres: e.target.value,
+                  })
+                }
+              >
+                {['G', 'PG', 'PG-13', 'R', 'NC-17'].map((certificates) => (
+                  <div key={certificates}>
+                    <label htmlFor={certificates}>
+                      <input
+                        type="radio"
+                        value={`us:${certificates}`}
+                        name="genres"
+                        id={certificates}
+                        checked={
+                          checked === `us:${certificates}` ||
+                          searchParams.get('certificates') ===
+                            `us:${certificates}`
+                        }
+                        onChange={handleChangeCheck}
+                      />
+                      <span style={{ color: 'black' }}>{certificates}</span>
+                    </label>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
           <div className={styles.filterContainer}>
             <h2>Pays</h2>
