@@ -23,7 +23,7 @@ body {
 
 .filterGridContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   width: 90%;
   margin: auto auto 10px auto;
   background: rgba(196, 196, 196, 0.22);
@@ -45,12 +45,13 @@ body {
   height: 70px;
   margin-top: 5px;
   color: black;
-  font-size: 13pt;
+  font-size: 20pt;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 3px;
   overflow: auto;
+  width: 100%;
 }
 
 .filterContainerReinitialiser {
@@ -162,6 +163,16 @@ body {
 
   .filterContainerReinitialiser {
     padding: 10px 10px 20px 10px;
+    font-size: 20pt;
+  }
+
+  .filterContainerReinitialiser > p {
+    font-size: 16pt;
+  }
+
+  .filterContainer > h2 {
+    font-size: 14pt;
+    text-align: center;
   }
 
   /* FILM */
