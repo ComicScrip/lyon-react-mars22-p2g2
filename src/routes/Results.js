@@ -22,20 +22,20 @@ export default function Results() {
 
   return (
     <div>
-      <div className="firstContainer">
-        <h2>Choose one</h2>
-      </div>
-      <div className="middleContainer">
-        <div className="secondContainerContent">
-          <ResultApiContainer resultApi={arrayApi} />
+      <div className="containerResolv">
+        <div className="firstContainer">
+          <h2>Choose one</h2>
         </div>
-        <div className="secondContainerContents">
-          {arrayApi.map((resultApi) => (
-            <ResultApiContainer resultApi={resultApi} />
-          ))}
+        <div className="middleContainer">
+          <div className="secondContainerContent">
+            <ResultApiContainer arrayApi={arrayApi} />
+          </div>
+          <div className="secondContainerContents">
+            <ResultApiContainer arrayApi={arrayApi} />
+          </div>
         </div>
+        <hr />
       </div>
-      <hr />
     </div>
   );
 }

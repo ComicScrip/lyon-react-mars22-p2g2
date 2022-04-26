@@ -1,27 +1,29 @@
 import React from 'react';
-import { FcLike } from 'react-icons/fc';
-import { IoIosCloseCircleOutline } from 'react-icons/io';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { RiCloseFill } from 'react-icons/ri';
 
-function ResultApiContainer({ resultApi }) {
+function ResultApiContainer({ arrayApi }) {
   return (
     <>
-      <img
-        className="pictureOfMonthR"
-        src={resultApi.image}
-        alt={resultApi.title}
-      />
+      <div className="knowMoreMovie">
+        <img
+          className="pictureOfMonthR"
+          src={arrayApi.image}
+          alt={arrayApi.title}
+        />
+        <a href="/" className="knowPara">
+          En savoir +
+        </a>
+      </div>
+
       <div className="textContainer">
-        <p className="plot">{resultApi.plot}</p>
+        <p className="plot">{arrayApi.plot}</p>
         <br />
-        <p className="runtime">{resultApi.runtimeStr}</p>
-        <p className="knowMore">En savoir +</p>
+        <p className="runtime">{arrayApi.runtimeStr}</p>
         <div className="button">
-          <button type="submit">
-            <FcLike size={30} />
-          </button>
-          <button type="submit">
-            <IoIosCloseCircleOutline size={30} />
-          </button>
+          <AiOutlineHeart className="buttons" />
+
+          <RiCloseFill className="buttons" />
         </div>
       </div>
     </>

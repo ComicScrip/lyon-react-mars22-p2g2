@@ -31,13 +31,23 @@
   background: rgba(196, 196, 196, 0.3);
 }
 .textContainer {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 10px;
 }
 .button {
-  display: flex;
+  display: none;
   justify-content: space-around;
   margin-top: 20px;
+}
+.buttons {
+  border: 1px solid #c4c4c4;
+  border-radius: 50%;
+  padding: 8px;
+  background: rgba(196, 196, 196, 0.22);
+  margin-right: 5px;
+  cursor: pointer;
 }
 button {
   cursor: pointer;
@@ -49,6 +59,16 @@ button {
   height: 250px;
   border-radius: 10px;
   cursor: pointer;
+}
+.knowMoreMovie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.knowPara {
+  margin-top: 50px;
+  text-decoration: none;
+  color: #c4c4c4;
 }
 hr {
   margin: 0px 15px;
@@ -65,11 +85,10 @@ hr {
   color: #c4c4c4;
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1050px) {
   .middleContainer {
     display: flex;
     justify-content: center;
-    margin: 200px;
   }
   .secondContainerContents {
     margin: 0px 15px 0px 15px;
@@ -78,7 +97,7 @@ hr {
   }
   .firstContainer {
     width: 20%;
-    margin: 100px auto;
+    margin: 50px auto;
   }
   .pictureOfMonthR {
     height: 500px;
@@ -87,14 +106,20 @@ hr {
   .textContainer {
     font-size: 20pt;
   }
-
+  .knowPara {
+    margin-bottom: 50px;
+  }
   hr {
     margin: 0px 100px;
   }
   .runtime {
     font-size: 10pt;
+    margin-top: 40px;
   }
   .plot {
     font-size: 15pt;
+  }
+  .containerResolv {
+    margin-bottom: 60px;
   }
 }
