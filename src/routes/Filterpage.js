@@ -5,6 +5,7 @@ import styles from '../components/Filter.module.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useSearchParams } from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
 
 function toObject(searchParams) {
   const res = {};
@@ -88,6 +89,8 @@ export default function Filterpage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [results, setResults] = useState([]);
 
+  const [isLoading, setLoading] = useState(true);
+
   const handleChangeCheck = (event) => {
     setChecked(event.target.value);
   };
@@ -98,7 +101,7 @@ export default function Filterpage() {
 
   useEffect(() => {
     const source = axios.CancelToken.source();
-
+    setLoading(true);
     axios
       .get(
         `https://imdb-api.com/API/AdvancedSearch/k_8kbcras1?count=20&user_rating=,3.0&${searchParams}`,
@@ -112,7 +115,8 @@ export default function Filterpage() {
       })
       .catch((err) => {
         console.error(err.response.data);
-      });
+      })
+      .finally(() => setLoading(false));
 
     return () => {
       source.cancel('Component got unmounted');
@@ -250,7 +254,6 @@ export default function Filterpage() {
                           color: 'black',
                           padding: '10px',
                           fontSize: '13pt',
-                          overflowWrap: 'break-word',
                         }}
                       >
                         {certificates.name}
@@ -348,9 +351,13 @@ export default function Filterpage() {
           </div>
         </section>
         <section className={styles.filmGridContainer}>
-          {results.map((resultApi) => (
-            <FilmContainer resultApi={resultApi} key={resultApi.id} />
-          ))}
+          {isLoading ? (
+            <CircularProgress />
+          ) : (
+            results.map((resultApi) => (
+              <FilmContainer resultApi={resultApi} key={resultApi.id} />
+            ))
+          )}
         </section>
       </div>
     </div>

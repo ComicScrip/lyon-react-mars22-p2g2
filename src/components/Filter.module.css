@@ -23,7 +23,7 @@ body {
 
 .filterGridContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   width: 90%;
   margin: auto auto 10px auto;
   background: rgba(196, 196, 196, 0.22);
@@ -36,7 +36,7 @@ body {
 }
 
 .filterContainer > h2 {
-  font-size: 9pt;
+  font-size: 11pt;
   text-align: center;
 }
 
@@ -56,12 +56,13 @@ body {
 
 .filterContainerReinitialiser {
   margin: auto;
-  font-size: 10pt;
+  padding-bottom: 10px;
   text-align: center;
 }
 
 .filterContainerReinitialiser > p {
   cursor: pointer;
+  font-size: 12pt;
 }
 
 .filterContainerReinitialiser > p:hover {
@@ -106,6 +107,7 @@ body {
   margin: 5px auto 0px auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  font-size: 14pt;
 }
 
 .filmPlot::-webkit-scrollbar {
