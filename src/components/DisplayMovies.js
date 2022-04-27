@@ -28,10 +28,10 @@ function DisplayMovies({ movie, trailer }) {
           <div className="trailerMediaQ">
             <ReactPlayer
               url={trailer.videoUrl}
+              className="trailer"
               controls
               playing
               muted
-              className="trailer"
               height="100%"
             />
           </div>
@@ -58,11 +58,11 @@ function DisplayMovies({ movie, trailer }) {
         <div className="trailerArrete">
           <ReactPlayer
             url={trailer.videoUrl}
+            className="trailer"
             controls
             playing
             muted
-            className="trailer"
-            width="95%"
+            width="89%"
           />
         </div>
       </>

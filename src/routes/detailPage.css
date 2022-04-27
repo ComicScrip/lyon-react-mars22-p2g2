@@ -68,6 +68,8 @@ body {
 }
 .distriTitle {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -89,6 +91,7 @@ body {
     text-align: inherit;
     margin: 20px 300px;
   }
+
   .firstPicture {
     height: 400px;
     width: 300px;
@@ -109,8 +112,8 @@ body {
     margin-top: 0px;
   }
   .actorsPictures {
-    height: 550px;
-    width: 550px;
+    max-height: 400px;
+    max-width: 400px;
   }
   .distriTitle {
     display: flex;

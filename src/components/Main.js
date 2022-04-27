@@ -17,7 +17,7 @@ export default function Main() {
         <Route path="/profil" element={<Profil />} />
         <Route path="/filterpage" element={<Filterpage />} />
         <Route path="/results" element={<Results />} />
-        <Route path="/detailpage" element={<DetailPage />} />
+        <Route path="/detailpage/:id" element={<DetailPage />} />
       </Routes>
     </main>
   );
