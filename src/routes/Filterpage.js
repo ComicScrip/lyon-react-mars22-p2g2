@@ -7,6 +7,8 @@ import axios from 'axios';
 import { useSearchParams } from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
 
+const apiKey = process.env.REACT_APP_FILTER_APIKEY;
+
 function toObject(searchParams) {
   const res = {};
   searchParams.forEach((value, key) => {
@@ -104,7 +106,7 @@ export default function Filterpage() {
     setLoading(true);
     axios
       .get(
-        `https://imdb-api.com/API/AdvancedSearch/k_8kbcras1?count=20&user_rating=,3.0&${searchParams}`,
+        `https://imdb-api.com/API/AdvancedSearch/${apiKey}?count=20&user_rating=,3.0&${searchParams}`,
         {
           cancelToken: source.token,
         }
