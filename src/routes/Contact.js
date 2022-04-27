@@ -19,6 +19,7 @@ export default function ContactPage() {
     setNom('');
     setEmail('');
     setMessage('');
+    console.log({ nom, email, message });
   };
 
   return (
