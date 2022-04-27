@@ -23,7 +23,7 @@ body {
 
 .filterGridContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   width: 90%;
   margin: auto auto 10px auto;
   background: rgba(196, 196, 196, 0.22);
@@ -35,8 +35,8 @@ body {
   margin: 10px;
 }
 
-.filterContainer > h2 {
-  font-size: 9pt;
+.h2title {
+  font-size: 11pt;
   text-align: center;
 }
 
@@ -45,22 +45,24 @@ body {
   height: 70px;
   margin-top: 5px;
   color: black;
-  font-size: 13pt;
+  font-size: 20pt;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 3px;
   overflow: auto;
+  width: 100%;
 }
 
 .filterContainerReinitialiser {
   margin: auto;
-  font-size: 10pt;
+  padding-bottom: 10px;
   text-align: center;
 }
 
 .filterContainerReinitialiser > p {
   cursor: pointer;
+  font-size: 12pt;
 }
 
 .filterContainerReinitialiser > p:hover {
@@ -105,6 +107,7 @@ body {
   margin: 5px auto 0px auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  font-size: 14pt;
 }
 
 .filmPlot::-webkit-scrollbar {
@@ -135,7 +138,6 @@ body {
 
 .filmDetailPlus > a {
   cursor: pointer;
-  display: none;
 }
 
 /* MEDIA QUERIES */
@@ -162,6 +164,16 @@ body {
 
   .filterContainerReinitialiser {
     padding: 10px 10px 20px 10px;
+    font-size: 20pt;
+  }
+
+  .filterContainerReinitialiser > p {
+    font-size: 16pt;
+  }
+
+  .h2title {
+    font-size: 14pt;
+    text-align: center;
   }
 
   /* FILM */
