@@ -5,11 +5,11 @@ export default function Quizz() {
   return (
     <div className="text-white">
       <div>
-        <h1 className="quizz mb-9">Quizz</h1>
+        <h1 className="quizz mb-9 text-3xl">Quizz</h1>
       </div>
       <div className="bloc">
         <div className="question pb-8">
-          <p>Question :</p>
+          <h3>Question :</h3>
           <p>
             HTML-ipsum est un générateur de faux texte (Lorem Ipsum) destiné à
             remplir de texte vos designs pour obtenir un rendu lorsque vous
@@ -21,11 +21,13 @@ export default function Quizz() {
         <div className="ligne1">.</div>
         <div>
           <div className="reponse">
-            <p>Réponse :</p>
+            <h3>Réponse :</h3>
           </div>
           <div className="myButtons">
             <button className="button1 h-24 w-/12" type="submit">
-              <h2 className="hover:scale-75 p-5">YES</h2>
+              <h2 className="hover:scale-75 p-5">
+                YES, <p>, of course! i'm loving it!!!</p>
+              </h2>
             </button>
             <button className="button2" type="submit">
               <h2 className="hover:scale-75 p-5">NO</h2>

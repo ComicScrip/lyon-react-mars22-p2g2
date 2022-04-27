@@ -9,6 +9,12 @@
   margin-right: auto;
 }
 
+h1 {
+  font-size: 24 px;
+}
+h3 {
+  font-size: 18px;
+}
 .bloc {
   color: white;
   /*background-color: black;*/
