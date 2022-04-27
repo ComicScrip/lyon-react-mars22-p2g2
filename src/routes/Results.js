@@ -5,9 +5,9 @@ import axios from 'axios';
 
 export default function Results() {
   const [resultApi, setResultApi] = useState([]);
-  const test = (array) => {
-    const test2 = array.sort(() => Math.random() - 0.5);
-    return test2;
+  const getRandomMovie = (array) => {
+    const randomMovie = array.sort(() => Math.random() - 0.5);
+    return randomMovie;
   };
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function Results() {
       )
       .then((res) => res.data)
       .then((data) => {
-        setResultApi(test(data.results));
+        setResultApi(getRandomMovie(data.results));
       })
       .catch((err) => {
         console.error(err.response.data);
