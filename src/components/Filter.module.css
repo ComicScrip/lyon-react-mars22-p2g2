@@ -35,7 +35,7 @@ body {
   margin: 10px;
 }
 
-.filterContainer > h2 {
+.h2title {
   font-size: 11pt;
   text-align: center;
 }
@@ -138,7 +138,6 @@ body {
 
 .filmDetailPlus > a {
   cursor: pointer;
-  display: none;
 }
 
 /* MEDIA QUERIES */
@@ -172,7 +171,7 @@ body {
     font-size: 16pt;
   }
 
-  .filterContainer > h2 {
+  .h2title {
     font-size: 14pt;
     text-align: center;
   }

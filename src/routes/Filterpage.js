@@ -128,12 +128,12 @@ export default function Filterpage() {
   return (
     <div>
       <div className={styles.title}>
-        <h1>FILTRES</h1>
+        <h1 className={styles.h1title}>FILTRES</h1>
       </div>
       <div className={styles.firstContainer}>
         <section className={styles.filterGridContainer}>
           <div className={styles.filterContainer}>
-            <h2>Année de sortie</h2>
+            <h2 className={styles.h2title}>Année de sortie</h2>
             <div className={styles.filterFond}>
               <div
                 value={searchParams.get('release_date') || ''}
@@ -174,7 +174,7 @@ export default function Filterpage() {
             </div>
           </div>
           <div className={styles.filterContainer}>
-            <h2>Catégorie</h2>
+            <h2 className={styles.h2title}>Catégorie</h2>
             <div className={styles.filterFond}>
               <div
                 value={searchParams.get('genres') || ''}
@@ -225,7 +225,7 @@ export default function Filterpage() {
             </div>
           </div>
           <div className={styles.filterContainer}>
-            <h2>Restriction d'âge</h2>
+            <h2 className={styles.h2title}>Restriction d'âge</h2>
             <div className={styles.filterFond}>
               <div
                 value={searchParams.get('certificates') || ''}
@@ -267,7 +267,7 @@ export default function Filterpage() {
             </div>
           </div>
           <div className={styles.filterContainer}>
-            <h2>Pays</h2>
+            <h2 className={styles.h2title}>Pays</h2>
             <div className={styles.filterFond}>
               <div
                 value={searchParams.get('countries') || ''}
@@ -308,7 +308,7 @@ export default function Filterpage() {
             </div>
           </div>
           <div className={styles.filterContainer}>
-            <h2>Rating</h2>
+            <h2 className={styles.h2title}>Rating</h2>
             <div className={styles.filterFond}>
               <div
                 value={searchParams.get('user_rating') || ''}
