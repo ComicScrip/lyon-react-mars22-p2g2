@@ -12,28 +12,21 @@
   color: #ddd4d4;
   display: flex;
   justify-content: center;
-  align-items: center;
-  border: solid;
-  border-radius: 10px;
-  margin: 0px 15px 0px 15px;
-  padding: 5px 10px;
-  background: rgba(196, 196, 196, 0.22);
-}
-.secondContainerContents {
-  color: #ddd4d4;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
   border: solid;
   border-radius: 10px;
   margin: 20px 15px 0px 15px;
   padding: 5px 10px;
   background: rgba(196, 196, 196, 0.22);
 }
+
+.plotContainer {
+  height: 200px;
+  overflow: auto;
+  margin-bottom: 50px;
+}
 .textContainer {
   display: flex;
   flex-direction: column;
-  text-align: center;
   padding: 10px;
 }
 .button {
@@ -79,6 +72,7 @@ hr {
 }
 .plot {
   font-size: 10pt;
+  font: inherit;
 }
 
 @media screen and (min-width: 1050px) {
@@ -86,14 +80,13 @@ hr {
     display: flex;
     justify-content: center;
   }
-  .secondContainerContents {
-    margin: 0px 15px 0px 15px;
-    display: flex;
-    flex-direction: row;
-  }
   .firstContainer {
     width: 20%;
     margin: 50px auto;
+  }
+  .secondContainerContent {
+    align-items: center;
+    width: 50%;
   }
   .pictureOfMonthR {
     height: 500px;
@@ -113,7 +106,7 @@ hr {
     margin-top: 40px;
   }
   .plot {
-    font-size: 15pt;
+    font-size: 17pt;
   }
   .containerResolv {
     margin-bottom: 60px;

@@ -2,24 +2,20 @@ import React from 'react';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { RiCloseFill } from 'react-icons/ri';
 
-function ResultApiContainer({ resultApi }) {
+function ResultApiContainer({ movie }) {
   return (
     <>
       <div className="knowMoreMovie">
-        <img
-          className="pictureOfMonthR"
-          src={resultApi.image}
-          alt={resultApi.title}
-        />
+        <img className="pictureOfMonthR" src={movie.image} alt={movie.title} />
         <a href="/" className="knowPara">
           En savoir +
         </a>
       </div>
-
       <div className="textContainer">
-        <p className="plot">{resultApi.plot}</p>
-        <br />
-        <p className="runtime">{resultApi.runtimeStr}</p>
+        <div className="plotContainer">
+          <p className="plot">{movie.plot}</p>
+        </div>
+        <p className="runtime">{movie.runtimeStr}</p>
         <div className="button">
           <AiOutlineHeart className="buttons" />
 
