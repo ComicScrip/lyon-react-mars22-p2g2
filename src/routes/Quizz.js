@@ -8,8 +8,8 @@ export default function Quizz() {
         <h1 className="quizz mb-9 text-6xl">Quizz</h1>
       </div>
       <div className="bloc">
-        <div className="question pb-8">
-          <h3>Question :</h3>
+        <div>
+          <h3 className="question pb-8">Question :</h3>
           <p className="text-lg">
             HTML-ipsum est un générateur de faux texte (Lorem Ipsum) destiné à
             remplir de texte vos designs pour obtenir un rendu lorsque vous
@@ -20,12 +20,12 @@ export default function Quizz() {
         </div>
         <div className="ligne1">.</div>
         <div>
-          <div className="reponse">
-            <h3>Réponse :</h3>
+          <div>
+            <h3 className="reponse">Réponse :</h3>
           </div>
           <div className="myButtons">
-            <button className="button1 h-24 w-/12" type="submit">
-              <h2 className="hover:scale-95 delay-200 p-5">
+            <button className="button1" type="submit">
+              <h2 className="buttonYes hover:scale-95 delay-200 w-/12">
                 YES,
                 <a href="/Profil">
                   <p>, of course! i'm loving it!!!</p>
@@ -33,7 +33,7 @@ export default function Quizz() {
               </h2>
             </button>
             <button className="button2" type="submit">
-              <h2 className="hover:scale-95 delay-200 p-5">
+              <h2 className="buttonNo hover:scale-95 delay-200">
                 NO
                 <a href="/Filterpage">
                   <p>, je ne veux pas faire le quizz</p>
@@ -43,7 +43,6 @@ export default function Quizz() {
           </div>
         </div>
       </div>
-      <div className="ligne2">.____</div>
     </div>
   );
 }
