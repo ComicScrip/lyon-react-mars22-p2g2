@@ -36,15 +36,10 @@
 .question,
 .reponse {
   font-size: 24px;
-  margin-bottom: 10%;
   text-align: center;
-}
-
-.question {
-  min-width: 50px;
-  border-color: white;
-  margin: 0 auto;
-  padding: 2% 9%;
+  /*margin: 0 auto; si besoin pour aérer le bloc
+  margin-bottom: 5%;*/
+  padding: 2% 0%;
 }
 
 .ligne1 {
