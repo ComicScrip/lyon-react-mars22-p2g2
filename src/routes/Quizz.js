@@ -10,9 +10,7 @@ export default function Quizz() {
       <div className="bloc">
         <div>
           <h3 className="question">Question :</h3>
-          <p className="thisQuestion text-center text-2xl">
-            Tu es plutôt Django ou Forest Gump?
-          </p>
+          <p className="thisQuestion text-center text-2xl">Tu es plutôt?</p>
         </div>
         <div className="ligne1">.</div>
         <div>
@@ -22,19 +20,11 @@ export default function Quizz() {
           <div className="myButtons">
             <button className="button1" type="submit">
               <h2 className="buttonYes hover:scale-95 delay-200 w-/12">
-                YES,
-                <a href="/Profil">
-                  <p>, of course! i'm loving it!!!</p>
-                </a>
+                Django
               </h2>
             </button>
             <button className="button2" type="submit">
-              <h2 className="buttonNo hover:scale-95 delay-200">
-                NO
-                <a href="/Filterpage">
-                  <p>, je ne veux pas faire le quizz</p>
-                </a>
-              </h2>
+              <h2 className="buttonNo hover:scale-95 delay-200">Forest Gump</h2>
             </button>
           </div>
         </div>
