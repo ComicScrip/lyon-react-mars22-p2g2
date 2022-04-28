@@ -43,6 +43,7 @@ export default function Quizz() {
           </div>
         </div>
       </div>
+      <div className="ligne2">.</div>
     </div>
   );
 }
