@@ -1,6 +1,32 @@
 body {
   color: white;
 }
+/*----------------------------------------trailer style*/
+.trailerArrete {
+  display: flex;
+  justify-content: center;
+}
+.trailerMediaQ {
+  display: none;
+}
+.trailer {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.noVideoIconMediaQ {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.noTrailerAvailable {
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+/*-----------------------------------------main style*/
 .mainContainerProfilPage {
   display: flex;
   justify-content: center;
@@ -22,6 +48,17 @@ body {
   line-height: 30px;
   font-size: 8pt;
 }
+.filmDetailPicture {
+  height: 30vh;
+  margin-right: 10px;
+}
+.moviePicture {
+  height: 35vh;
+}
+.rateContainer {
+  margin-top: 30px;
+}
+/*--------------------------------------distribution style*/
 .distribution {
   display: flex;
   flex-direction: column;
@@ -33,10 +70,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.filmDetailPicture {
-  height: 30vh;
-  margin-right: 10px;
-}
 .firstPicture {
   height: 200px;
   width: 160px;
@@ -47,24 +80,10 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.trailer {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-.moviePicture {
-  height: 35vh;
-}
-.rateContainer {
-  margin-top: 30px;
-}
 .actorsPictures {
   height: 200px;
   width: 200px;
   margin-top: 20px;
-}
-.trailerMediaQ {
-  display: none;
 }
 .distriTitle {
   margin-bottom: 20px;
@@ -72,7 +91,9 @@ body {
   justify-content: center;
 }
 
+/*---------------------------------------mediaQ*/
 @media screen and (min-width: 768px) {
+  /*-----main style-----*/
   .filmDetailPicture {
     height: 700px;
     margin-right: 15px;
@@ -86,12 +107,12 @@ body {
   }
   .fontSyno {
     font-size: 12pt;
+    margin-top: 50px;
   }
   .synopsisContainer {
     text-align: inherit;
     margin: 20px 300px;
   }
-
   .firstPicture {
     height: 400px;
     width: 300px;
@@ -111,6 +132,7 @@ body {
     padding-left: 15px;
     margin-top: 0px;
   }
+  /*--------------------------------distribution style*/
   .actorsPictures {
     max-height: 400px;
     max-width: 400px;
@@ -128,9 +150,6 @@ body {
   }
   .actorName {
     font-size: 20pt;
-  }
-  .fontSyno {
-    margin-top: 50px;
   }
 }
 

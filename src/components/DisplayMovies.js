@@ -1,6 +1,7 @@
 import '../routes/detailPage.css';
 import Rating from '@mui/material/Rating';
 import ReactPlayer from 'react-player';
+import { BsFillCameraVideoOffFill } from 'react-icons/bs';
 
 function DisplayMovies({ movie, trailer }) {
   return (
@@ -26,14 +27,28 @@ function DisplayMovies({ movie, trailer }) {
             </h1>
           </div>
           <div className="trailerMediaQ">
-            <ReactPlayer
-              url={trailer.videoUrl}
-              className="trailer"
-              controls
-              playing
-              muted
-              height="100%"
-            />
+            {trailer.videoUrl === '' ? (
+              <div className="noVideoIconMediaQ">
+                <p className="noTrailerAvailable">No trailer available</p>
+                <BsFillCameraVideoOffFill
+                  style={{
+                    fontSize: '15em',
+                    border: 'solid',
+                    padding: '15px',
+                    borderRadius: '10px',
+                  }}
+                />
+              </div>
+            ) : (
+              <ReactPlayer
+                url={trailer.videoUrl}
+                className="trailer"
+                controls
+                playing
+                muted
+                width="100%"
+              />
+            )}
           </div>
         </div>
         <div className="synopsisContainer">
@@ -56,14 +71,22 @@ function DisplayMovies({ movie, trailer }) {
           ))}
         </div>
         <div className="trailerArrete">
-          <ReactPlayer
-            url={trailer.videoUrl}
-            className="trailer"
-            controls
-            playing
-            muted
-            width="89%"
-          />
+          {trailer.videoUrl === '' ? (
+            <BsFillCameraVideoOffFill
+              style={{
+                fontSize: '5em',
+              }}
+            />
+          ) : (
+            <ReactPlayer
+              url={trailer.videoUrl}
+              className="trailer"
+              controls
+              playing
+              muted
+              width="89%"
+            />
+          )}
         </div>
       </>
     )
