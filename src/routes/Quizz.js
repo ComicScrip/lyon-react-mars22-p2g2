@@ -5,7 +5,7 @@ export default function Quizz() {
   return (
     <div>
       <div>
-        <h1 className="quizz mb-9 text-6xl">Quizz</h1>
+        <h1 className="quizz text-6xl">Quizz</h1>
       </div>
       <div className="bloc">
         <div>
