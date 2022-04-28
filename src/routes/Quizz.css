@@ -18,7 +18,6 @@
 
 .bloc {
   color: white;
-  /*background-color: black;*/
   margin: 0 5% 12% 5%;
   padding: 5%;
   background: rgba(196, 196, 196, 0.22);
@@ -37,8 +36,6 @@
 .reponse {
   font-size: 24px;
   text-align: center;
-  /*margin: 0 auto; si besoin pour aérer le bloc
-  margin-bottom: 5%;*/
   padding: 2% 0%;
 }
 
@@ -56,7 +53,6 @@
 
 @media screen and (min-width: 768px) {
   .myButtons {
-    /*width: 25%;*/
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -80,9 +76,8 @@
 .buttonNo {
   font-size: 22px;
   padding: 5%;
-  /*margin: 5%;*/
-  /*min-width: 100px;
-  margin-top: 10px;*/
+  min-width: 100px;
+  margin-top: 10px;
   border: solid;
   border-radius: 15px;
   text-align: center;
@@ -94,7 +89,6 @@
   height: 2px;
   margin: 10% 5%;
   background-color: grey;
-  /*box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);*/
 }
 
 @media screen and (min-width: 768px) {

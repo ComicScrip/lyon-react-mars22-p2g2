@@ -9,13 +9,9 @@ export default function Quizz() {
       </div>
       <div className="bloc">
         <div>
-          <h3 className="question pb-8">Question :</h3>
-          <p className="text-lg">
-            HTML-ipsum est un générateur de faux texte (Lorem Ipsum) destiné à
-            remplir de texte vos designs pour obtenir un rendu lorsque vous
-            n'avez pas encore de contenu. Plusieurs type de mise en forme sont
-            disponibles : paragraphe, liste (non)ordonnée, phrase, etc. Un clic
-            sur le titre ("long paragraph", etc.)
+          <h3 className="question">Question :</h3>
+          <p className="thisQuestion text-center text-2xl">
+            Tu es plutôt Django ou Forest Gump?
           </p>
         </div>
         <div className="ligne1">.</div>
