@@ -16,8 +16,11 @@
 }
 
 .bloc {
+  width: 70%;
+  height: 350px;
   color: white;
-  margin: 0 5% 12% 5%;
+  /*margin: 0 5% 12% 5%;*/
+  margin: 5% auto;
   padding: 5%;
   background: rgba(196, 196, 196, 0.22);
   border: 1px solid #c4c4c4;
@@ -27,41 +30,41 @@
 
 @media screen and (min-width: 768px) {
   .bloc {
-    margin: 70px;
+    margin: 15% auto;
+    padding-bottom: 5%;
   }
 }
 
-.question,
+.thisQuestion {
+  border-bottom: solid;
+  border-color: grey;
+  padding-bottom: 5%;
+}
+
 .reponse {
   font-size: 24px;
   text-align: center;
   padding: 2% 0%;
 }
 
-.ligne1 {
-  height: 2px;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  background-color: grey;
-}
-
 .myButtons {
   width: 50%;
-  margin: auto;
+  display: flex;
+  margin: 15% auto 5% auto;
+  display: flex;
 }
 
 @media screen and (min-width: 768px) {
   .myButtons {
     height: 100%;
-    display: flex;
     justify-content: space-around;
+    align-items: flex-start;
   }
 }
 
 .button1,
 .button2 {
   width: 100%;
-  margin-top: 15%;
 }
 
 @media screen and (min-width: 768px) {
@@ -73,13 +76,16 @@
 
 .buttonYes,
 .buttonNo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 22px;
   padding: 5%;
-  min-width: 100px;
+  min-width: 132px;
+  min-height: 90px;
   margin-top: 10px;
   border: solid;
   border-radius: 15px;
-  text-align: center;
   border-color: white;
   background: rgba(196, 196, 196, 0.22);
 }

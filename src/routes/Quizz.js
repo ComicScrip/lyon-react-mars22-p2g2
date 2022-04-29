@@ -9,14 +9,9 @@ export default function Quizz() {
       </div>
       <div className="bloc">
         <div>
-          <h3 className="question">Question :</h3>
-          <p className="thisQuestion text-center text-2xl">Tu es plutôt?</p>
+          <p className="thisQuestion text-center text-3xl">Tu es plutôt?</p>
         </div>
-        <div className="ligne1">.</div>
         <div>
-          <div>
-            <h3 className="reponse">Réponse :</h3>
-          </div>
           <div className="myButtons">
             <button className="button1" type="submit">
               <h2 className="buttonYes hover:scale-95 delay-200 w-/12">
