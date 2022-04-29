@@ -5,7 +5,6 @@
 }
 
 .liste {
-  margin: 0px 120px;
   padding: 0;
   list-style-type: none;
   background: #ffce31;
@@ -51,7 +50,9 @@
     height: 200px;
     width: 50%;
     top: 6vh;
-    left: 18vh;
+    position: fixed;
+    margin: 0px;
+    right: 0px;
   }
   .item {
     display: flex;
