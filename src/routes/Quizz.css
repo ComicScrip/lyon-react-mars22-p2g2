@@ -17,7 +17,7 @@
 
 .bloc {
   width: 70%;
-  height: 350px;
+  /*height: 350px;*/
   color: white;
   /*margin: 0 5% 12% 5%;*/
   margin: 5% auto;
@@ -83,6 +83,7 @@
   padding: 5%;
   min-width: 132px;
   min-height: 90px;
+  max-height: 110px;
   margin-top: 10px;
   border: solid;
   border-radius: 15px;
