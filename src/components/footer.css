@@ -2,6 +2,10 @@
   display: flex;
   background: #ffce31;
   justify-content: space-between;
+  border-top: solid 10px white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .container {
@@ -14,6 +18,7 @@
   color: #000;
   font-size: 15px;
   margin-left: 5px;
+  font-weight: bold;
 }
 
 .logo-content {
@@ -29,4 +34,5 @@
 .title {
   font-size: 12px;
   margin-right: 10px;
+  color: #000;
 }
