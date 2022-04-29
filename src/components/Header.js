@@ -36,28 +36,28 @@ export default function Header() {
         <div className="liste">
           <NavLink
             className={'items'}
-            to="../routes/Home"
+            to="/"
             style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}
           >
             Home
           </NavLink>
           <NavLink
             className={'items'}
-            to="../routes/Quizz"
+            to="/Quizz"
             style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}
           >
             Quizz
           </NavLink>
           <NavLink
             className={'items'}
-            to="../routes/Profil"
+            to="/Narnarmate"
             style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}
           >
             Nanar Localisation
           </NavLink>
           <NavLink
             className={'items'}
-            to="../routes/Contact"
+            to="/Contact"
             style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}
           >
             Contact

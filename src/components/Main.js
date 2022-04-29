@@ -13,7 +13,7 @@ export default function Main() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/quizz" element={<Quizz />} />
-        <Route path="/profil" element={<Profil />} />
+        <Route path="/Nanarmate" element={<Profil />} />
         <Route path="/filterpage" element={<Filterpage />} />
         <Route path="/results" element={<Results />} />
       </Routes>
