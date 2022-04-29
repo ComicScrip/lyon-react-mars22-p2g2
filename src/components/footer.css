@@ -1,8 +1,6 @@
 .main-footer {
-  height: 7vh;
   display: flex;
-
-  background: #3f92a8;
+  background: #ffce31;
   justify-content: space-between;
 }
 
@@ -13,7 +11,7 @@
 }
 
 .content {
-  color: #fff;
+  color: #000;
   font-size: 15px;
   margin-left: 5px;
 }
@@ -28,6 +26,7 @@
   width: 20;
 }
 
-h3 {
+.title {
   font-size: 12px;
+  margin-right: 10px;
 }

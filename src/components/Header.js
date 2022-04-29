@@ -37,29 +37,29 @@ export default function Header() {
           <NavLink
             className={'items'}
             to="../routes/Home"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
+            style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}
           >
             Home
           </NavLink>
           <NavLink
             className={'items'}
             to="../routes/Quizz"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
+            style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}
           >
             Quizz
           </NavLink>
           <NavLink
             className={'items'}
             to="../routes/Profil"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
+            style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}
           >
-            Profil
+            Nanar Localisation
           </NavLink>
           <NavLink
             GrClose
             className={'items'}
             to="../routes/Contact"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
+            style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}
           >
             Contact
           </NavLink>

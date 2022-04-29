@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import logo from '../image/logo.png';
 import './footer.css';
 
 export default function Footer() {
@@ -18,10 +17,7 @@ export default function Footer() {
       </div>
       <div className="logo-content">
         <div className="webName">
-          <h3>FilmsClaqués.com</h3>
-        </div>
-        <div className="logo">
-          <img src={logo} alt="logo" className={'logo'} />
+          <h3 className="title">Nanar Production</h3>
         </div>
       </div>
     </div>
