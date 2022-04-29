@@ -9,7 +9,10 @@ function DisplayMovies({ movie, trailer }) {
     trailer && (
       <>
         <div className="mainContainerProfilPage">
-          <img className="moviePicture" src={movie.image} alt="" />
+          <div className="moviePictureContainer">
+            <img className="moviePicture" src={movie.image} alt="" />
+          </div>
+
           <div className="secondContainerProfilPage">
             <div className="filmContainer">
               <h2>{movie.title}</h2>
@@ -46,8 +49,8 @@ function DisplayMovies({ movie, trailer }) {
                 controls
                 playing
                 muted
-                width="700px"
-                height="450px"
+                width="600px"
+                height="350px"
               />
             )}
           </div>
