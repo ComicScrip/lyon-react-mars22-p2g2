@@ -14,7 +14,7 @@ function DisplayMovies({ movie, trailer }) {
             <div className="filmContainer">
               <h2>{movie.title}</h2>
               <h2 className="spaceBtwTitle">{movie.description}</h2>
-              <h2>{movie.runtimeStr}</h2>
+              <h2 className="runTime">{movie.runtimeStr}</h2>
             </div>
 
             <h1 className="rateContainer">
@@ -46,7 +46,8 @@ function DisplayMovies({ movie, trailer }) {
                 controls
                 playing
                 muted
-                width="100%"
+                width="700px"
+                height="450px"
               />
             )}
           </div>

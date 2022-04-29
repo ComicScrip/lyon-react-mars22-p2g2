@@ -34,6 +34,8 @@ body {
 }
 .secondContainerProfilPage {
   font-size: 9pt;
+  display: flex;
+  flex-direction: column;
 }
 .spaceBtwTitle {
   margin: 10px 0px 10px 0px;
@@ -55,9 +57,7 @@ body {
 .moviePicture {
   height: 35vh;
 }
-.rateContainer {
-  margin-top: 30px;
-}
+
 /*--------------------------------------distribution style*/
 .distribution {
   display: flex;
