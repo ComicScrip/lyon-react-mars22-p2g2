@@ -53,7 +53,7 @@ export default function Header() {
             to="/Narnarmate"
             style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}
           >
-            Nanar Localisation
+            Nanar Mate
           </NavLink>
           <NavLink
             className={'items'}
