@@ -1,11 +1,12 @@
+/* eslint-disable operator-linebreak */
 import '../routes/detailPage.css';
 import Rating from '@mui/material/Rating';
 import ReactPlayer from 'react-player';
 import { BsFillCameraVideoOffFill } from 'react-icons/bs';
 
-function DisplayMovies({ movie, trailer }) {
+function DisplayMovie({ movie, trailer }) {
   return (
-    movie,
+    movie &&
     trailer && (
       <>
         <div className="mainContainerProfilPage">
@@ -61,13 +62,14 @@ function DisplayMovies({ movie, trailer }) {
         <hr />
         <h1 className="distriTitle">DISTRIBUTION</h1>
         <div className="distribution">
-          {movie.actorList.slice(0, 6).map((actor) => (
+          {(movie.actorList || []).slice(0, 6).map((actor) => (
             <div key={actor.id}>
               <img
                 className="actorsPictures"
                 src={actor.image}
                 alt={actor.name}
               />
+
               <p className="actorName" style={{ textAlign: 'center' }}>
                 {actor.name}
               </p>
@@ -97,4 +99,4 @@ function DisplayMovies({ movie, trailer }) {
   );
 }
 
-export default DisplayMovies;
+export default DisplayMovie;

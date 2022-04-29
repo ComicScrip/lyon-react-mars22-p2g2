@@ -1,7 +1,7 @@
 import './detailPage.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import DisplayMovies from '../components/DisplayMovies';
+import DisplayMovie from '../components/DisplayMovie';
 import { useParams } from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -9,7 +9,7 @@ const apiKey = process.env.REACT_APP_DETAIL_APIKEY;
 
 export default function DetailPage() {
   const [movie, setMovie] = useState('');
-  const [trailer, SetTrailer] = useState('');
+  const [trailer, setTrailer] = useState('');
   const { id } = useParams();
 
   const [isLoading, setIsLoading] = useState(true);
@@ -32,7 +32,7 @@ export default function DetailPage() {
       .get(`https://imdb-api.com/en/API/YouTubeTrailer/${apiKey}/${id}`)
       .then((answer) => answer.data)
       .then((movieInfo) => {
-        SetTrailer(movieInfo);
+        setTrailer(movieInfo);
       })
       .catch((err) => {
         console.error(err.response.data);
@@ -45,7 +45,7 @@ export default function DetailPage() {
       {isLoading ? (
         <CircularProgress />
       ) : (
-        <DisplayMovies movie={movie} trailer={trailer} />
+        <DisplayMovie movie={movie} trailer={trailer} />
       )}
     </div>
   );
