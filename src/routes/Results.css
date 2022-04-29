@@ -12,28 +12,20 @@
   color: #ddd4d4;
   display: flex;
   justify-content: center;
-  align-items: center;
-  border: solid;
-  border-radius: 10px;
-  margin: 0px 15px 0px 15px;
-  padding: 5px 10px;
-  background: rgba(196, 196, 196, 0.22);
-}
-.secondContainerContents {
-  color: #ddd4d4;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
   border: solid;
   border-radius: 10px;
   margin: 20px 15px 0px 15px;
   padding: 5px 10px;
   background: rgba(196, 196, 196, 0.22);
 }
+
+.plotContainer {
+  height: 200px;
+  overflow: auto;
+}
 .textContainer {
   display: flex;
   flex-direction: column;
-  text-align: center;
   padding: 10px;
 }
 .button {
@@ -56,7 +48,7 @@ button {
   margin: 40px 15px;
 }
 .pictureOfMonthR {
-  height: 250px;
+  height: 200px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -66,54 +58,67 @@ button {
   align-items: center;
 }
 .knowPara {
-  margin-top: 50px;
+  margin-top: 80px;
   text-decoration: none;
   color: #c4c4c4;
+  font-style: italic;
+  font-size: 13pt;
 }
-hr {
-  margin: 0px 15px;
-  color: #c4c4c4;
+.actorsPara {
+  font-size: 13pt;
+  font-weight: bold;
 }
 .runtime {
-  font-size: 8pt;
+  font-size: 10pt;
 }
 .plot {
   font-size: 10pt;
+  font: inherit;
 }
 
 @media screen and (min-width: 1050px) {
   .middleContainer {
     display: flex;
     justify-content: center;
+    margin: 0px 260px 0px 260px;
   }
-  .secondContainerContents {
-    margin: 0px 15px 0px 15px;
-    display: flex;
-    flex-direction: row;
+  .chooseOneTitle {
+    font-size: 20pt;
+  }
+  .plotContainer {
+    margin: 0px;
+  }
+  .actorNoPic {
+    line-height: 15pt;
   }
   .firstContainer {
     width: 20%;
     margin: 50px auto;
   }
+  .secondContainerContent {
+    align-items: center;
+    width: 50%;
+  }
+  .secondContainerContents {
+    align-items: center;
+    width: 50%;
+  }
   .pictureOfMonthR {
-    height: 500px;
+    height: 300px;
     margin: 10px 10px;
   }
   .textContainer {
     font-size: 20pt;
   }
   .knowPara {
-    margin-bottom: 50px;
-  }
-  hr {
-    margin: 0px 100px;
+    margin-bottom: 40px;
+    font-size: 15pt;
   }
   .runtime {
-    font-size: 10pt;
-    margin-top: 40px;
+    font-size: 13pt;
   }
   .plot {
-    font-size: 15pt;
+    font-size: 17pt;
   }
   .containerResolv {
     margin-bottom: 60px;
