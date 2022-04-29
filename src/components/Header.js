@@ -56,7 +56,6 @@ export default function Header() {
             Nanar Localisation
           </NavLink>
           <NavLink
-            GrClose
             className={'items'}
             to="../routes/Contact"
             style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}
