@@ -1,18 +1,7 @@
-import ProfilAchievement from '../components/ProfilAchievement';
-import ProfilDetail from '../components/ProfilDetail';
-import ProfilFilmFav from '../components/ProfilFilmFav';
-import styles from '../components/Profil.module.css';
+import React from 'react';
 
-export default function Profil() {
-  return (
-    <div className={styles.profilPageContainer}>
-      <div className={styles.profilFirstContainer}>
-        <ProfilDetail />
-      </div>
-      <div className={styles.profilSecondContainer}>
-        <ProfilAchievement />
-        <ProfilFilmFav />
-      </div>
-    </div>
-  );
+function Profil() {
+  return <div>Profil</div>;
 }
+
+export default Profil;

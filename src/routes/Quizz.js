@@ -182,17 +182,17 @@ export default function Quizz() {
         {
           answer: 'Un bon navet',
           value: 'user_rating=2.0,3.0.0&',
-          id: 'certificate1',
+          id: 'userrating1',
         },
         {
           answer: 'Un navet de qualité supérieure',
           value: 'user_rating=1.0,2.0&',
-          id: 'certificate2',
+          id: 'userrating2',
         },
         {
           answer: 'Un navet légendaire',
           value: 'user_rating=,1.0&',
-          id: 'certificate3',
+          id: 'userrating3',
         },
       ],
     },
@@ -212,7 +212,6 @@ export default function Quizz() {
 
     if (nextQuestion === quizzQuestions.length) {
       setQuizzValues((table) => [...table, value]);
-      alert("you've reached the end of the quizz");
       navigate(`/results/${url}`);
     }
   };
