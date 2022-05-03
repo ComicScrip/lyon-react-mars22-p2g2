@@ -2,22 +2,30 @@
 body {
   font-family: 'Abhaya Libre', serif;
 }
-.mainContainerMediaQ {
-  height: 87vh;
+.mainHomePicture {
+  display: none;
 }
 .linkStyle {
   text-decoration: none;
   color: #938181;
   font-style: italic;
+  font-size: 12pt;
+  margin-top: 15px;
 }
 .movieMonth {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+.movieMonths {
+  font-size: 15pt;
+  padding: 10px 10px;
 }
 .borderMovie {
   color: #c4c4c4;
+  border: solid;
+  border-radius: 10px;
 }
 .mainTitle {
   display: flex;
@@ -27,7 +35,9 @@ body {
   border-radius: 10px;
   margin: 30px;
   color: #c4c4c4;
+  padding: 10px 20px;
 }
+
 .mainPara {
   display: flex;
   justify-content: center;
@@ -53,15 +63,23 @@ body {
   justify-content: center;
   text-align: center;
   height: 250px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 30px;
   cursor: pointer;
 }
-.quizzYes {
-  display: none;
+.comunityContainer {
+  margin: 20px;
 }
 
 @media screen and (min-width: 760px) {
+  .mainHomePicture {
+    display: initial;
+    height: 20vh;
+    width: 100%;
+  }
+  .mainContainerHomePicture {
+    margin: 0px 200px;
+  }
   .containerMediaQ {
     width: 50%;
     display: flex;
