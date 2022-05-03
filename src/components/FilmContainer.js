@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Filter.module.css';
 import { AiOutlineHeart } from 'react-icons/ai';
-import { RiCloseFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
 function FilmContainer({ resultApi }) {
@@ -22,10 +21,11 @@ function FilmContainer({ resultApi }) {
           <p>{resultApi.plot}</p>
         </div>
         <div className={styles.filmDetailPlus}>
-          <Link to={pathname}>En savoir +</Link>
+          <Link to={pathname} style={{ color: 'white' }}>
+            En savoir +
+          </Link>
           <div className={styles.filmButtons}>
             <AiOutlineHeart className={styles.buttons} />
-            <RiCloseFill className={styles.buttons} />
           </div>
         </div>
       </section>
