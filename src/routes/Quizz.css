@@ -74,7 +74,7 @@ body {
 .buttonQuizzStyle {
   margin: 20px 0px;
   padding: 20px 0px;
-  color: #fff;
+  color: rgb(0, 0, 0);
   background: rgba(196, 196, 196, 0.7);
   border: 1px solid #c4c4c4;
   border-radius: 15px;
