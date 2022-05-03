@@ -16,7 +16,7 @@ export default function Main() {
         <Route path="/quizz" element={<Quizz />} />
         <Route path="/profil" element={<Profil />} />
         <Route path="/filterpage" element={<Filterpage />} />
-        <Route path="/results/" element={<Results />} />
+        <Route path="/results/:id" element={<Results />} />
         <Route path="/detailpage/:id" element={<DetailPage />} />
       </Routes>
     </main>

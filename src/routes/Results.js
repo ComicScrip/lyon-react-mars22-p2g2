@@ -2,9 +2,17 @@ import './Results.css';
 import ResultApiContainer from './ResultApiContainer';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
+
+const apiKey = process.env.REACT_APP_DETAIL_APIKEY;
 
 export default function Results() {
   const [resultApi, setResultApi] = useState([]);
+  const { id } = useParams();
+
+  const [isLoading, setIsLoading] = useState(true);
+
   const getRandomMovie = (array) => {
     const randomMovie = array.sort(() => Math.random() - 0.5);
     return randomMovie;
@@ -13,7 +21,7 @@ export default function Results() {
   useEffect(() => {
     axios
       .get(
-        'https://imdb-api.com/API/AdvancedSearch/k_8kbcras1?user_rating=1.0,3.0&genres=action,adventure&colors=color'
+        `https://imdb-api.com/API/AdvancedSearch/${apiKey}?user_rating=1.0,3.0&${id}`
       )
       .then((res) => res.data)
       .then((data) => {
@@ -21,21 +29,26 @@ export default function Results() {
       })
       .catch((err) => {
         console.error(err.response.data);
-      });
+      })
+      .finally(() => setIsLoading(false));
   }, []);
 
   return (
     <div>
       <div className="containerResolv">
         <div className="firstContainer">
-          <h2 className="chooseOneTitle">Choose one</h2>
+          <h2 className="chooseOneTitle">Nos suggestions pour toi</h2>
         </div>
         <div className="middleContainer">
-          {resultApi.slice(0, 2).map((movie) => (
-            <div className="secondContainerContent" key={movie.id}>
-              <ResultApiContainer movie={movie} />
-            </div>
-          ))}
+          {isLoading ? (
+            <CircularProgress />
+          ) : (
+            resultApi.slice(0, 2).map((movie) => (
+              <div className="secondContainerContent" key={movie.id}>
+                <ResultApiContainer movie={movie} />
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>
