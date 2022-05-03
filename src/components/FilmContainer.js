@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Filter.module.css';
-import { AiOutlineHeart } from 'react-icons/ai';
+import { AiFillHeart } from 'react-icons/ai';
+import { IoHeartDislikeOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
 function FilmContainer({ resultApi }) {
   const linkTo = resultApi.id;
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const pathname = `/detailpage/${linkTo}`;
   return (
@@ -25,7 +27,17 @@ function FilmContainer({ resultApi }) {
             En savoir +
           </Link>
           <div className={styles.filmButtons}>
-            <AiOutlineHeart className={styles.buttons} />
+            {isFavorite ? (
+              <IoHeartDislikeOutline
+                className={styles.buttons}
+                onClick={() => setIsFavorite(!isFavorite)}
+              />
+            ) : (
+              <AiFillHeart
+                className={styles.buttons}
+                onClick={() => setIsFavorite(!isFavorite)}
+              />
+            )}
           </div>
         </div>
       </section>
