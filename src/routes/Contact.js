@@ -1,13 +1,36 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from './ContactPage.module.css';
+import emailjs from '@emailjs/browser';
 
 export default function ContactPage() {
   const [nom, setNom] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const form = useRef();
+    emailjs
+      .sendForm(
+        'service_9ckxiwr',
+        'template_73bygp6',
+        form.current,
+        '-P9_tX4W1pcnOXEX_'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    setNom('');
+    setEmail('');
+    setMessage('');
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -25,7 +48,7 @@ export default function ContactPage() {
   return (
     <div>
       <h1>Formulaire de contact</h1>
-      <div className={styles.container}>
+      <div className={styles.container} onSubmit={sendEmail}>
         <form className={styles.form} onSubmit={handleSubmit}>
           <label htmlFor="email">
             Nom:
