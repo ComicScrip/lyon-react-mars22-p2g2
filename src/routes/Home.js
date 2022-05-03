@@ -7,7 +7,7 @@ export default function Home() {
       <div className="mainContainerHomePicture">
         <img
           className="mainHomePicture"
-          src="https://upopi.ciclic.fr/sites/default/files/styles/11x4_1920/public/ca-tourne-a-manhattan-1995-06-g.jpg?itok=PjyGcJFe"
+          src="http://www.raisingedmonton.com/wp-content/uploads/2016/03/family-movie-1040cs051612.jpg"
           alt="hello"
         />
       </div>
@@ -18,11 +18,14 @@ export default function Home() {
           </div>
           <div className="mainPara">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.labore et
-              dolore magna aliqua.
+              Bonjour et bienvenue sur FILMS CLAQUES.COM, le site où trouver les
+              meilleurs Nanar pour tous les gouts et toutes les occasions.
+              <br />
+              Nous vous offrons la possibilité de faire notre Quizz de 5
+              questions à l'issu duquel 2 Nanars vous seront proposés. Si vous
+              souhaitez découvrir notre selection de Nanar, n'hésitez pas à
+              consulter le lien ci-dessous.
+              <br />A VOS NANAR, PRET, PARTEZ!!
             </p>
           </div>
           <div className="quizzYes">
@@ -40,6 +43,7 @@ export default function Home() {
                   backgroundColor: 'black',
                   borderColor: 'black',
                   transition: '0.7s',
+                  color: '#c4c4c4',
                 },
               }}
             >
@@ -78,6 +82,7 @@ export default function Home() {
                   backgroundColor: 'black',
                   borderColor: 'black',
                   transition: '0.7s',
+                  color: '#c4c4c4',
                 },
               }}
             >

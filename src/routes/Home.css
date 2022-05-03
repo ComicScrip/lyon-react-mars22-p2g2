@@ -41,9 +41,9 @@ body {
 .mainPara {
   display: flex;
   justify-content: center;
-  padding: 0px 50px 0px 50px;
   text-align: center;
   color: #c4c4c4;
+  line-height: 15pt;
 }
 .quizzYes {
   display: flex;
@@ -74,6 +74,7 @@ body {
 @media screen and (min-width: 760px) {
   .mainHomePicture {
     display: initial;
+    object-fit: cover;
     height: 20vh;
     width: 100%;
   }
@@ -81,7 +82,7 @@ body {
     margin: 0px 200px;
   }
   .containerMediaQ {
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
