@@ -69,6 +69,7 @@ body {
 }
 .comunityContainer {
   margin: 20px;
+  display: none;
 }
 
 @media screen and (min-width: 760px) {
