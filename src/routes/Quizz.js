@@ -208,10 +208,10 @@ export default function Quizz() {
     const nextQuestion = currentQuestion + 1;
 
     setCurrentQuestion(nextQuestion);
-    setQuizzValues((table) => [...table, value]);
+    setQuizzValues((prevValue) => [...prevValue, value]);
 
     if (nextQuestion === quizzQuestions.length) {
-      setQuizzValues((table) => [...table, value]);
+      setQuizzValues((prevValue) => [...prevValue, value]);
       navigate(`/results/${url}`);
     }
   };
