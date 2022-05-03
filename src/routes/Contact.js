@@ -16,10 +16,10 @@ export default function ContactPage() {
       type: 'success',
       position: 'bottom-center',
     });
+
     setNom('');
     setEmail('');
     setMessage('');
-    console.log({ nom, email, message });
   };
 
   return (
@@ -38,7 +38,6 @@ export default function ContactPage() {
               onChange={(e) => setNom(e.target.value)}
             />
           </label>
-
           <label htmlFor="email">
             Email:
             <input
@@ -50,7 +49,6 @@ export default function ContactPage() {
               onChange={(e) => setEmail(e.target.value)}
             />
           </label>
-
           <label htmlFor="message">
             Message:
             <textarea
