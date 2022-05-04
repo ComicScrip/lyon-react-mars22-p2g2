@@ -39,7 +39,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div>
+    <div className={styles.background}>
       <div className={styles.apropos}>
         <p>A propos de Nanar production </p>
       </div>
@@ -57,10 +57,12 @@ export default function ContactPage() {
             <input
               type="nom"
               id="nom"
+              name="nom"
               className={styles.field}
               required
               value={nom}
               onChange={(e) => setNom(e.target.value)}
+              placeholder="ex: Adnan Mahamat"
             />
           </label>
           <label htmlFor="email">
@@ -68,20 +70,26 @@ export default function ContactPage() {
             <input
               type="email"
               id="email"
+              name="email"
               className={styles.field}
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              placeholder="ex: adnanmht@gmail.com"
             />
           </label>
           <label htmlFor="message">
             Message:
             <textarea
               id="message"
+              name="message"
               className={styles.field}
               required
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              placeholder="Votre texte ici..."
+              maxLength="400"
+              style={{ resize: 'none' }}
             />
           </label>
           <button type="submit" className={styles.submitBtn}>
