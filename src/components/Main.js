@@ -6,19 +6,25 @@ import Profil from '../routes/Profil';
 import Filterpage from '../routes/Filterpage';
 import Results from '../routes/Results';
 import DetailPage from '../routes/DetailPage';
+import { FavoriteContextProvider } from '../contexts/favoriteContext';
+import { ResultsContextProvider } from '../contexts/resultsContext';
 
 export default function Main() {
   return (
     <main>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/quizz" element={<Quizz />} />
-        <Route path="/profil" element={<Profil />} />
-        <Route path="/filterpage" element={<Filterpage />} />
-        <Route path="/results/" element={<Results />} />
-        <Route path="/detailpage/:id" element={<DetailPage />} />
-      </Routes>
+      <ResultsContextProvider>
+        <FavoriteContextProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/quizz" element={<Quizz />} />
+            <Route path="/profil" element={<Profil />} />
+            <Route path="/filterpage" element={<Filterpage />} />
+            <Route path="/results/" element={<Results />} />
+            <Route path="/detailpage/:id" element={<DetailPage />} />
+          </Routes>
+        </FavoriteContextProvider>
+      </ResultsContextProvider>
     </main>
   );
 }

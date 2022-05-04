@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import styles from './Filter.module.css';
-import { AiFillHeart } from 'react-icons/ai';
-import { IoHeartDislikeOutline } from 'react-icons/io5';
+import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import { FavoriteContext } from '../contexts/favoriteContext';
 
-function FilmContainer({ resultApi }) {
+function FilmContainer({ resultApi, id }) {
   const linkTo = resultApi.id;
-  const [isFavorite, setIsFavorite] = useState(false);
 
   const pathname = `/detailpage/${linkTo}`;
+
+  const { toggleFavoriteMovie, isFavoriteMovie } = useContext(FavoriteContext);
+
   return (
     <div className={styles.filmContainer}>
       <section className={styles.filmAfficheContainer}>
@@ -27,15 +29,15 @@ function FilmContainer({ resultApi }) {
             En savoir +
           </Link>
           <div className={styles.filmButtons}>
-            {isFavorite ? (
-              <IoHeartDislikeOutline
-                className={styles.buttons}
-                onClick={() => setIsFavorite(!isFavorite)}
-              />
-            ) : (
+            {isFavoriteMovie(id) ? (
               <AiFillHeart
                 className={styles.buttons}
-                onClick={() => setIsFavorite(!isFavorite)}
+                onClick={() => toggleFavoriteMovie(id)}
+              />
+            ) : (
+              <AiOutlineHeart
+                className={styles.buttons}
+                onClick={() => toggleFavoriteMovie(id)}
               />
             )}
           </div>
