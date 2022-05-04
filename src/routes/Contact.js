@@ -8,10 +8,10 @@ export default function ContactPage() {
   const [nom, setNom] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
+  const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-    const form = useRef();
+
     emailjs
       .sendForm(
         'service_9ckxiwr',
@@ -30,26 +30,18 @@ export default function ContactPage() {
     setNom('');
     setEmail('');
     setMessage('');
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
     toast('Merci ! Nous reviendrons vite vers vous :)', {
       theme: 'light',
       type: 'success',
       position: 'bottom-center',
     });
-
-    setNom('');
-    setEmail('');
-    setMessage('');
   };
 
   return (
     <div>
       <h1>Formulaire de contact</h1>
-      <div className={styles.container} onSubmit={sendEmail}>
-        <form className={styles.form} onSubmit={handleSubmit}>
+      <div className={styles.container}>
+        <form className={styles.form} ref={form} onSubmit={sendEmail}>
           <label htmlFor="email">
             Nom:
             <input
