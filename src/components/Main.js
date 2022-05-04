@@ -6,6 +6,7 @@ import Profil from '../routes/Profil';
 import Filterpage from '../routes/Filterpage';
 import Results from '../routes/Results';
 import DetailPage from '../routes/DetailPage';
+import NanarResult from '../routes/NanarResult';
 
 export default function Main() {
   return (
@@ -18,6 +19,7 @@ export default function Main() {
         <Route path="/filterpage" element={<Filterpage />} />
         <Route path="/results/" element={<Results />} />
         <Route path="/detailpage/:id" element={<DetailPage />} />
+        <Route path="/nanarresult" element={<NanarResult />} />
       </Routes>
     </main>
   );
