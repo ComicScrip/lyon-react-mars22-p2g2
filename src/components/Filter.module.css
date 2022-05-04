@@ -14,12 +14,22 @@ body {
 }
 
 .title {
-  padding: 10px 0px;
+  display: flex;
+  width: 100%;
+  margin: 20px auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1title {
   border: 1px solid #c4c4c4;
   border-radius: 5px;
-  text-align: center;
-  width: 50%;
-  margin: 20px auto;
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.titleDesktop {
+  display: none;
 }
 
 .firstContainer {
@@ -155,8 +165,16 @@ body {
   /* LAYOUT */
 
   .title {
-    width: 30%;
+    width: 100%;
     margin: 60px auto 30px auto;
+  }
+
+  .h1title {
+    margin-right: 40px;
+  }
+
+  .titleDesktop {
+    display: initial;
   }
 
   .firstContainer {

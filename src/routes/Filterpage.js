@@ -4,6 +4,7 @@
 /* eslint-disable operator-linebreak */
 import FilmContainer from '../components/FilmContainer';
 import styles from '../components/Filter.module.css';
+import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useSearchParams } from 'react-router-dom';
@@ -141,13 +142,21 @@ export default function Filterpage() {
   return (
     <div>
       <div className={styles.title}>
-        <h1 className={styles.h1title}>FILTRES</h1>
-        <button
-          type="button"
-          onClick={() => setIsFavoriteList(!isFavoriteList)}
-        >
-          Favoris
-        </button>
+        <h1 className={styles.h1title}>
+          RECHERCHE<span className={styles.titleDesktop}>R UN NAVET</span>
+        </h1>
+
+        {isFavoriteList ? (
+          <AiFillHeart
+            className={styles.buttons}
+            onClick={() => setIsFavoriteList(!isFavoriteList)}
+          />
+        ) : (
+          <AiOutlineHeart
+            className={styles.buttons}
+            onClick={() => setIsFavoriteList(!isFavoriteList)}
+          />
+        )}
       </div>
       <div className={styles.firstContainer}>
         <section className={styles.filterGridContainer}>
