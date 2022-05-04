@@ -146,6 +146,9 @@ hr {
     margin: 3% 28%;
     background: rgba(196, 196, 196, 0.22);
   }
+  h2 {
+    font-size: x-large;
+  }
 }
 
 @media screen and (max-width: 688px) {

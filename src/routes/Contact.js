@@ -8,6 +8,7 @@ export default function ContactPage() {
   const [nom, setNom] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -39,6 +40,15 @@ export default function ContactPage() {
 
   return (
     <div>
+      <div className={styles.apropos}>
+        <p>A propos de Nanar production </p>
+      </div>
+      <div className={styles.detail}>
+        <h2>
+          L'équipe est composé de cinq développeurs en herbe :
+          Julie,Quentin,Rayanne,Adnan et Mylène
+        </h2>
+      </div>
       <h1>Formulaire de contact</h1>
       <div className={styles.container}>
         <form className={styles.form} ref={form} onSubmit={sendEmail}>
@@ -83,18 +93,6 @@ export default function ContactPage() {
       </div>
       <div className={styles.ligne}>
         <hr className="ligne" />
-      </div>
-      <div className={styles.apropos}>
-        <p>A propos de Nanar production </p>
-      </div>
-      <div className={styles.detail}>
-        <h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          at ultrices turpis, non hendrerit leo. Vivamus auctor tempus nulla,
-          nec elementum augue tincidunt vel. Nam et pellentesque lectus, vel
-          fermentum augue. Maecenas pretium aliquet ipsum, ac fermentum nibh
-          sagittis nec. Donec euismod dictum turpis sed accumsan.
-        </h2>
       </div>
     </div>
   );
