@@ -1,32 +1,48 @@
 import React from 'react';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { RiCloseFill } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
-function ResultApiContainer({ resultApi }) {
+function ResultApiContainer({ movie }) {
+  const linkTo = movie.id;
+
+  const pathname = `/detailpage/${linkTo}`;
   return (
-    <>
-      <div className="knowMoreMovie">
-        <img
-          className="pictureOfMonthR"
-          src={resultApi.image}
-          alt={resultApi.title}
-        />
-        <a href="/" className="knowPara">
-          En savoir +
-        </a>
-      </div>
-
-      <div className="textContainer">
-        <p className="plot">{resultApi.plot}</p>
-        <br />
-        <p className="runtime">{resultApi.runtimeStr}</p>
-        <div className="button">
-          <AiOutlineHeart className="buttons" />
-
-          <RiCloseFill className="buttons" />
+    movie && (
+      <>
+        <div className="knowMoreMovie">
+          <img
+            className="pictureOfMonthR"
+            src={movie.image}
+            alt={movie.title}
+          />
+          <Link className="knowPara" to={pathname}>
+            En savoir +
+          </Link>
         </div>
-      </div>
-    </>
+        <div className="textContainer">
+          <div className="plotContainer">
+            <p className="plot">{movie.plot}</p>
+          </div>
+          <p className="runtime">{movie.runtimeStr}</p>
+          <div className="actorNoPic">
+            <hr />
+            <p className="actorsPara">Actors :</p>
+            <br />
+            {(movie.starList || []).slice(0, 5).map((actorNoPic) => (
+              <div key={actorNoPic.name}>
+                <p className="">{actorNoPic.name}</p>
+              </div>
+            ))}
+          </div>
+          <div className="button">
+            <AiOutlineHeart className="buttons" />
+
+            <RiCloseFill className="buttons" />
+          </div>
+        </div>
+      </>
+    )
   );
 }
 
