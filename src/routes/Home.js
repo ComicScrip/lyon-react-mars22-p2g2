@@ -56,7 +56,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="movieMonth">
+        {/* <div className="movieMonth">
           <div className="borderMovie">
             <h2 className="movieMonthTitle">Movie of the month</h2>
           </div>
@@ -87,7 +87,7 @@ export default function Home() {
               Rencontrer la communauté Nanar
             </Button>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -74,7 +74,7 @@ body {
   display: none;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 900px) {
   .mainHomePicture {
     display: initial;
     object-fit: cover;
@@ -82,7 +82,8 @@ body {
     width: 100%;
   }
   .mainContainerHomePicture {
-    margin: 0px 200px;
+    margin: 0px;
+    width: 100%;
   }
   .containerMediaQ {
     width: 60%;

@@ -50,7 +50,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .nav {
     background: #ffce31;
     display: flex;
@@ -109,7 +109,7 @@ body {
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
   .nav {
     border-bottom: 10px solid white;
   }

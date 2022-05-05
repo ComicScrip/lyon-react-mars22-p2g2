@@ -34,7 +34,7 @@ export default function Header() {
           <img src={logo} alt="logo" className={'item'} />
         </Link>
       </div>
-      {(toggleMenu || largeur > 700) && (
+      {(toggleMenu || largeur > 900) && (
         <div className="liste">
           <NavLink
             className={'items'}
