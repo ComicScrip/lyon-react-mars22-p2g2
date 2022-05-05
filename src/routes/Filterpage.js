@@ -1,11 +1,16 @@
+/* eslint-disable react/jsx-indent */
+/* eslint-disable indent */
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable operator-linebreak */
 import FilmContainer from '../components/FilmContainer';
 import styles from '../components/Filter.module.css';
-import { useState, useEffect } from 'react';
+import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
+import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useSearchParams } from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
+import { ResultsContext } from '../contexts/resultsContext';
+import { FavoriteContext } from '../contexts/favoriteContext';
 
 const apiKey = process.env.REACT_APP_FILTER_APIKEY;
 
@@ -89,9 +94,11 @@ export default function Filterpage() {
 
   const [checked, setChecked] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
-  const [results, setResults] = useState([]);
+  const { results, setResults } = useContext(ResultsContext);
+  const { favoriteMovies } = useContext(FavoriteContext);
 
   const [isLoading, setLoading] = useState(true);
+  const [isFavoriteList, setIsFavoriteList] = useState(false);
 
   const handleChangeCheck = (event) => {
     setChecked(event.target.value);
@@ -125,10 +132,31 @@ export default function Filterpage() {
     };
   }, [searchParams]);
 
+  if (isLoading) {
+    return (
+      <div className={styles.loadingCircle}>
+        <CircularProgress />
+      </div>
+    );
+  }
   return (
     <div>
       <div className={styles.title}>
-        <h1 className={styles.h1title}>FILTRES</h1>
+        <h1 className={styles.h1title}>
+          RECHERCHE<span className={styles.titleDesktop}>R UN NAVET</span>
+        </h1>
+
+        {isFavoriteList ? (
+          <AiFillHeart
+            className={styles.buttons}
+            onClick={() => setIsFavoriteList(!isFavoriteList)}
+          />
+        ) : (
+          <AiOutlineHeart
+            className={styles.buttons}
+            onClick={() => setIsFavoriteList(!isFavoriteList)}
+          />
+        )}
       </div>
       <div className={styles.firstContainer}>
         <section className={styles.filterGridContainer}>
@@ -353,13 +381,21 @@ export default function Filterpage() {
           </div>
         </section>
         <section className={styles.filmGridContainer}>
-          {isLoading ? (
-            <CircularProgress />
-          ) : (
-            results.map((resultApi) => (
-              <FilmContainer resultApi={resultApi} key={resultApi.id} />
-            ))
-          )}
+          {isFavoriteList
+            ? favoriteMovies.map((resultApi) => (
+                <FilmContainer
+                  resultApi={resultApi}
+                  key={resultApi.id}
+                  id={resultApi.id}
+                />
+              ))
+            : results.map((resultApi) => (
+                <FilmContainer
+                  resultApi={resultApi}
+                  key={resultApi.id}
+                  id={resultApi.id}
+                />
+              ))}
         </section>
       </div>
     </div>
