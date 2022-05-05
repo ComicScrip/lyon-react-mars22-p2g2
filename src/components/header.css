@@ -1,6 +1,11 @@
+@import url('https: //fonts.google.com/share?selection.family=Abhaya%20Libre');
+body {
+  font-family: 'Abhaya Libre', serif;
+}
+
 .nav {
-  height: 6vh;
-  background: #3f92a8;
+  height: 8vh;
+  background: #ffce31;
   display: flex;
 }
 
@@ -8,7 +13,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  background: #3f92a8;
+  background: #ffce31;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -17,22 +22,23 @@
   width: 100%;
 }
 
-.item {
+.logoContainer {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 10px;
+}
+
+.item {
   width: 50px;
   height: 50px;
-  margin-top: 5px;
 }
 
 .items {
   margin-right: 10px;
   color: #f1f1f1;
   cursor: pointer;
-  width: 90px;
   height: 40px;
-  background: #26798b;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,13 +50,19 @@
   display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
+  .nav {
+    background: #ffce31;
+    display: flex;
+  }
+
   .liste {
     flex-direction: column;
+    position: fixed;
     height: 200px;
     width: 50%;
-    top: 6vh;
-    left: 18vh;
+    top: 8vh;
+    right: 0;
   }
   .item {
     display: flex;
@@ -74,21 +86,31 @@
     display: block;
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 15px;
     height: 4vh;
     width: 50px;
     cursor: pointer;
-    color: #f1f1f1;
+    color: black;
   }
 
   .btn2 {
     display: block;
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 15px;
     height: 4vh;
     width: 50px;
     cursor: pointer;
-    color: #f1f1f1;
+    color: black;
+  }
+
+  .desktopText {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .nav {
+    border-bottom: 10px solid white;
   }
 }

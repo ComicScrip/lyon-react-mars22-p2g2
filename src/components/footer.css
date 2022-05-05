@@ -1,3 +1,8 @@
+@import url('https: //fonts.google.com/share?selection.family=Abhaya%20Libre');
+body {
+  font-family: 'Abhaya Libre', serif;
+}
+
 .main-footer {
   display: flex;
   justify-content: space-between;

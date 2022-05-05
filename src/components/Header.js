@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './header.css';
 import { AiOutlineClose } from 'react-icons/ai';
 import logo from '../image/logo.png';
@@ -29,29 +29,42 @@ export default function Header() {
 
   return (
     <nav className="nav">
-      <div>
-        <img src={logo} alt="logo" className={'item'} />
+      <div className="logoContainer">
+        <Link to="/">
+          <img src={logo} alt="logo" className={'item'} />
+        </Link>
       </div>
-      {(toggleMenu || largeur > 500) && (
+      {(toggleMenu || largeur > 700) && (
         <div className="liste">
           <NavLink
             className={'items'}
             to="/"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
+            style={({ isActive }) => ({ color: isActive ? 'orange' : 'black' })}
+            onClick={toggleNavSmallScreen}
           >
-            Home
+            HomePage
           </NavLink>
           <NavLink
             className={'items'}
             to="/Quizz"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
+            style={({ isActive }) => ({ color: isActive ? 'orange' : 'black' })}
+            onClick={toggleNavSmallScreen}
           >
-            Quizz
+            Quick Navet
+          </NavLink>
+          <NavLink
+            className={'items'}
+            to="/filterpage"
+            style={({ isActive }) => ({ color: isActive ? 'orange' : 'black' })}
+            onClick={toggleNavSmallScreen}
+          >
+            Rechercher &nbsp; <span className="desktopText">un navet</span>
           </NavLink>
           <NavLink
             className={'items'}
             to="/Contact"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
+            style={({ isActive }) => ({ color: isActive ? 'orange' : 'black' })}
+            onClick={toggleNavSmallScreen}
           >
             Contact
           </NavLink>
