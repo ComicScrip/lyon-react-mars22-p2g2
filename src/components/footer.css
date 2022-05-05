@@ -1,9 +1,10 @@
 .main-footer {
-  height: 7vh;
   display: flex;
-
-  background: #3f92a8;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #ffce31;
+  color: black;
 }
 
 .container {
@@ -13,7 +14,7 @@
 }
 
 .content {
-  color: #fff;
+  color: black;
   font-size: 15px;
   margin-left: 5px;
 }
@@ -28,6 +29,12 @@
   width: 20;
 }
 
-h3 {
-  font-size: 12px;
+.webName {
+  font-size: 12pt;
+}
+
+@media screen and (min-width: 900px) {
+  .main-footer {
+    border-top: 10px solid white;
+  }
 }
