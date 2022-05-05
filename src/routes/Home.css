@@ -115,7 +115,7 @@ body {
   .borderMovie {
     position: absolute;
     border: none;
-    top: 240px;
+    top: 190px;
     z-index: 1;
     width: 100%;
     display: flex;
