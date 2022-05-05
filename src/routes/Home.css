@@ -91,11 +91,13 @@ body {
     justify-content: center;
     align-items: center;
   }
+
   .movieMonth {
     position: relative;
   }
   .movieMonthTitle {
-    font-size: 14pt;
+    font-size: 13pt;
+    padding: 0px;
   }
   .mainPara {
     width: 50%;
@@ -115,7 +117,7 @@ body {
     border: none;
     top: 240px;
     z-index: 1;
-    width: 74%;
+    width: 100%;
     display: flex;
     justify-content: center;
   }
