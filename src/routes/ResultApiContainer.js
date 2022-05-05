@@ -11,11 +11,13 @@ function ResultApiContainer({ movie }) {
     movie && (
       <>
         <div className="knowMoreMovie">
-          <img
-            className="pictureOfMonthR"
-            src={movie.image}
-            alt={movie.title}
-          />
+          <Link to={pathname}>
+            <img
+              className="pictureOfMonthR"
+              src={movie.image}
+              alt={movie.title}
+            />
+          </Link>
           <Link className="knowPara" to={pathname}>
             En savoir +
           </Link>
