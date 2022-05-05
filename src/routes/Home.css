@@ -44,6 +44,7 @@ body {
   text-align: center;
   color: #c4c4c4;
   line-height: 15pt;
+  margin: 0px 15px;
 }
 .quizzYes {
   display: flex;
