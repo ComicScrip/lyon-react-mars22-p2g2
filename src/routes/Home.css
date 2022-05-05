@@ -18,7 +18,7 @@ body {
   align-items: center;
   margin-top: 30px;
 }
-.movieMonths {
+.movieMonthTitle {
   font-size: 15pt;
   padding: 10px 10px;
 }
@@ -26,6 +26,7 @@ body {
   color: #c4c4c4;
   border: solid;
   border-radius: 10px;
+  text-transform: uppercase;
 }
 .mainTitle {
   display: flex;
@@ -93,6 +94,9 @@ body {
   .movieMonth {
     position: relative;
   }
+  .movieMonthTitle {
+    font-size: 15pt;
+  }
   .mainPara {
     width: 50%;
     display: flex;
@@ -108,15 +112,12 @@ body {
   }
   .borderMovie {
     position: absolute;
-    border: solid;
-    border-color: #c4c4c4;
-    border-radius: 10px;
+    border: none;
     top: 240px;
     z-index: 1;
     width: 74%;
     display: flex;
     justify-content: center;
-    font-size: 10pt;
   }
   .pictureOfMonth {
     min-height: 50vh;

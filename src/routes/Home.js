@@ -58,7 +58,7 @@ export default function Home() {
         </div>
         <div className="movieMonth">
           <div className="borderMovie">
-            <h2 className="movieMonths">Movie of the month</h2>
+            <h2 className="movieMonthTitle">Movie of the month</h2>
           </div>
           <a href="/detailpage">
             <img
