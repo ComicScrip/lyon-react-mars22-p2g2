@@ -5,6 +5,7 @@ import Quizz from '../routes/Quizz';
 import Profil from '../routes/Profil';
 import Filterpage from '../routes/Filterpage';
 import Results from '../routes/Results';
+import DetailPage from '../routes/DetailPage';
 
 export default function Main() {
   return (
@@ -15,7 +16,8 @@ export default function Main() {
         <Route path="/quizz" element={<Quizz />} />
         <Route path="/profil" element={<Profil />} />
         <Route path="/filterpage" element={<Filterpage />} />
-        <Route path="/results" element={<Results />} />
+        <Route path="/results/" element={<Results />} />
+        <Route path="/detailpage/:id" element={<DetailPage />} />
       </Routes>
     </main>
   );

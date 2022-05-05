@@ -1,0 +1,121 @@
+.firstContainer {
+  color: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  border-radius: 10px;
+  margin: 30px 50px;
+  padding: 5px 0px;
+  border: solid 3px #c4c4c4;
+}
+.secondContainerContent {
+  color: #ddd4d4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-radius: 10px;
+  margin: 0px 15px 0px 15px;
+  padding: 5px 10px;
+  background: rgba(196, 196, 196, 0.22);
+}
+.secondContainerContents {
+  color: #ddd4d4;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  border: solid;
+  border-radius: 10px;
+  margin: 20px 15px 0px 15px;
+  padding: 5px 10px;
+  background: rgba(196, 196, 196, 0.22);
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+.button {
+  display: none;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.buttons {
+  border: 1px solid #c4c4c4;
+  border-radius: 50%;
+  padding: 8px;
+  background: rgba(196, 196, 196, 0.22);
+  margin-right: 5px;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+.middleContainer {
+  margin: 40px 15px;
+}
+.pictureOfMonthR {
+  height: 250px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.knowMoreMovie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.knowPara {
+  margin-top: 50px;
+  text-decoration: none;
+  color: #c4c4c4;
+}
+hr {
+  margin: 0px 15px;
+  color: #c4c4c4;
+}
+.runtime {
+  font-size: 8pt;
+}
+.plot {
+  font-size: 10pt;
+}
+
+@media screen and (min-width: 1050px) {
+  .middleContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .secondContainerContents {
+    margin: 0px 15px 0px 15px;
+    display: flex;
+    flex-direction: row;
+  }
+  .firstContainer {
+    width: 20%;
+    margin: 50px auto;
+  }
+  .pictureOfMonthR {
+    height: 500px;
+    margin: 10px 10px;
+  }
+  .textContainer {
+    font-size: 20pt;
+  }
+  .knowPara {
+    margin-bottom: 50px;
+  }
+  hr {
+    margin: 0px 100px;
+  }
+  .runtime {
+    font-size: 10pt;
+    margin-top: 40px;
+  }
+  .plot {
+    font-size: 15pt;
+  }
+  .containerResolv {
+    margin-bottom: 60px;
+  }
+}

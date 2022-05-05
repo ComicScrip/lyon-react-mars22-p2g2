@@ -1,3 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+
+body {
+  font-family: 'Abhaya Libre', serif;
+  color: #c4c4c4;
+}
+
+.backgroundQuizzFond {
+  background-color: none;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hrQuizzStyle {
+  color: white;
+  width: 80%;
+  margin-top: 70px;
+}
+
+/* QUIZZ */
+
+.quizzContainer {
+  width: 80%;
+  height: 60%;
+  background: rgba(196, 196, 196, 0.22);
+  border: 1px solid #c4c4c4;
+  border-radius: 15px;
+}
+
+.questionNumber {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.questionNumberText {
+  display: none;
+}
+
+.quesAnswContainer {
+  height: 70%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* QUESTION QUIZZ */
+
+.questionText {
+  width: 100%;
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 20px;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* REPONSE QUIZZ */
+
+.answerSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonQuizzStyle {
+  margin: 20px 0px;
+  padding: 20px 0px;
+  color: rgb(0, 0, 0);
+  background: rgba(196, 196, 196, 0.7);
+  border: 1px solid #c4c4c4;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  font-family: 'Abhaya Libre', serif;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.buttonQuizzStyle:hover {
+  background-color: rgb(206, 206, 206);
+  color: #121326;
+}
+
+/*@media screen and (min-width: 900px) {
+  .backgroundQuizzFond {
+    background-color: none;
+    width: 80%;
+    margin: auto;
+  }
+
+  .hrQuizzStyle {
+    display: none;
+  }
+
+  /* QUIZZ CONTAINER */
+.quizzContainer {
+  width: 60%;
+}
+
+.questionNumber {
+  display: none;
+}
+
+.questionNumberText {
+  display: initial;
+}
+
+.quesAnswContainer {
+  height: 100%;
+}
+
+/* QUESITON QUIZZ */
+
+.questionText {
+  padding-bottom: 40px;
+}
+
+/* REPONSES QUIZZ */
+.answerSection {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.buttonQuizzStyle {
+  width: 40%;
+  margin: 40px 0px;
+}
+
 .quizz {
   width: 30%;
   text-align: center;
@@ -8,8 +144,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-.bloc {
+*/ .bloc {
   color: white;
   background-color: black;
   opacity: 22%;
@@ -54,6 +189,5 @@ h2 {
   border-color: white;
 }
 
-.ligne2 {
-  margin: 0 5%;
-}
+/*.ligne2 {
+  margin: 0 5%;*/
