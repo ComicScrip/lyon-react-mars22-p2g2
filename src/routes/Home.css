@@ -2,22 +2,31 @@
 body {
   font-family: 'Abhaya Libre', serif;
 }
-.mainContainerMediaQ {
-  height: 87vh;
+.mainHomePicture {
+  display: none;
 }
 .linkStyle {
   text-decoration: none;
   color: #938181;
   font-style: italic;
+  font-size: 12pt;
+  margin-top: 15px;
 }
 .movieMonth {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+.movieMonthTitle {
+  font-size: 15pt;
+  padding: 10px 10px;
 }
 .borderMovie {
   color: #c4c4c4;
+  border: solid;
+  border-radius: 10px;
+  text-transform: uppercase;
 }
 .mainTitle {
   display: flex;
@@ -27,13 +36,16 @@ body {
   border-radius: 10px;
   margin: 30px;
   color: #c4c4c4;
+  padding: 10px 20px;
 }
+
 .mainPara {
   display: flex;
   justify-content: center;
-  padding: 0px 50px 0px 50px;
   text-align: center;
   color: #c4c4c4;
+  line-height: 15pt;
+  margin: 0px 15px;
 }
 .quizzYes {
   display: flex;
@@ -53,24 +65,39 @@ body {
   justify-content: center;
   text-align: center;
   height: 250px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 30px;
   cursor: pointer;
 }
-.quizzYes {
+.comunityContainer {
+  margin: 20px;
   display: none;
 }
 
 @media screen and (min-width: 760px) {
+  .mainHomePicture {
+    display: initial;
+    object-fit: cover;
+    height: 20vh;
+    width: 100%;
+  }
+  .mainContainerHomePicture {
+    margin: 0px 200px;
+  }
   .containerMediaQ {
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .movieMonth {
     position: relative;
+  }
+  .movieMonthTitle {
+    font-size: 13pt;
+    padding: 0px;
   }
   .mainPara {
     width: 50%;
@@ -87,15 +114,12 @@ body {
   }
   .borderMovie {
     position: absolute;
-    border: solid;
-    border-color: #c4c4c4;
-    border-radius: 10px;
-    top: 240px;
+    border: none;
+    top: 190px;
     z-index: 1;
-    width: 74%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    font-size: 10pt;
   }
   .pictureOfMonth {
     min-height: 50vh;
