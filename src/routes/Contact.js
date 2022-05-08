@@ -49,7 +49,7 @@ export default function ContactPage() {
           Julie,Quentin,Rayanne,Adnan et Mylène
         </h2>
       </div>
-      <h1>Formulaire de contact</h1>
+      <h1>Contact-nous</h1>
       <div className={styles.container}>
         <form className={styles.form} ref={form} onSubmit={sendEmail}>
           <label htmlFor="email">
