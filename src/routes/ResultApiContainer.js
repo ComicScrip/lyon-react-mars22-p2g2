@@ -1,6 +1,4 @@
 import React from 'react';
-import { AiOutlineHeart } from 'react-icons/ai';
-import { RiCloseFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
 function ResultApiContainer({ movie }) {
@@ -28,19 +26,14 @@ function ResultApiContainer({ movie }) {
           </div>
           <p className="runtime">{movie.runtimeStr}</p>
           <div className="actorNoPic">
-            <hr />
+            <hr style={{ margin: '5px 0px' }} />
             <p className="actorsPara">Actors :</p>
             <br />
-            {(movie.starList || []).slice(0, 5).map((actorNoPic) => (
-              <div key={actorNoPic.name}>
-                <p className="">{actorNoPic.name}</p>
+            {(movie.starList || []).slice(0, 5).map((actorList) => (
+              <div key={actorList.name}>
+                <p className="">{actorList.name}</p>
               </div>
             ))}
-          </div>
-          <div className="button">
-            <AiOutlineHeart className="buttons" />
-
-            <RiCloseFill className="buttons" />
           </div>
         </div>
       </>
