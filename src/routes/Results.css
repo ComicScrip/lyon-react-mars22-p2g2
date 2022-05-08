@@ -74,9 +74,10 @@
 
   .resultPageMainContainer {
     margin: 0px 40px;
+    padding: 20px 0px;
     min-height: 88vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }

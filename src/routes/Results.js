@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
 
-// const apiKey = process.env.REACT_APP_DETAIL_APIKEY;
+const apiKey = process.env.REACT_APP_DETAIL_APIKEY;
 
 export default function Results() {
   const [resultApi, setResultApi] = useState([]);
@@ -21,7 +21,7 @@ export default function Results() {
   useEffect(() => {
     axios
       .get(
-        `https://imdb-api.com/API/AdvancedSearch/k_8kbcras1?user_rating=1.0,3.0&${id}`
+        `https://imdb-api.com/API/AdvancedSearch/${apiKey}?user_rating=1.0,3.0&${id}`
       )
       .then((res) => res.data)
       .then((data) => {

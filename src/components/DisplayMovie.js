@@ -3,8 +3,12 @@ import '../routes/detailPage.css';
 import Rating from '@mui/material/Rating';
 import ReactPlayer from 'react-player';
 import { BsFillCameraVideoOffFill } from 'react-icons/bs';
+import * as dayjs from 'dayjs';
 
 function DisplayMovie({ movie, trailer }) {
+  const date = movie.releaseDate;
+  const newFormatdate = dayjs(date).format('D MMMM YYYY');
+
   return (
     movie &&
     trailer && (
@@ -17,7 +21,7 @@ function DisplayMovie({ movie, trailer }) {
           <div className="secondContainerProfilPage">
             <div className="filmContainer">
               <h2>{movie.title}</h2>
-              <h2 className="spaceBtwTitle">{movie.description}</h2>
+              <h2 className="spaceBtwTitle">{newFormatdate}</h2>
               <h2 className="runTime">{movie.runtimeStr}</h2>
             </div>
 
