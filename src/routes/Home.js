@@ -11,21 +11,21 @@ export default function Home() {
           alt="hello"
         />
       </div>
-      <div className="mainContainerMediaQ">
-        <div className="containerMediaQ">
+      <div className="mainContainer">
+        <div className="descriptionContainer">
           <div className="mainTitle">
-            <h2>FILMSClaqués.com</h2>
+            <h2>FILMSclaqués.com</h2>
           </div>
           <div className="mainPara">
             <p>
-              Bonjour et bienvenue sur FILMS CLAQUES.COM, le site où trouver les
-              meilleurs Nanar pour tous les gouts et toutes les occasions.
+              Bonjour et bienvenue sur FILMSCLAQUES.COM, le site où trouver les
+              meilleurs Nanars pour tous les goûts et toutes les occasions.
               <br />
-              Nous vous offrons la possibilité de faire notre Quizz de 5
+              Nous vous offrons la possibilité de faire notre quiz de 5
               questions à l'issu duquel 2 Nanars vous seront proposés. Si vous
-              souhaitez découvrir notre selection de Nanar, n'hésitez pas à
+              souhaitez découvrir notre sélection de Nanar, n'hésitez pas à
               consulter le lien ci-dessous.
-              <br />A VOS NANAR, PRET, PARTEZ!!
+              <br />A VOS NANARS, PRET, PARTEZ!!
             </p>
           </div>
           <div className="quizzYes">
@@ -47,7 +47,7 @@ export default function Home() {
                 },
               }}
             >
-              Oui, je veux faire le quizz
+              Oui, je veux faire le quiz
             </Button>
           </div>
           <div className="quizzNo">
@@ -56,15 +56,13 @@ export default function Home() {
             </a>
           </div>
         </div>
-        {/* <div className="movieMonth">
-          <div className="borderMovie">
-            <h2 className="movieMonthTitle">Movie of the month</h2>
+        <div className="movieNanarContainer">
+          <div className="movieMonthTitle">
+            <h2>MOVIE OF THE MONTH</h2>
           </div>
-          <img
-            className="pictureOfMonth"
-            src="https://imdb-api.com/images/original/MV5BYTUyNjZkMjEtYmQ5OS00NzljLThiMmQtNWIwNTM1YjUyOWNjXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_Ratio0.6837_AL_.jpg"
-            alt="filmofthemonth"
-          />
+          <div className="movieMonthPictureContainer">
+            <h2 className="movieMonthTitleDesktop">MOVIE OF THE MONTH</h2>
+          </div>
           <div className="comunityContainer">
             <Button
               href="/nanarmate"
@@ -87,7 +85,7 @@ export default function Home() {
               Rencontrer la communauté Nanar
             </Button>
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   );

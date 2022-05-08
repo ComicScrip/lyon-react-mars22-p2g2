@@ -21,6 +21,7 @@ export default function Main() {
             <Route path="/filterpage" element={<Filterpage />} />
             <Route path="/results/:id" element={<Results />} />
             <Route path="/detailpage/:id" element={<DetailPage />} />
+            <Route path="/nanarmate" element={<DetailPage />} />
           </Routes>
         </FavoriteContextProvider>
       </ResultsContextProvider>

@@ -7,33 +7,46 @@ body {
 }
 .linkStyle {
   text-decoration: none;
-  color: #938181;
+  color: #fff;
   font-style: italic;
-  font-size: 12pt;
-  margin-top: 15px;
+  font-size: 14pt;
 }
-.movieMonth {
+
+.movieNanarContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 15px;
 }
+
 .movieMonthTitle {
-  font-size: 15pt;
-  padding: 10px 10px;
-}
-.borderMovie {
+  text-align: center;
+  border: 2px solid #c4c4c4;
+  border-radius: 5px;
   color: #c4c4c4;
-  border: solid;
-  border-radius: 10px;
-  text-transform: uppercase;
+  font-size: 10pt;
+  width: 80%;
+  letter-spacing: 2pt;
+  padding: 10px 0px;
 }
+
+.movieMonthPictureContainer {
+  background: url('https://imdb-api.com/images/original/MV5BYTUyNjZkMjEtYmQ5OS00NzljLThiMmQtNWIwNTM1YjUyOWNjXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_Ratio0.6837_AL_.jpg');
+  background-size: cover;
+  height: 250px;
+  width: 200px;
+  margin-top: 20px;
+}
+
+.movieMonthTitleDesktop {
+  display: none;
+}
+
 .mainTitle {
   display: flex;
   justify-content: center;
-  border: solid;
-  border-color: #c4c4c4;
-  border-radius: 10px;
+  border: 2px solid #c4c4c4;
+  border-radius: 5px;
   margin: 30px;
   color: #c4c4c4;
   padding: 10px 20px;
@@ -46,11 +59,12 @@ body {
   color: #c4c4c4;
   line-height: 15pt;
   margin: 0px 15px;
+  font-size: 14pt;
+  font-weight: bold;
 }
 .quizzYes {
   display: flex;
   justify-content: center;
-  padding: 0px 20px 0px 20px;
   margin: 15px;
 }
 .quizzNo {
@@ -60,18 +74,9 @@ body {
   color: #c4c4c4;
   font-size: 9pt;
 }
-.pictureOfMonth {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  height: 250px;
-  border-radius: 5px;
-  margin-top: 30px;
-  cursor: pointer;
-}
+
 .comunityContainer {
-  margin: 20px;
-  display: none;
+  margin: 20px 0px;
 }
 
 @media screen and (min-width: 900px) {
@@ -85,49 +90,58 @@ body {
     margin: 0px;
     width: 100%;
   }
-  .containerMediaQ {
-    width: 60%;
+
+  .mainContainer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .movieMonth {
-    position: relative;
-  }
-  .movieMonthTitle {
-    font-size: 13pt;
-    padding: 0px;
-  }
-  .mainPara {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    line-height: 25pt;
-  }
-  .mainContainerMediaQ {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 86vh;
-    width: 87%;
-  }
-  .borderMovie {
-    position: absolute;
-    border: none;
-    top: 190px;
-    z-index: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .pictureOfMonth {
-    min-height: 50vh;
-    opacity: 70%;
-    margin: 0;
-  }
   .mainTitle {
-    padding: 10px;
+    margin: 0px 0px 30px 0px;
+  }
+
+  .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 20px 0px;
+  }
+
+  .mainPara {
+    line-height: 20pt;
+    font-weight: lighter;
+    width: 80%;
+  }
+
+  .movieNanarContainer {
+    margin-top: 0px;
+    width: 50%;
+  }
+
+  .movieMonthTitle {
+    display: none;
+  }
+
+  .movieMonthPictureContainer {
+    height: 60vh;
+    width: 65%;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+  }
+
+  .movieMonthTitleDesktop {
+    display: initial;
+    opacity: 1;
+  }
+  .linkStyle {
+    color: rgb(177, 177, 177);
+    font-size: 12pt;
   }
 }

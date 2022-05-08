@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import './header.css';
 import { AiOutlineClose } from 'react-icons/ai';
-import logo from '../image/logo.png';
+import logo from '../image/LOGO.png';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 export default function Header() {
@@ -39,7 +39,10 @@ export default function Header() {
           <NavLink
             className={'items'}
             to="/"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'black' })}
+            style={({ isActive }) => ({
+              borderBottom: isActive && largeur > 900 ? '2px solid black' : '',
+              color: isActive && largeur < 900 ? 'white' : 'black',
+            })}
             onClick={toggleNavSmallScreen}
           >
             HomePage
@@ -47,7 +50,10 @@ export default function Header() {
           <NavLink
             className={'items'}
             to="/Quizz"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'black' })}
+            style={({ isActive }) => ({
+              borderBottom: isActive && largeur > 900 ? '2px solid black' : '',
+              color: isActive && largeur < 900 ? 'white' : 'black',
+            })}
             onClick={toggleNavSmallScreen}
           >
             Quick Navet
@@ -55,7 +61,10 @@ export default function Header() {
           <NavLink
             className={'items'}
             to="/filterpage"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'black' })}
+            style={({ isActive }) => ({
+              borderBottom: isActive && largeur > 900 ? '2px solid black' : '',
+              color: isActive && largeur < 900 ? 'white' : 'black',
+            })}
             onClick={toggleNavSmallScreen}
           >
             Rechercher &nbsp; <span className="desktopText">un navet</span>
@@ -63,7 +72,10 @@ export default function Header() {
           <NavLink
             className={'items'}
             to="/Contact"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'black' })}
+            style={({ isActive }) => ({
+              borderBottom: isActive && largeur > 900 ? '2px solid black' : '',
+              color: isActive && largeur < 900 ? 'white' : 'black',
+            })}
             onClick={toggleNavSmallScreen}
           >
             Contact
