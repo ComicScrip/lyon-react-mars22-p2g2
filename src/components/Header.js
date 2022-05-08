@@ -71,6 +71,17 @@ export default function Header() {
           </NavLink>
           <NavLink
             className={'items'}
+            to="/nanarmate"
+            style={({ isActive }) => ({
+              borderBottom: isActive && largeur > 900 ? '2px solid black' : '',
+              color: isActive && largeur < 900 ? 'white' : 'black',
+            })}
+            onClick={toggleNavSmallScreen}
+          >
+            Nanar Mates
+          </NavLink>
+          <NavLink
+            className={'items'}
             to="/Contact"
             style={({ isActive }) => ({
               borderBottom: isActive && largeur > 900 ? '2px solid black' : '',

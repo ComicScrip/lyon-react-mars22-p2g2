@@ -60,7 +60,7 @@ body {
   .liste {
     flex-direction: column;
     position: fixed;
-    height: 200px;
+    height: 240px;
     width: 50%;
     top: 8vh;
     right: 0;
