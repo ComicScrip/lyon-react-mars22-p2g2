@@ -1,0 +1,56 @@
+/* MISE EN FORME DE NANARMATE.JS */
+
+.miseenforme {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 60px 0px;
+}
+
+/* MISEN FORME DE NANARFORMULAIRE.JS */
+
+.formulaire {
+  height: 65vh;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: hsla(0, 0%, 77%, 0.22);
+  border: 1px solid #c4c4c4;
+  border-radius: 5%;
+}
+
+.input {
+  display: block;
+  width: 409px;
+  height: 47px;
+  left: 336px;
+  top: 337px;
+  padding: 5px;
+  font-size: 20pt;
+  background: #c4c4c4;
+  border-radius: 23.5px;
+}
+
+.items {
+  font-family: 'Abhaya Libre';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+
+  color: #ffffff;
+}
+
+.btn {
+  width: 194px;
+  height: 40px;
+  left: 444px;
+  top: 823px;
+  margin-top: 10px;
+  background: #c4c4c4;
+  border-radius: 15.5px;
+}
