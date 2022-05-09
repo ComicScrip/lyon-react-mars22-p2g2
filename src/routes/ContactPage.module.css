@@ -4,31 +4,34 @@ body {
 }
 
 .apropos {
-  margin: 0% 40%;
   width: 20%;
+  margin: 0% 38%;
+  padding: 1%;
   text-align: center;
-  border: groove 1px #ddd4d4;
-  font-size: 18px;
-  border-radius: 5px;
-  font-family: Abhaya Libre;
-  color: #ddd4d4;
+  border: groove 2px white;
+  font-size: 20px;
+  border-radius: 7px;
+  color: white;
 }
 
 .detail {
-  margin: 10%;
-  padding: 10px;
-  border: groove 1px #ddd4d4;
-  font-size: 10px;
+  background: rgba(196, 196, 196, 0.22);
+  width: 40%;
+  height: 17%;
+  margin: 3% 29%;
+  padding: 2px;
+  border: groove 1px white;
   border-radius: 5px;
-  font-family: Abhaya Libre;
-  color: #ddd4d4;
+  color: white;
+  text-align: center;
+  font-size: x-large;
 }
 
-h1 {
+.contacte {
   margin: 13%;
   margin-bottom: 8%;
   margin-top: 25%;
-  padding: 15px;
+  padding: 10px;
   margin-left: 12%;
 
   border: groove 2px white;
@@ -48,64 +51,46 @@ h1 {
 }
 
 .form {
-  margin: 0% 5%;
+  margin: 0% 10%;
   height: 400px;
 
   /* Font police */
   text-align: center;
 
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   margin-top: 0px;
 }
 
 .field {
-  border: 1px solid #ddd4d4;
   border-radius: 15px;
   width: 100%;
-  padding: 5px;
-  font-size: 2vh;
-  box-sizing: border-box;
-  margin-bottom: 30px;
-  margin-top: 20px;
-  background-color: #ddd4d4;
-}
-
-label {
-  color: #ddd4d4;
-  margin-top: 20%;
-  margin-bottom: 0% 50%;
+  padding: 1px;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  background: #c4c4c4;
 }
 
 .submitBtn {
-  margin-top: 10px;
-  width: 50%;
-  background-color: #ddd4d4;
+  width: 40%;
+  margin: 3%;
+  background: #c4c4c4;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  padding: 5px;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
-.submitBtn:hover {
-  background-color: #ddd4d4;
+.lignedesktop {
+  color: #c4c4c4;
+  width: 38%;
+  margin: 3% 30%;
 }
 
-hr {
-  color: #ddd4d4;
-  margin-bottom: 80%;
-}
-
-/*hr {
-  width: 70%;
-
-  position: absolute;
-  left: 90px;
-  top: 630px;
-  border: 1px solid #ddd4d4;
-  padding-left: 10%;
+.lignemobile {
+  margin: 0%;
+  padding-bottom: 15%;
 }
 
 /* MEDIA QUERIES */
@@ -113,12 +98,12 @@ hr {
   .desktop {
     display: none;
   }
+
   .background {
-    display: block;
     margin: 7%;
     padding: 3%;
-    height: 730px;
-    width: 80%;
+    height: 100%;
+    width: 100% 0%;
     margin-top: 0%;
     margin-bottom: 0%;
 
@@ -126,41 +111,26 @@ hr {
   }
 
   .container {
-    margin: 2% 15%;
-    display: flex;
+    margin: 0% 17%;
   }
   .form {
-    width: 100%;
+    margin: 0% 5%;
     height: 0%;
+    padding: 2%;
   }
 
-  h1 {
-    width: 20%;
-    margin: 3% 38%;
-  }
-
-  .apropos {
-    width: 20%;
-    margin: 3% 38%;
-    padding: 1%;
-  }
-
-  .detail {
-    background: rgba(196, 196, 196, 0.22);
-    width: 30%;
-    margin: 3% 33%;
-  }
-  h2 {
-    width: 60%;
-    font-size: large;
+  .contacte {
+    width: 14%;
+    margin: 3% 41%;
   }
 
   .field {
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     margin-top: 0px;
-    padding: 0%;
+    padding: 1%;
+    font-size: 14px;
   }
-  hr {
+  .lignemobile {
     display: none;
   }
 }
@@ -170,20 +140,19 @@ hr {
     display: none;
   }
 
+  .lignedesktop {
+    display: none;
+  }
   .detail {
     display: none;
+  }
+  .form {
+    margin-top: 10%;
   }
 
   .container {
     background: rgba(196, 196, 196, 0.22);
     display: flex;
     justify-content: center;
-  }
-  .body {
-    margin: 20%;
-  }
-  hr {
-    margin-bottom: 19%;
-    margin-top: 19%;
   }
 }

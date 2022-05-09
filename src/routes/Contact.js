@@ -44,16 +44,19 @@ export default function ContactPage() {
         <p>A propos de Nanar production </p>
       </div>
       <div className={styles.detail}>
-        <h2>
-          L'équipe est composé de cinq développeurs en herbe :
-          Julie,Quentin,Rayanne,Adnan et Mylène
-        </h2>
+        L'équipe est composé de cinq développeurs en herbe :
+        Julie,Quentin,Rayanne,Adnan et Mylène
       </div>
-      <h1>Contact-nous</h1>
+      <div className={styles.lignedesktop}>
+        <hr className="ligne" />
+      </div>
+      <div className={styles.contacte}>
+        <p>Contacte-nous</p>
+      </div>
       <div className={styles.container}>
         <form className={styles.form} ref={form} onSubmit={sendEmail}>
           <label htmlFor="email">
-            Nom:
+            Nom
             <input
               type="nom"
               id="nom"
@@ -66,7 +69,7 @@ export default function ContactPage() {
             />
           </label>
           <label htmlFor="email">
-            Email:
+            Email
             <input
               type="email"
               id="email"
@@ -78,9 +81,11 @@ export default function ContactPage() {
               placeholder="ex: adnanmht@gmail.com"
             />
           </label>
-          <label htmlFor="message">
-            Message:
+          <div htmlFor="message">
+            Message
             <textarea
+              rows="8"
+              cols="90"
               id="message"
               name="message"
               className={styles.field}
@@ -88,10 +93,8 @@ export default function ContactPage() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Votre texte ici..."
-              maxLength="400"
-              style={{ resize: 'none' }}
             />
-          </label>
+          </div>
           <button type="submit" className={styles.submitBtn}>
             Envoyer
           </button>
@@ -99,7 +102,8 @@ export default function ContactPage() {
 
         <ToastContainer />
       </div>
-      <div className={styles.ligne}>
+
+      <div className={styles.lignemobile}>
         <hr className="ligne" />
       </div>
     </div>
