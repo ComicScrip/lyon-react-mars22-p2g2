@@ -21,7 +21,7 @@ export default function Results() {
   useEffect(() => {
     axios
       .get(
-        `https://imdb-api.com/API/AdvancedSearch/${apiKey}?user_rating=1.0,3.0&${id}`
+        `https://cors-proxy.comicscrip.duckdns.org/imdb-api.com/API/AdvancedSearch/${apiKey}?user_rating=1.0,3.0&${id}`
       )
       .then((res) => res.data)
       .then((data) => {
@@ -45,7 +45,7 @@ export default function Results() {
           <div className="resultsContainer">
             {resultApi.slice(0, 2).map((movie) => (
               <div className="resultContentContainer" key={movie.id}>
-                <ResultApiContainer movie={movie} />
+                <ResultApiContainer movie={movie} id={movie.id} />
               </div>
             ))}
           </div>

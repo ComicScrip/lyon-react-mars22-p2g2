@@ -64,6 +64,7 @@ body {
     width: 50%;
     top: 8vh;
     right: 0;
+    z-index: 2;
   }
   .item {
     display: flex;
@@ -72,6 +73,7 @@ body {
     width: 40px;
     height: 40px;
     margin-top: 0px;
+    z-index: 2;
   }
   .items :nth-child(1) {
     border-top: 1px solid #f1f1f1;
@@ -82,6 +84,7 @@ body {
     width: 100%;
     line-height: 50px;
     margin-right: 0px;
+    z-index: 2;
   }
   .btn {
     display: block;

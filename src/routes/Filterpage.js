@@ -109,7 +109,7 @@ export default function Filterpage() {
     setLoading(true);
     axios
       .get(
-        `https://imdb-api.com/API/AdvancedSearch/${apiKey}?count=20&user_rating=,3.0&${searchParams}`,
+        `https://cors-proxy.comicscrip.duckdns.org/imdb-api.com/API/AdvancedSearch/${apiKey}?count=250&user_rating=,3.0&${searchParams}`,
         {
           cancelToken: source.token,
         }

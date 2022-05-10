@@ -51,7 +51,7 @@
   align-items: center;
 }
 .knowPara {
-  margin-top: 80px;
+  margin-top: 60px;
   text-decoration: none;
   color: #c4c4c4;
   font-style: italic;
@@ -67,6 +67,20 @@
 .plot {
   font-size: 10pt;
   font: inherit;
+}
+
+.filmButtons {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.buttons {
+  border: 1px solid #c4c4c4;
+  border-radius: 50%;
+  padding: 8px;
+  background: rgba(196, 196, 196, 0.22);
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 900px) {
@@ -126,8 +140,12 @@
   }
 
   .knowPara {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 15pt;
+  }
+
+  .filmButtons {
+    margin-bottom: 40px;
   }
   .runtime {
     font-size: 13pt;

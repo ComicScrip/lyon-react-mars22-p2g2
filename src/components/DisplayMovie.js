@@ -9,6 +9,7 @@ function DisplayMovie({ movie, trailer }) {
   const date = movie.releaseDate;
   const newFormatdate = dayjs(date).format('D MMMM YYYY');
 
+  console.log(movie.releaseDate);
   return (
     movie &&
     trailer && (
@@ -21,11 +22,13 @@ function DisplayMovie({ movie, trailer }) {
           <div className="secondContainerProfilPage">
             <div className="filmContainer">
               <h2>{movie.title}</h2>
-              <h2 className="spaceBtwTitle">{newFormatdate}</h2>
+              <h2 className="spaceBtwTitle">
+                {movie.releaseDate ? newFormatdate : ''}
+              </h2>
               <h2 className="runTime">{movie.runtimeStr}</h2>
             </div>
 
-            <h1 className="rateContainer">
+            <div className="rateContainer">
               <Rating
                 sx={{ '& .MuiRating-iconEmpty': { color: '#faaf00' } }}
                 name="half-rating-read"
@@ -33,7 +36,7 @@ function DisplayMovie({ movie, trailer }) {
                 precision={0.5}
                 readOnly
               />
-            </h1>
+            </div>
           </div>
           <div className="trailerMediaQ">
             {trailer.videoUrl === '' ? (
