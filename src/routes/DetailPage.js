@@ -17,7 +17,7 @@ export default function DetailPage() {
   useEffect(() => {
     axios
       .get(
-        `https://cors-proxy.comicscrip.duckdns.org/imdb-api.com/en/API/Title/${apiKey}/${id}`
+        `https://cors-proxy.comicscrip.duckdns.org/https://imdb-api.com/en/API/Title/${apiKey}/${id}`
       )
       .then((answer) => answer.data)
       .then((data) => {
@@ -32,7 +32,7 @@ export default function DetailPage() {
   useEffect(() => {
     axios
       .get(
-        `https://cors-proxy.comicscrip.duckdns.org/imdb-api.com/en/API/YouTubeTrailer/${apiKey}/${id}`
+        `https://cors-proxy.comicscrip.duckdns.org/https://imdb-api.com/en/API/YouTubeTrailer/${apiKey}/${id}`
       )
       .then((answer) => answer.data)
       .then((movieInfo) => {

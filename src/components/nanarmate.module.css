@@ -1,0 +1,171 @@
+/* MISE EN FORME DE NANARMATE.JS */
+
+.miseenforme {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 88vh;
+}
+
+/* MISEN FORME DE NANARFORMULAIRE.JS */
+
+.formulairecontainer {
+  width: 50%;
+}
+
+.formulaire {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(196, 196, 196, 0.22);
+  border: 1px solid #c4c4c4;
+  border-radius: 5%;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  height: 47px;
+  left: 336px;
+  top: 337px;
+
+  font-size: 20pt;
+  background: #c4c4c4;
+  border-radius: 23.5px;
+}
+
+.items {
+  font-family: 'Abhaya Libre';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+  width: 80%;
+  color: #ffffff;
+}
+
+.btn {
+  width: 194px;
+  height: 40px;
+  left: 444px;
+  top: 823px;
+  margin-top: 10px;
+  background: #c4c4c4;
+  border-radius: 15.5px;
+}
+
+/* CSS PARTIE NANARRESULTS */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.resultscontainer {
+  width: 50%;
+}
+.mainContainerNanar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(196, 196, 196, 0.22);
+  border: solid 1px white;
+  border-radius: 5%;
+  width: 80%;
+  margin: auto;
+  overflow: auto;
+  height: 520px;
+}
+
+.secondContainerNanar {
+  border: solid 1px white;
+  border-radius: 10px;
+  background: rgba(196, 196, 196, 0.22);
+  margin: 20px;
+  width: 70%;
+  height: 70%;
+}
+.nanarTextContainer {
+  padding: 15px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+  .formulairecontainer {
+    width: 100%;
+  }
+
+  .resultscontainer {
+    width: 100%;
+  }
+  .mainContainerNanar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: none;
+    background: none;
+    overflow: none;
+    height: auto;
+  }
+  .secondContainerNanar {
+    background-color: #121326;
+    border: solid 1px white;
+    width: 80%;
+  }
+  .formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    border: none;
+    background: rgba(196, 196, 196, 0.22);
+    border: 1px solid #c4c4c4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .miseenforme {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 60px 0px;
+  }
+  .input {
+    display: block;
+    width: 100%;
+    height: 47px;
+    left: 336px;
+    top: 337px;
+
+    font-size: 20pt;
+    background: #c4c4c4;
+    border-radius: 23.5px;
+  }
+
+  .items {
+    font-family: 'Abhaya Libre';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    width: 80%;
+    color: #ffffff;
+  }
+
+  .btn {
+    width: 194px;
+    height: 40px;
+    left: 444px;
+    top: 823px;
+    margin-top: 10px;
+    background: #c4c4c4;
+    border-radius: 15.5px;
+  }
+}

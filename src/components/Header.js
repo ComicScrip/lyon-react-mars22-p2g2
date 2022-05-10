@@ -82,6 +82,13 @@ export default function Header() {
           </NavLink>
           <NavLink
             className={'items'}
+            to="/Nanarmate"
+            style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
+          >
+            Nanar Mate
+          </NavLink>
+          <NavLink
+            className={'items'}
             to="/Contact"
             style={({ isActive }) => ({
               borderBottom: isActive && largeur > 900 ? '2px solid black' : '',

@@ -1,0 +1,11 @@
+.mainBodyContainer {
+  min-height: 88vh;
+}
+
+@media screen and (min-width: 900px) {
+  .mainBodyContainer {
+    background-color: #121326;
+    width: 75%;
+    margin: auto;
+  }
+}
