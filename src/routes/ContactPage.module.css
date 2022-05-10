@@ -80,13 +80,13 @@ body {
 
 .submitBtn {
   width: 40%;
-  margin: 3%;
+  margin: 5%;
   background: #c4c4c4;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 20px;
 }
 
 .lignedesktop {
