@@ -22,9 +22,9 @@ body {
 
 .detail {
   background: rgba(196, 196, 196, 0.22);
-  width: 40%;
-  height: 17%;
-  margin: 2% 29%;
+  width: 50%;
+  height: 15%;
+  margin: 2% 24%;
   padding: 0px;
   border: groove 1px white;
   border-radius: 5px;
@@ -123,7 +123,7 @@ body {
   }
 
   .field {
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     margin-top: 0px 0px;
     padding: 1%;
     font-size: large;
@@ -146,6 +146,7 @@ body {
   }
   .form {
     margin-top: 10%;
+    height: 10%;
   }
 
   .container {
@@ -153,5 +154,12 @@ body {
     background: rgba(196, 196, 196, 0.22);
     display: flex;
     justify-content: center;
+    margin: 10% 10%;
+  }
+  .field {
+    margin-bottom: 7%;
+    margin-top: 0px 0px;
+    padding: 2%;
+    font-size: large;
   }
 }
