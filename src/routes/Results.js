@@ -9,7 +9,7 @@ export default function Results() {
   useEffect(() => {
     axios
       .get(
-        'https://imdb-api.com/API/AdvancedSearch/k_9vhe3kdy?user_rating=1.0,3.0&genres=action,adventure&colors=color'
+        'https://cors-proxy.comicscrip.duckdns.org/https://imdb-api.com/API/AdvancedSearch/k_9vhe3kdy?user_rating=1.0,3.0&genres=action,adventure&colors=color'
       )
       .then((res) => res.data)
       .then((data) => {
