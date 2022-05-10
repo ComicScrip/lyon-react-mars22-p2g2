@@ -23,6 +23,7 @@ function DisplayMovie({ movie, trailer }) {
 
             <h1 className="rateContainer">
               <Rating
+                sx={{ '& .MuiRating-iconEmpty': { color: '#faaf00' } }}
                 name="half-rating-read"
                 value={movie.imDbRating}
                 precision={0.5}

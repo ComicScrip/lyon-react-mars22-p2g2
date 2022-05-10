@@ -2,24 +2,29 @@ import { Route, Routes } from 'react-router-dom';
 import Home from '../routes/Home';
 import Contact from '../routes/Contact';
 import Quizz from '../routes/Quizz';
-import Nanarmate from '../routes/NanarMate';
 import Filterpage from '../routes/Filterpage';
 import Results from '../routes/Results';
 import DetailPage from '../routes/DetailPage';
-import './main.css';
+import NanarResult from '../routes/NanarResult';
+import { FavoriteContextProvider } from '../contexts/favoriteContext';
+import { ResultsContextProvider } from '../contexts/resultsContext';
 
 export default function Main() {
   return (
-    <main className="mainBodyContainer">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/quizz" element={<Quizz />} />
-        <Route path="/nanarmate" element={<Nanarmate />} />
-        <Route path="/filterpage" element={<Filterpage />} />
-        <Route path="/results" element={<Results />} />
-        <Route path="/detailpage/:id" element={<DetailPage />} />
-      </Routes>
+    <main>
+      <ResultsContextProvider>
+        <FavoriteContextProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/quizz" element={<Quizz />} />
+            <Route path="/filterpage" element={<Filterpage />} />
+            <Route path="/results/:id" element={<Results />} />
+            <Route path="/detailpage/:id" element={<DetailPage />} />
+            <Route path="/nanarmate" element={<NanarResult />} />
+          </Routes>
+        </FavoriteContextProvider>
+      </ResultsContextProvider>
     </main>
   );
 }
