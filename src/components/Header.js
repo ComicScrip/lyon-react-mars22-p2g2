@@ -50,13 +50,6 @@ export default function Header() {
           </NavLink>
           <NavLink
             className={'items'}
-            to="/Profil"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
-          >
-            Profil
-          </NavLink>
-          <NavLink
-            className={'items'}
             to="/Contact"
             style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
           >
