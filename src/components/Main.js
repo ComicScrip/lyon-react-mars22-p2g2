@@ -6,10 +6,11 @@ import Nanarmate from '../routes/NanarMate';
 import Filterpage from '../routes/Filterpage';
 import Results from '../routes/Results';
 import DetailPage from '../routes/DetailPage';
+import './main.css';
 
 export default function Main() {
   return (
-    <main>
+    <main className="mainBodyContainer">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

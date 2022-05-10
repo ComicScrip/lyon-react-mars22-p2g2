@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Select from 'react-select';
 
 function NanarFormulaire() {
   const [name, setName] = useState('');
@@ -12,26 +13,42 @@ function NanarFormulaire() {
   const [movieForm, SetMovieForm] = useState('');
   const [localisationForm, setLocalisationForm] = useState('');
   const [timeForm, setTimeForm] = useState('');
-  const notify = () =>
-    toast('Parfait ! tu es prêt à trouver ton Nanar Mate ! 🎉 ', {
-      position: toast.POSITION.BOTTOM_CENTER,
-    });
+  const notify = () => {
+    if (
+      name === '' ||
+      dateForm === '' ||
+      movieForm === '' ||
+      localisationForm === '' ||
+      timeForm === ''
+    ) {
+      toast.error(
+        'Tu dois renseigner tous les champs avant de soumettre ta requête',
+        {
+          position: toast.POSITION.BOTTOM_CENTER,
+        }
+      );
+    } else {
+      toast('Parfait ! tu es prêt à trouver ton Nanar Mate ! 🎉 ', {
+        position: toast.POSITION.BOTTOM_CENTER,
+      });
+    }
+  };
 
   const apiKey = process.env.REACT_APP_NANARFORM_APIKEY;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('', {
-        userName: name,
-        movieName: movieForm,
-        location: localisationForm,
-        date: dateForm,
-      })
+      .post(
+        'https://lyon-react-mars22-p2g2-api.comicscrip.duckdns.org/availabilities',
+        {
+          userName: name,
+          movieName: movieForm,
+          location: localisationForm,
+          date: dateForm,
+        }
+      )
       .then((res) => res.data)
-      .then(setName(''))
-      .then(setDateForm(''))
-      .then(setLocalisationForm(''))
       .then(setTimeForm(''))
       .finally(SetMovieForm(''));
   };
@@ -41,7 +58,7 @@ function NanarFormulaire() {
 
     axios
       .get(
-        `https://imdb-api.com/API/AdvancedSearch/${apiKey}?count=20&user_rating=,3.0`,
+        `https://imdb-api.com/API/AdvancedSearch/${apiKey}?count=250&user_rating=,3.0`,
         {
           cancelToken: source.token,
         }
@@ -58,6 +75,34 @@ function NanarFormulaire() {
       source.cancel('Component got unmounted');
     };
   }, []);
+
+  const options = results.map((movie) => ({
+    key: movie.id,
+    value: movie.title,
+    label: movie.title,
+  }));
+
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+
+      width: '409px',
+      height: '47px',
+      padding: '5px',
+      fontSize: '20pt',
+      borderRadius: '23.5px',
+      background: '#c4c4c4',
+    }),
+    option: (provided) => ({
+      ...provided,
+      color: 'black',
+    }),
+  };
+
+  const handleChange = (value) => {
+    const date = value.value;
+    SetMovieForm(date);
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -78,21 +123,27 @@ function NanarFormulaire() {
 
         <label htmlFor="MovieList" className={styles.items}>
           Film
-          <select
+          {/*    <select
             className={styles.input}
             onChange={(e) => SetMovieForm(e.target.value)}
             value={movieForm}
             required
-          >
-            <option key={''} value={''}>
-              &nbsp;
+          >  */}
+          <Select
+            options={options}
+            onChange={handleChange}
+            styles={customStyles}
+            required
+          />
+          {/* <option key={''} value={''}>
+            &nbsp;
+          </option>
+          {results.map((movie) => (
+            <option key={movie.id} value={movie.title}>
+              {movie.title}
             </option>
-            {results.map((movie) => (
-              <option key={movie.id} value={movie.title}>
-                {movie.title}
-              </option>
-            ))}
-          </select>
+          ))} */}
+          {/* </select> */}
         </label>
         <label htmlFor="Localisation" className={styles.items}>
           Localisation
@@ -105,10 +156,10 @@ function NanarFormulaire() {
             <option key={''} value={''}>
               &nbsp;
             </option>
-            <option value="Place Bellecour">Lyon 5éme</option>
-            <option value="La Guillotiere">Lyon 6éme</option>
-            <option value="La Part-dieu">Lyon 7éme</option>
-            <option value="Confluence">Lyon 8éme</option>
+            <option value="Place Bellecour">Place Bellecour</option>
+            <option value="La Guillotiere">La Guillotiere</option>
+            <option value="La Part-dieu">La Part-dieu</option>
+            <option value="Confluence">Confluence</option>
           </select>
         </label>
         <label htmlFor="Date" className={styles.items}>
