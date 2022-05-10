@@ -21,7 +21,7 @@ export default function Results() {
   useEffect(() => {
     axios
       .get(
-        `https://imdb-api.com/API/AdvancedSearch/${apiKey}?user_rating=1.0,3.0&${id}`
+        `https://cors-proxy.comicscrip.duckdns.org/https://imdb-api.com/API/AdvancedSearch/${apiKey}?user_rating=1.0,3.0&${id}`
       )
       .then((res) => res.data)
       .then((data) => {
