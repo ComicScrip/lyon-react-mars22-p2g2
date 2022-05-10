@@ -1,3 +1,4 @@
+import './Main.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from '../routes/Home';
 import Contact from '../routes/Contact';
