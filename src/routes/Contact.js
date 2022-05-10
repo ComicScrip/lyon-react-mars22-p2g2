@@ -3,6 +3,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from './ContactPage.module.css';
 import emailjs from '@emailjs/browser';
+import { Avatar } from '@mui/material';
+import Julie from '../img/Julie.png';
+import Quentin from '../img/Quentin.png';
+import Rayanne from '../img/Rayanne.png';
+import Adnan from '../img/Adnan.png';
+import Mylène from '../img/Mylène.png';
 
 export default function ContactPage() {
   const [nom, setNom] = useState('');
@@ -44,8 +50,17 @@ export default function ContactPage() {
         <p>A propos de Nanar production </p>
       </div>
       <div className={styles.detail}>
-        L'équipe est composé de cinq développeurs en herbe :
-        Julie,Quentin,Rayanne,Adnan et Mylène
+        <p>
+          L'équipe est composé de cinq développeurs en herbe :
+          Julie,Quentin,Rayanne,Adnan et Mylène
+        </p>
+        <div className={styles.Avatar} style={{ margin: 30 }}>
+          <Avatar alt="Julie" src={Julie} />
+          <Avatar alt="Quentin" src={Quentin} />
+          <Avatar alt="Rayanne" src={Rayanne} />
+          <Avatar alt="Adnan" src={Adnan} />
+          <Avatar alt="Mylène" src={Mylène} />
+        </div>
       </div>
       <div className={styles.lignedesktop}>
         <hr className="ligne" />

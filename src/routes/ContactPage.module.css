@@ -10,16 +10,23 @@ body {
   text-align: center;
   border: groove 2px white;
   font-size: 20px;
-  border-radius: 7px;
+  border-radius: 5px;
   color: white;
+}
+
+.Avatar {
+  display: flex;
+  justify-content: space-between;
+  margin: 3%;
+  font-size: large;
 }
 
 .detail {
   background: rgba(196, 196, 196, 0.22);
   width: 40%;
   height: 17%;
-  margin: 3% 29%;
-  padding: 2px;
+  margin: 2% 29%;
+  padding: 0px;
   border: groove 1px white;
   border-radius: 5px;
   color: white;
@@ -51,14 +58,14 @@ body {
 }
 
 .form {
-  margin: 0% 10%;
+  margin: 0% 9%;
   height: 400px;
 
   /* Font police */
   text-align: center;
 
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   margin-top: 0px;
 }
 
@@ -69,6 +76,7 @@ body {
   margin-bottom: 25px;
   margin-top: 15px;
   background: #c4c4c4;
+  font-size: large;
 }
 
 .submitBtn {
@@ -99,23 +107,14 @@ body {
     display: none;
   }
 
-  .background {
-    margin: 7%;
-    padding: 3%;
-    height: 100%;
-    width: 100% 0%;
-    margin-top: 0%;
-    margin-bottom: 0%;
-
-    background-color: black;
-  }
-
   .container {
-    margin: 0% 17%;
+    margin: 0% 18%;
   }
   .form {
-    margin: 0% 5%;
-    height: 0%;
+    margin: 0% 10%;
+    padding: 2%;
+  }
+  .background {
     padding: 2%;
   }
 
@@ -126,9 +125,9 @@ body {
 
   .field {
     margin-bottom: 0px;
-    margin-top: 0px;
+    margin-top: 0px 0px;
     padding: 1%;
-    font-size: 14px;
+    font-size: large;
   }
   .lignemobile {
     display: none;
@@ -151,6 +150,7 @@ body {
   }
 
   .container {
+    border: 1px solid #c4c4c4;
     background: rgba(196, 196, 196, 0.22);
     display: flex;
     justify-content: center;
