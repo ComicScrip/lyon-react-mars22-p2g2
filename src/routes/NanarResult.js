@@ -19,8 +19,6 @@ export default function Results() {
         console.error(err.response.data);
       });
   }, []);
-  console.log(nanarAPI);
-
   return (
     <div>
       <div>
