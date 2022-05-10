@@ -87,7 +87,7 @@ function NanarFormulaire() {
     control: (provided) => ({
       ...provided,
 
-      width: '409px',
+      width: '100%',
       height: '47px',
       padding: '5px',
       fontSize: '20pt',
@@ -106,89 +106,75 @@ function NanarFormulaire() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className={styles.formulaire}>
-        <h1>Formulaire</h1>
-        <label htmlFor="name">
-          <p className={styles.items}>Name</p>
-          <input
-            className={styles.input}
-            id="name"
-            name="name"
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </label>
-
-        <label htmlFor="MovieList" className={styles.items}>
-          Film
-          {/*    <select
-            className={styles.input}
-            onChange={(e) => SetMovieForm(e.target.value)}
-            value={movieForm}
-            required
-          >  */}
-          <Select
-            options={options}
-            onChange={handleChange}
-            styles={customStyles}
-            required
-          />
-          {/* <option key={''} value={''}>
-            &nbsp;
-          </option>
-          {results.map((movie) => (
-            <option key={movie.id} value={movie.title}>
-              {movie.title}
-            </option>
-          ))} */}
-          {/* </select> */}
-        </label>
-        <label htmlFor="Localisation" className={styles.items}>
-          Localisation
-          <select
-            className={styles.input}
-            onChange={(e) => setLocalisationForm(e.target.value)}
-            value={localisationForm}
-            required
-          >
-            <option key={''} value={''}>
-              &nbsp;
-            </option>
-            <option value="Place Bellecour">Place Bellecour</option>
-            <option value="La Guillotiere">La Guillotiere</option>
-            <option value="La Part-dieu">La Part-dieu</option>
-            <option value="Confluence">Confluence</option>
-          </select>
-        </label>
-        <label htmlFor="Date" className={styles.items}>
-          Date
-          <input
-            className={styles.input}
-            type="Date"
-            onChange={(e) => setDateForm(e.target.value)}
-            value={dateForm}
-            required
-          />
-        </label>
-        <label htmlFor="Date" className={styles.items}>
-          Heure
-          <input
-            className={styles.input}
-            type="Time"
-            onChange={(e) => setTimeForm(e.target.value)}
-            value={timeForm}
-            required
-          />
-        </label>
-        <button type="submit" onClick={notify} className={styles.btn}>
-          Soumettre
-        </button>
-        <ToastContainer />
-      </div>
-    </form>
+    <div className={styles.formulairecontainer}>
+      <form onSubmit={handleSubmit}>
+        <div className={styles.formulaire}>
+          <h1>Formulaire</h1>
+          <label htmlFor="name" className={styles.items}>
+            Name
+            <input
+              className={styles.input}
+              id="name"
+              name="name"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </label>
+          <div className={styles.items}>
+            Film
+            <Select
+              options={options}
+              onChange={handleChange}
+              styles={customStyles}
+              required
+            />
+          </div>
+          <label htmlFor="Localisation" className={styles.items}>
+            Localisation
+            <select
+              className={styles.input}
+              onChange={(e) => setLocalisationForm(e.target.value)}
+              value={localisationForm}
+              required
+            >
+              <option key={''} value={''}>
+                &nbsp;
+              </option>
+              <option value="Place Bellecour">Place Bellecour</option>
+              <option value="La Guillotiere">La Guillotiere</option>
+              <option value="La Part-dieu">La Part-dieu</option>
+              <option value="Confluence">Confluence</option>
+            </select>
+          </label>
+          <label htmlFor="Date" className={styles.items}>
+            Date
+            <input
+              className={styles.input}
+              type="Date"
+              onChange={(e) => setDateForm(e.target.value)}
+              value={dateForm}
+              required
+            />
+          </label>
+          <label htmlFor="Date" className={styles.items}>
+            Heure
+            <input
+              className={styles.input}
+              type="Time"
+              onChange={(e) => setTimeForm(e.target.value)}
+              value={timeForm}
+              required
+            />
+          </label>
+          <button type="submit" onClick={notify} className={styles.btn}>
+            Envoyer
+          </button>
+          <ToastContainer />
+        </div>
+      </form>
+    </div>
   );
 }
 

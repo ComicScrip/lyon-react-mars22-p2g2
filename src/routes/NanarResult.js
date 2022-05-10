@@ -1,4 +1,4 @@
-import './nanarResult.css';
+import styles from '../components/nanarmate.module.css';
 import DisplayAvailibilities from './DisplayAvailibilities';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -20,13 +20,11 @@ export default function Results() {
       });
   }, []);
   return (
-    <div>
-      <div>
-        <div className="mainContainerNanar">
-          {nanarAPI.map((nanarUser) => (
-            <DisplayAvailibilities nanarUser={nanarUser} key={nanarUser.id} />
-          ))}
-        </div>
+    <div className={styles.resultscontainer}>
+      <div className={styles.mainContainerNanar}>
+        {nanarAPI.map((nanarUser) => (
+          <DisplayAvailibilities nanarUser={nanarUser} key={nanarUser.id} />
+        ))}
       </div>
     </div>
   );

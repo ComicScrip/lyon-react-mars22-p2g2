@@ -5,13 +5,14 @@ import Quizz from '../routes/Quizz';
 import Filterpage from '../routes/Filterpage';
 import Results from '../routes/Results';
 import DetailPage from '../routes/DetailPage';
-import NanarResult from '../routes/NanarResult';
+import NanarMate from '../routes/NanarMate';
 import { FavoriteContextProvider } from '../contexts/favoriteContext';
 import { ResultsContextProvider } from '../contexts/resultsContext';
+import './main.css';
 
 export default function Main() {
   return (
-    <main>
+    <main className="mainBodyContainer">
       <ResultsContextProvider>
         <FavoriteContextProvider>
           <Routes>
@@ -21,7 +22,7 @@ export default function Main() {
             <Route path="/filterpage" element={<Filterpage />} />
             <Route path="/results/:id" element={<Results />} />
             <Route path="/detailpage/:id" element={<DetailPage />} />
-            <Route path="/nanarmate" element={<NanarResult />} />
+            <Route path="/nanarmate" element={<NanarMate />} />
           </Routes>
         </FavoriteContextProvider>
       </ResultsContextProvider>
