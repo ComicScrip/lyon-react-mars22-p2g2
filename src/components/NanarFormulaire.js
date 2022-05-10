@@ -40,12 +40,13 @@ function NanarFormulaire() {
     e.preventDefault();
     axios
       .post(
-        'https://lyon-react-mars22-p2g2-api.comicscrip.duckdns.org/availabilities',
+        'https://cors-proxy.comicscrip.duckdns.org/https://lyon-react-mars22-p2g2-api.comicscrip.duckdns.org/availabilities',
         {
           userName: name,
           movieName: movieForm,
           location: localisationForm,
           date: dateForm,
+          heure: timeForm,
         }
       )
       .then((res) => res.data)
@@ -58,7 +59,7 @@ function NanarFormulaire() {
 
     axios
       .get(
-        `https://imdb-api.com/API/AdvancedSearch/${apiKey}?count=250&user_rating=,3.0`,
+        `https://cors-proxy.comicscrip.duckdns.org/https://imdb-api.com/API/AdvancedSearch/${apiKey}?count=250&user_rating=,3.0`,
         {
           cancelToken: source.token,
         }
