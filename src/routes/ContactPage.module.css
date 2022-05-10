@@ -18,7 +18,6 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 3%;
-  font-size: large;
 }
 
 .detail {

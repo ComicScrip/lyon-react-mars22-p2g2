@@ -54,7 +54,7 @@ export default function ContactPage() {
           L'équipe est composé de cinq développeurs en herbe :
           Julie,Quentin,Rayanne,Adnan et Mylène
         </p>
-        <div className={styles.Avatar} style={{ margin: 30 }}>
+        <div className={styles.Avatar} style={{ margin: 20 }}>
           <Avatar alt="Julie" src={Julie} />
           <Avatar alt="Quentin" src={Quentin} />
           <Avatar alt="Rayanne" src={Rayanne} />
