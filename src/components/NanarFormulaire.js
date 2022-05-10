@@ -10,9 +10,10 @@ function NanarFormulaire() {
   const [name, setName] = useState('');
   const [dateForm, setDateForm] = useState('');
   const [results, setResults] = useState([]);
-  const [movieForm, SetMovieForm] = useState('');
+  const [movieForm, setMovieForm] = useState('');
   const [localisationForm, setLocalisationForm] = useState('');
   const [timeForm, setTimeForm] = useState('');
+  let movieFormValue = '';
   const notify = () => {
     if (
       name === '' ||
@@ -51,7 +52,10 @@ function NanarFormulaire() {
       )
       .then((res) => res.data)
       .then(setTimeForm(''))
-      .finally(SetMovieForm(''));
+      .then(setDateForm(''))
+      .then(setLocalisationForm(''))
+      .then((movieFormValue = ''))
+      .finally(setMovieForm(movieFormValue));
   };
 
   useEffect(() => {
@@ -101,8 +105,8 @@ function NanarFormulaire() {
   };
 
   const handleChange = (value) => {
-    const date = value.value;
-    SetMovieForm(date);
+    movieFormValue = value.value;
+    setMovieForm(movieFormValue);
   };
 
   return (

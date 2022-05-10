@@ -50,9 +50,9 @@ export default function ContactPage() {
         <p>A propos de Nanar production </p>
       </div>
       <div className={styles.detail}>
-        <p>
-          L'équipe est composé de cinq développeurs en herbe :
-          Julie,Quentin,Rayanne,Adnan et Mylène
+        <p style={{ padding: '10px' }}>
+          L'équipe est composée de cinq développeurs en herbe : Julie, Quentin,
+          Rayane, Adnan et Mylène
         </p>
         <div className={styles.Avatar} style={{ margin: 20 }}>
           <Avatar alt="Julie" src={Julie} />

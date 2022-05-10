@@ -42,7 +42,9 @@
 
 .pictureOfMonthR {
   height: 200px;
+  max-width: 150px;
   border-radius: 10px;
+  object-fit: cover;
   cursor: pointer;
 }
 .knowMoreMovie {
@@ -132,6 +134,7 @@
   .pictureOfMonthR {
     height: 300px;
     margin: 10px 10px;
+    max-width: 200px;
   }
   .textContainer {
     font-size: 20pt;
