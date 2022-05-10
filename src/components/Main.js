@@ -1,3 +1,4 @@
+import './Main.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from '../routes/Home';
 import Contact from '../routes/Contact';
@@ -11,7 +12,7 @@ import { ResultsContextProvider } from '../contexts/resultsContext';
 
 export default function Main() {
   return (
-    <main>
+    <main className="mainBodyContainer">
       <ResultsContextProvider>
         <FavoriteContextProvider>
           <Routes>
