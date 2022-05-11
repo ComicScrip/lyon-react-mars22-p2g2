@@ -18,7 +18,7 @@ export default function Results() {
       .catch((err) => {
         console.error(err.response.data);
       });
-  }, []);
+  }, [nanarAPI]);
   return (
     <div className={styles.resultscontainer}>
       <div className={styles.mainContainerNanar}>

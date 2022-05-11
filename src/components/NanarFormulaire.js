@@ -5,14 +5,16 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Select from 'react-select';
+import Button from '@mui/material/Button';
 
 function NanarFormulaire() {
   const [name, setName] = useState('');
   const [dateForm, setDateForm] = useState('');
   const [results, setResults] = useState([]);
-  const [movieForm, SetMovieForm] = useState('');
+  const [movieForm, setMovieForm] = useState('');
   const [localisationForm, setLocalisationForm] = useState('');
   const [timeForm, setTimeForm] = useState('');
+  let movieFormValue = '';
   const notify = () => {
     if (
       name === '' ||
@@ -51,7 +53,10 @@ function NanarFormulaire() {
       )
       .then((res) => res.data)
       .then(setTimeForm(''))
-      .finally(SetMovieForm(''));
+      .then(setDateForm(''))
+      .then(setLocalisationForm(''))
+      .then((movieFormValue = ''))
+      .finally(setMovieForm(movieFormValue));
   };
 
   useEffect(() => {
@@ -101,17 +106,16 @@ function NanarFormulaire() {
   };
 
   const handleChange = (value) => {
-    const date = value.value;
-    SetMovieForm(date);
+    movieFormValue = value.value;
+    setMovieForm(movieFormValue);
   };
 
   return (
     <div className={styles.formulairecontainer}>
       <form onSubmit={handleSubmit}>
         <div className={styles.formulaire}>
-          <h1>Formulaire</h1>
           <label htmlFor="name" className={styles.items}>
-            Name
+            Nom
             <input
               className={styles.input}
               id="name"
@@ -168,9 +172,29 @@ function NanarFormulaire() {
               required
             />
           </label>
-          <button type="submit" onClick={notify} className={styles.btn}>
+
+          <Button
+            type="submit"
+            onClick={notify}
+            variant="outlined"
+            sx={{
+              marginTop: '10px',
+              borderColor: '#FFCE31',
+              backgroundColor: '#FFCE31',
+              color: 'black',
+              fontWeight: 'bold',
+
+              borderRadius: '10px',
+              '&:hover': {
+                backgroundColor: 'black',
+                borderColor: 'black',
+                transition: '0.7s',
+                color: '#c4c4c4',
+              },
+            }}
+          >
             Envoyer
-          </button>
+          </Button>
           <ToastContainer />
         </div>
       </form>

@@ -9,6 +9,7 @@ import Quentin from '../img/Quentin.png';
 import Rayanne from '../img/Rayanne.png';
 import Adnan from '../img/Adnan.png';
 import Mylène from '../img/Mylène.png';
+import Button from '@mui/material/Button';
 
 export default function ContactPage() {
   const [nom, setNom] = useState('');
@@ -50,9 +51,9 @@ export default function ContactPage() {
         <p>A propos de Nanar production </p>
       </div>
       <div className={styles.detail}>
-        <p>
-          L'équipe est composé de cinq développeurs en herbe :
-          Julie,Quentin,Rayanne,Adnan et Mylène
+        <p style={{ padding: '10px' }}>
+          L'équipe est composée de cinq développeurs en herbe : Julie, Quentin,
+          Rayane, Adnan et Mylène
         </p>
         <div className={styles.Avatar} style={{ margin: 20 }}>
           <Avatar alt="Julie" src={Julie} />
@@ -110,9 +111,28 @@ export default function ContactPage() {
               placeholder="Votre texte ici..."
             />
           </div>
-          <button type="submit" className={styles.submitBtn}>
+
+          <Button
+            type="submit"
+            variant="outlined"
+            sx={{
+              marginTop: '10px',
+              borderColor: '#FFCE31',
+              backgroundColor: '#FFCE31',
+              color: 'black',
+              fontWeight: 'bold',
+
+              borderRadius: '10px',
+              '&:hover': {
+                backgroundColor: 'black',
+                borderColor: 'black',
+                transition: '0.7s',
+                color: '#c4c4c4',
+              },
+            }}
+          >
             Envoyer
-          </button>
+          </Button>
         </form>
 
         <ToastContainer />

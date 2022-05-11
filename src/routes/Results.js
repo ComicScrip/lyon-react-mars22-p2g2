@@ -34,23 +34,23 @@ export default function Results() {
   }, []);
 
   return (
-    <div>
-      <div className="containerResolv">
-        <div className="firstContainer">
-          <h2 className="chooseOneTitle">Nos suggestions pour toi</h2>
-        </div>
-        <div className="middleContainer">
-          {isLoading ? (
-            <CircularProgress />
-          ) : (
-            resultApi.slice(0, 2).map((movie) => (
-              <div className="secondContainerContent" key={movie.id}>
-                <ResultApiContainer movie={movie} />
+    <div className="resultPageMainContainer">
+      {isLoading ? (
+        <CircularProgress />
+      ) : (
+        <div>
+          <div className="resultTitleContainer">
+            <h2 className="chooseOneTitle">NOS SUGGESTIONS POUR TOI</h2>
+          </div>
+          <div className="resultsContainer">
+            {resultApi.slice(0, 2).map((movie) => (
+              <div className="resultContentContainer" key={movie.id}>
+                <ResultApiContainer movie={movie} id={movie.id} />
               </div>
-            ))
-          )}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
