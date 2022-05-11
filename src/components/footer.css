@@ -1,9 +1,15 @@
-.main-footer {
-  height: 7vh;
-  display: flex;
+@import url('https: //fonts.google.com/share?selection.family=Abhaya%20Libre');
+body {
+  font-family: 'Abhaya Libre', serif;
+}
 
-  background: #3f92a8;
+.main-footer {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #ffce31;
+  color: black;
 }
 
 .container {
@@ -13,7 +19,7 @@
 }
 
 .content {
-  color: #fff;
+  color: black;
   font-size: 15px;
   margin-left: 5px;
 }
@@ -24,10 +30,11 @@
 }
 
 .logo {
-  height: 30px;
-  width: 20;
+  height: 20px;
+  width: 20px;
+  margin: 0px 5px;
 }
 
-h3 {
-  font-size: 12px;
+.webName {
+  font-size: 12pt;
 }

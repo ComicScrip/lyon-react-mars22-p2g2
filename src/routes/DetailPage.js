@@ -16,7 +16,9 @@ export default function DetailPage() {
 
   useEffect(() => {
     axios
-      .get(`https://imdb-api.com/en/API/Title/${apiKey}/${id}`)
+      .get(
+        `https://cors-proxy.comicscrip.duckdns.org/https://imdb-api.com/en/API/Title/${apiKey}/${id}`
+      )
       .then((answer) => answer.data)
       .then((data) => {
         setMovie(data);
@@ -29,7 +31,9 @@ export default function DetailPage() {
 
   useEffect(() => {
     axios
-      .get(`https://imdb-api.com/en/API/YouTubeTrailer/${apiKey}/${id}`)
+      .get(
+        `https://cors-proxy.comicscrip.duckdns.org/https://imdb-api.com/en/API/YouTubeTrailer/${apiKey}/${id}`
+      )
       .then((answer) => answer.data)
       .then((movieInfo) => {
         setTrailer(movieInfo);

@@ -21,7 +21,7 @@ export default function Results() {
   useEffect(() => {
     axios
       .get(
-        `https://imdb-api.com/API/AdvancedSearch/${apiKey}?user_rating=1.0,3.0&${id}`
+        `https://cors-proxy.comicscrip.duckdns.org/https://imdb-api.com/API/AdvancedSearch/${apiKey}?user_rating=1.0,3.0&${id}`
       )
       .then((res) => res.data)
       .then((data) => {
@@ -34,23 +34,23 @@ export default function Results() {
   }, []);
 
   return (
-    <div>
-      <div className="containerResolv">
-        <div className="firstContainer">
-          <h2 className="chooseOneTitle">Nos suggestions pour toi</h2>
-        </div>
-        <div className="middleContainer">
-          {isLoading ? (
-            <CircularProgress />
-          ) : (
-            resultApi.slice(0, 2).map((movie) => (
-              <div className="secondContainerContent" key={movie.id}>
-                <ResultApiContainer movie={movie} />
+    <div className="resultPageMainContainer">
+      {isLoading ? (
+        <CircularProgress />
+      ) : (
+        <div>
+          <div className="resultTitleContainer">
+            <h2 className="chooseOneTitle">NOS SUGGESTIONS POUR TOI</h2>
+          </div>
+          <div className="resultsContainer">
+            {resultApi.slice(0, 2).map((movie) => (
+              <div className="resultContentContainer" key={movie.id}>
+                <ResultApiContainer movie={movie} id={movie.id} />
               </div>
-            ))
-          )}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

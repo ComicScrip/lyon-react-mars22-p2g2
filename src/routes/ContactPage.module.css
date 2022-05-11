@@ -1,0 +1,165 @@
+@import url('https: //fonts.google.com/share?selection.family=Abhaya%20Libre');
+body {
+  font-family: 'Abhaya Libre', serif;
+}
+
+.apropos {
+  width: 20%;
+  margin: 0% 38%;
+  padding: 1%;
+  text-align: center;
+  border: groove 2px white;
+  font-size: 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.Avatar {
+  display: flex;
+  justify-content: space-between;
+  margin: 3%;
+}
+
+.detail {
+  background: rgba(196, 196, 196, 0.22);
+  width: 50%;
+  height: 15%;
+  margin: 2% 24%;
+  padding: 0px;
+  border: groove 1px white;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-size: x-large;
+}
+
+.contacte {
+  margin: 13%;
+  margin-bottom: 8%;
+  margin-top: 25%;
+  padding: 10px;
+  margin-left: 12%;
+
+  border: groove 2px white;
+  font-size: 24px;
+  border-radius: 5px;
+  font-family: Abhaya Libre;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  background: rgba(196, 196, 196, 0.22);
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 9%;
+}
+
+.form {
+  margin: 0% 9%;
+  height: 400px;
+
+  /* Font police */
+  text-align: center;
+
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.field {
+  border-radius: 15px;
+  width: 100%;
+  padding: 1px;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  background: #c4c4c4;
+  font-size: large;
+}
+
+.submitBtn {
+  width: 40%;
+  margin: 3%;
+  background: #c4c4c4;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.lignedesktop {
+  color: #c4c4c4;
+  width: 38%;
+  margin: 3% 30%;
+}
+
+.lignemobile {
+  margin: 0%;
+  padding: 4% 4%;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 700px) {
+  .desktop {
+    display: none;
+  }
+
+  .container {
+    margin: 0% 18%;
+  }
+  .form {
+    margin: 0% 10%;
+    padding: 2%;
+  }
+  .background {
+    padding: 2%;
+  }
+
+  .contacte {
+    width: 14%;
+    margin: 3% 41%;
+  }
+
+  .field {
+    margin-bottom: 5px;
+    margin-top: 0px 0px;
+    padding: 1% 1% 1% 15px;
+    font-size: large;
+  }
+  .lignemobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 688px) {
+  .apropos {
+    display: none;
+  }
+
+  .lignedesktop {
+    display: none;
+  }
+  .detail {
+    display: none;
+  }
+  .form {
+    margin-top: 10%;
+    height: 10%;
+  }
+
+  .container {
+    border: 1px solid #c4c4c4;
+    background: rgba(196, 196, 196, 0.22);
+    display: flex;
+    justify-content: center;
+    margin: 10% 10%;
+  }
+  .field {
+    margin-bottom: 7%;
+    margin-top: 0px 0px;
+    padding: 2%;
+    font-size: large;
+  }
+}

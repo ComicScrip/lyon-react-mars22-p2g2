@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './header.css';
 import { AiOutlineClose } from 'react-icons/ai';
-import logo from '../image/logo.png';
+import logo from '../image/LOGO.png';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 export default function Header() {
@@ -29,29 +29,66 @@ export default function Header() {
 
   return (
     <nav className="nav">
-      <div>
-        <img src={logo} alt="logo" className={'item'} />
+      <div className="logoContainer">
+        <Link to="/">
+          <img src={logo} alt="logo" className={'item'} />
+        </Link>
       </div>
-      {(toggleMenu || largeur > 500) && (
+      {(toggleMenu || largeur > 900) && (
         <div className="liste">
           <NavLink
             className={'items'}
             to="/"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
+            style={({ isActive }) => ({
+              borderBottom: isActive && largeur > 900 ? '2px solid black' : '',
+              color: isActive && largeur < 900 ? 'white' : 'black',
+            })}
+            onClick={toggleNavSmallScreen}
           >
-            Home
+            HomePage
           </NavLink>
           <NavLink
             className={'items'}
             to="/Quizz"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
+            style={({ isActive }) => ({
+              borderBottom: isActive && largeur > 900 ? '2px solid black' : '',
+              color: isActive && largeur < 900 ? 'white' : 'black',
+            })}
+            onClick={toggleNavSmallScreen}
           >
-            Quizz
+            Quick Navet
           </NavLink>
           <NavLink
             className={'items'}
+            to="/filterpage"
+            style={({ isActive }) => ({
+              borderBottom: isActive && largeur > 900 ? '2px solid black' : '',
+              color: isActive && largeur < 900 ? 'white' : 'black',
+            })}
+            onClick={toggleNavSmallScreen}
+          >
+            Rechercher &nbsp; <span className="desktopText">un navet</span>
+          </NavLink>
+          <NavLink
+            className={'items'}
+            to="/nanarmate"
+            style={({ isActive }) => ({
+              borderBottom: isActive && largeur > 900 ? '2px solid black' : '',
+              color: isActive && largeur < 900 ? 'white' : 'black',
+            })}
+            onClick={toggleNavSmallScreen}
+          >
+            Nanar Mates
+          </NavLink>
+
+          <NavLink
+            className={'items'}
             to="/Contact"
-            style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}
+            style={({ isActive }) => ({
+              borderBottom: isActive && largeur > 900 ? '2px solid black' : '',
+              color: isActive && largeur < 900 ? 'white' : 'black',
+            })}
+            onClick={toggleNavSmallScreen}
           >
             Contact
           </NavLink>

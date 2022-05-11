@@ -1,7 +1,3 @@
-/* eslint-disable react/jsx-indent */
-/* eslint-disable indent */
-/* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable operator-linebreak */
 import FilmContainer from '../components/FilmContainer';
 import styles from '../components/Filter.module.css';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
@@ -113,7 +109,7 @@ export default function Filterpage() {
     setLoading(true);
     axios
       .get(
-        `https://imdb-api.com/API/AdvancedSearch/${apiKey}?count=20&user_rating=,3.0&${searchParams}`,
+        `https://cors-proxy.comicscrip.duckdns.org/imdb-api.com/API/AdvancedSearch/${apiKey}?count=250&user_rating=,3.0&${searchParams}`,
         {
           cancelToken: source.token,
         }
@@ -140,7 +136,7 @@ export default function Filterpage() {
     );
   }
   return (
-    <div>
+    <div className={styles.bodyContainer}>
       <div className={styles.title}>
         <h1 className={styles.h1title}>
           RECHERCHE<span className={styles.titleDesktop}>R UN NAVET</span>
