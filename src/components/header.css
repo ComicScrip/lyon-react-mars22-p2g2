@@ -114,7 +114,11 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-  .nav {
-    border-bottom: 10px solid white;
+  .btn {
+    display: none;
+  }
+
+  .btn2 {
+    display: none;
   }
 }

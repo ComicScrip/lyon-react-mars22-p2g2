@@ -38,9 +38,3 @@ body {
 .webName {
   font-size: 12pt;
 }
-
-@media screen and (min-width: 900px) {
-  .main-footer {
-    border-top: 10px solid white;
-  }
-}

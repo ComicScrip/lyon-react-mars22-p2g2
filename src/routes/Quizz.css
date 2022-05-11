@@ -14,12 +14,6 @@ body {
   flex-direction: column;
 }
 
-.hrQuizzStyle {
-  color: white;
-  width: 80%;
-  margin-top: 70px;
-}
-
 /* QUIZZ */
 
 .quizzContainer {
@@ -94,10 +88,6 @@ body {
     background-color: none;
     width: 80%;
     margin: auto;
-  }
-
-  .hrQuizzStyle {
-    display: none;
   }
 
   /* QUIZZ CONTAINER */

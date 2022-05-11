@@ -246,7 +246,6 @@ export default function Quizz() {
             </section>
           </div>
         </div>
-        <hr className="hrQuizzStyle" />
       </div>
     </div>
   );

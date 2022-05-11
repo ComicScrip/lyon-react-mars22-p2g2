@@ -34,10 +34,11 @@
   height: 47px;
   left: 336px;
   top: 337px;
-
+  padding-left: 15px;
   font-size: 20pt;
   background: #c4c4c4;
   border-radius: 23.5px;
+  box-sizing: border-box;
 }
 
 .items {
@@ -93,6 +94,7 @@
 .nanarTextContainer {
   padding: 15px;
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 900px) {

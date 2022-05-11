@@ -5,6 +5,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Select from 'react-select';
+import Button from '@mui/material/Button';
 
 function NanarFormulaire() {
   const [name, setName] = useState('');
@@ -113,9 +114,8 @@ function NanarFormulaire() {
     <div className={styles.formulairecontainer}>
       <form onSubmit={handleSubmit}>
         <div className={styles.formulaire}>
-          <h1>Formulaire</h1>
           <label htmlFor="name" className={styles.items}>
-            Name
+            Nom
             <input
               className={styles.input}
               id="name"
@@ -172,9 +172,29 @@ function NanarFormulaire() {
               required
             />
           </label>
-          <button type="submit" onClick={notify} className={styles.btn}>
+
+          <Button
+            type="submit"
+            onClick={notify}
+            variant="outlined"
+            sx={{
+              marginTop: '10px',
+              borderColor: '#FFCE31',
+              backgroundColor: '#FFCE31',
+              color: 'black',
+              fontWeight: 'bold',
+
+              borderRadius: '10px',
+              '&:hover': {
+                backgroundColor: 'black',
+                borderColor: 'black',
+                transition: '0.7s',
+                color: '#c4c4c4',
+              },
+            }}
+          >
             Envoyer
-          </button>
+          </Button>
           <ToastContainer />
         </div>
       </form>
